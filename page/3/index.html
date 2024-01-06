@@ -6,13 +6,15 @@
   
   <title>樱川琴子的 备忘录</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+  <meta name="description" content="探索计算机科技的无尽可能，我的个人博客涵盖了前端开发、Linux系统以及Python编程等计算机相关主题。同时，我记录了个人生活中的点滴和科研探索的旅程。在这个虚拟空间，技术与生活相互交融，期待与您分享我的成长和发现。">
+<meta property="og:type" content="website">
 <meta property="og:title" content="樱川琴子的 备忘录">
 <meta property="og:url" content="https://dyson-wang.github.io/SakuraGw_Kotoko/page/3/index.html">
 <meta property="og:site_name" content="樱川琴子的 备忘录">
+<meta property="og:description" content="探索计算机科技的无尽可能，我的个人博客涵盖了前端开发、Linux系统以及Python编程等计算机相关主题。同时，我记录了个人生活中的点滴和科研探索的旅程。在这个虚拟空间，技术与生活相互交融，期待与您分享我的成长和发现。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Dyson Wang">
-<meta property="article:tag" content="前端">
+<meta property="article:tag" content="技术博客 个人生活记录 日常分享 科研记录 前端开发博客 Linux 计算机技术">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/SakuraGw_Kotoko/atom.xml" title="樱川琴子的 备忘录" type="application/atom+xml">
@@ -44,7 +46,7 @@
       </h1>
       
         <h2 id="subtitle-wrap">
-          <a href="/SakuraGw_Kotoko/" id="subtitle">这是一个副标题</a>
+          <a href="/SakuraGw_Kotoko/" id="subtitle">个人记录博客. Contact me: dyson.wang@outlook.com</a>
         </h2>
       
     </div>
@@ -62,10 +64,10 @@
         
           <a class="nav-icon" href="/SakuraGw_Kotoko/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
         
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://dyson-wang.github.io/SakuraGw_Kotoko"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://dyson-wang.github.io/SakuraGw_Kotoko"></form>
       </div>
     </div>
   </div>
@@ -73,6 +75,55 @@
 
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Git Notes" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/SakuraGw_Kotoko/2022/09/10/Git%20Notes/" class="article-date">
+  <time class="dt-published" datetime="2022-09-10T09:32:17.000Z" itemprop="datePublished">2022-09-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/SakuraGw_Kotoko/2022/09/10/Git%20Notes/">Git Notes</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Git-Notes"><a href="#Git-Notes" class="headerlink" title="Git Notes"></a>Git Notes</h1><h2 id="git-源码安装"><a href="#git-源码安装" class="headerlink" title="git 源码安装"></a>git 源码安装</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//依赖库 gcc gcc-c++</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-log"><a href="#git-log" class="headerlink" title="git log "></a><code>git log </code></h3><ul>
+<li><code>-p</code> 显示diff补丁 -2 限定数量</li>
+<li><code>--stat</code> 显示简略统计信息</li>
+<li><code>--pretty</code> &#x3D;oneline一行输出 &#x3D;short,full,fuller<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git log --pretty=format:&quot;%h - %an, %ar : %s&quot;</span><br><span class="line">  ca82a6d - Scott Chacon, 6 years ago : changed the version number</span><br><span class="line">  085bb3b - Scott Chacon, 6 years ago : removed unnecessary test</span><br><span class="line">  a11bef0 - Scott Chacon, 6 years ago : first commit</span><br></pre></td></tr></table></figure>
+  <img src="/SakuraGw_Kotoko/@attachment/Clipboard_2022-09-10-17-37-34.png"></li>
+<li><img src="/SakuraGw_Kotoko/@attachment/Clipboard_2022-09-10-17-38-20.png"></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/10/Git%20Notes/" data-id="clr1zvmt80004wwvn8cro3j37" data-title="Git Notes" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Blogs-Articles/" rel="tag">Blogs Articles</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
   
     <article id="post-JetBrains" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
@@ -107,7 +158,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/07/JetBrains/" data-id="clr1zc5fo000hlcvnfevo4szo" data-title="JetBrains" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/07/JetBrains/" data-id="clr1zvmtf000jwwvn71nj0n9u" data-title="JetBrains" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -427,7 +478,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/06/KT-Cloud-Management/" data-id="clr1zc5fp000jlcvn047r5470" data-title="KT-Cloud-Management" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/06/KT-Cloud-Management/" data-id="clr1zvmth000mwwvn7z3222sx" data-title="KT-Cloud-Management" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -483,7 +534,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/06/Nginx%20Notes/" data-id="clr1zc5fs000tlcvn42i1e1fd" data-title="Nginx Notes" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/06/Nginx%20Notes/" data-id="clr1zvmtk000twwvnfw551quv" data-title="Nginx Notes" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -528,7 +579,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/06/Node.js%20&%20npm/" data-id="clr1zc5ft000vlcvn03vobq3m" data-title="Node.js &amp; npm" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/06/Node.js%20&%20npm/" data-id="clr1zvmtl000vwwvn4ot1cyvy" data-title="Node.js &amp; npm" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -574,7 +625,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/06/Redux%20Notes/" data-id="clr1zc5fx0017lcvnc59z1dy8" data-title="Redux Notes" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/06/Redux%20Notes/" data-id="clr1zvmtn0011wwvn5hea1sqd" data-title="Redux Notes" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -620,7 +671,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/05/Go/" data-id="clr1zc5fj0008lcvn9ciqekom" data-title="Go" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/05/Go/" data-id="clr1zvmtb0009wwvn5iw9a2r3" data-title="Go" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -663,7 +714,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/05/Java/" data-id="clr1zc5fu000xlcvna8wj41mz" data-title="Java" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/05/Java/" data-id="clr1zvmtf000hwwvnhkwuepxu" data-title="Java" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -710,7 +761,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/05/Python/" data-id="clr1zc5fu000zlcvn4v3jgcc5" data-title="Python" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/05/Python/" data-id="clr1zvmtm000xwwvndd2v454h" data-title="Python" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -752,52 +803,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/05/JavaScript/" data-id="clr1zc5fn000elcvn0onnhzv3" data-title="JavaScript" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Programming-Language/" rel="tag">Programming Language</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-C++" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/SakuraGw_Kotoko/2022/09/05/C++/" class="article-date">
-  <time class="dt-published" datetime="2022-09-05T12:50:32.000Z" itemprop="datePublished">2022-09-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/SakuraGw_Kotoko/2022/09/05/C++/">C++</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h1><h2 id="封装-encapsulation-继承-多态性"><a href="#封装-encapsulation-继承-多态性" class="headerlink" title="封装 encapsulation 继承 多态性"></a>封装 encapsulation 继承 多态性</h2><h3 id=""><a href="#" class="headerlink" title=""></a></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a.cpp 类definition</span><br><span class="line">a.h   头文件declaration</span><br><span class="line">a.ii  预处理后的代码文件 a.h + a.cpp</span><br><span class="line">a.o   目标代码</span><br><span class="line">a.out 可执行程序</span><br><span class="line">a.s   汇编代码</span><br></pre></td></tr></table></figure>
-
-<h3 id="条件编译"><a href="#条件编译" class="headerlink" title="条件编译"></a>条件编译</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#ifndef _如果未定义_ 常用于重复引用 多次声明定义（类）</span><br><span class="line">#define </span><br><span class="line">... 标准头文件结构</span><br><span class="line">#endif</span><br></pre></td></tr></table></figure>
-
-<p>cpp 编译<br>g++ –save-temps 保留中间文件 -c 只编译 -D 定义变量<br>  -m32 以32位编译 -Wall</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/05/C++/" data-id="clr1zc5fd0001lcvndkgq9d62" data-title="C++" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/05/JavaScript/" data-id="clr1zvmtd000ewwvn3h9f50ph" data-title="JavaScript" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -815,7 +821,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/SakuraGw_Kotoko/page/2/">&laquo; Prev</a><a class="page-number" href="/SakuraGw_Kotoko/">1</a><a class="page-number" href="/SakuraGw_Kotoko/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/SakuraGw_Kotoko/page/4/">4</a><a class="extend next" rel="next" href="/SakuraGw_Kotoko/page/4/">Next &raquo;</a>
+    <a class="extend prev" rel="prev" href="/SakuraGw_Kotoko/page/2/">&laquo; zurück</a><a class="page-number" href="/SakuraGw_Kotoko/">1</a><a class="page-number" href="/SakuraGw_Kotoko/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/SakuraGw_Kotoko/page/4/">4</a><a class="extend next" rel="next" href="/SakuraGw_Kotoko/page/4/">weiter &raquo;</a>
   </nav>
 
 </section>
@@ -829,7 +835,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/Blogs-Articles/" rel="tag">Blogs Articles</a></li><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/Private/" rel="tag">Private</a></li><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/Programming-Language/" rel="tag">Programming Language</a></li><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/%E6%96%87%E7%8C%AE/" rel="tag">文献</a></li><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/%E8%B4%A6%E5%8F%B7/" rel="tag">账号</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/Blogs-Articles/" rel="tag">Blogs Articles</a></li><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/Private/" rel="tag">Private</a></li><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/Programming-Language/" rel="tag">Programming Language</a></li><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/" rel="tag">个人</a></li><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/%E6%96%87%E7%8C%AE/" rel="tag">文献</a></li></ul>
     </div>
   </div>
 
@@ -839,14 +845,14 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/SakuraGw_Kotoko/tags/Blogs-Articles/" style="font-size: 20px;">Blogs Articles</a> <a href="/SakuraGw_Kotoko/tags/Private/" style="font-size: 16.67px;">Private</a> <a href="/SakuraGw_Kotoko/tags/Programming-Language/" style="font-size: 13.33px;">Programming Language</a> <a href="/SakuraGw_Kotoko/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a> <a href="/SakuraGw_Kotoko/tags/%E6%96%87%E7%8C%AE/" style="font-size: 10px;">文献</a> <a href="/SakuraGw_Kotoko/tags/%E8%B4%A6%E5%8F%B7/" style="font-size: 10px;">账号</a>
+      <a href="/SakuraGw_Kotoko/tags/Blogs-Articles/" style="font-size: 20px;">Blogs Articles</a> <a href="/SakuraGw_Kotoko/tags/Private/" style="font-size: 17.5px;">Private</a> <a href="/SakuraGw_Kotoko/tags/Programming-Language/" style="font-size: 15px;">Programming Language</a> <a href="/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/" style="font-size: 10px;">个人</a> <a href="/SakuraGw_Kotoko/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a> <a href="/SakuraGw_Kotoko/tags/%E6%96%87%E7%8C%AE/" style="font-size: 12.5px;">文献</a>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2024/01/">一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/12/">十二月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/11/">十一月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/09/">九月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/04/">四月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/02/">二月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2022/09/">九月 2022</a></li></ul>
     </div>
@@ -856,9 +862,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/SakuraGw_Kotoko/2024/01/06/%E5%85%B3%E4%BA%8E%E8%87%AA%E5%B7%B1/">关于自己</a>
+          </li>
         
           <li>
             <a href="/SakuraGw_Kotoko/2024/01/03/%E5%B7%B2%E9%98%85%E8%AF%BB%E6%96%87%E7%8C%AE/">已阅读文献</a>
@@ -874,10 +884,6 @@
         
           <li>
             <a href="/SakuraGw_Kotoko/2023/11/02/Gem5/">Gem5</a>
-          </li>
-        
-          <li>
-            <a href="/SakuraGw_Kotoko/2023/09/21/mariadb/">mariadb</a>
           </li>
         
       </ul>
