@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Nginx Notes | 樱川琴子的 备忘录</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Nginx Notescurl1curl -o [filename] [link]  Basic依赖1yum install -y gcc gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel  Linux-nginx12345678cd .&#x2F;nginx&#x2F;nginx-1.16.1&#x2F;.&#x2F;configure --prefix&#x3D;&#x2F;us">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nginx Notes">
+<meta property="og:url" content="https://dyson-wang.github.io/hexoStaticBlog/2024/01/06/Nginx%20Notes/index.html">
+<meta property="og:site_name" content="樱川琴子的 备忘录">
+<meta property="og:description" content="Nginx Notescurl1curl -o [filename] [link]  Basic依赖1yum install -y gcc gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel  Linux-nginx12345678cd .&#x2F;nginx&#x2F;nginx-1.16.1&#x2F;.&#x2F;configure --prefix&#x3D;&#x2F;us">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-01-06T03:40:06.467Z">
+<meta property="article:modified_time" content="2023-09-19T20:57:24.000Z">
+<meta property="article:author" content="Dyson Wang">
+<meta property="article:tag" content="Blogs Articles">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/hexoStaticBlog/atom.xml" title="樱川琴子的 备忘录" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/hexoStaticBlog/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/hexoStaticBlog/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/hexoStaticBlog/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/hexoStaticBlog/" id="logo">樱川琴子的 备忘录</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/hexoStaticBlog/" id="subtitle">这是一个副标题</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/hexoStaticBlog/">Home</a>
+        
+          <a class="main-nav-link" href="/hexoStaticBlog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/hexoStaticBlog/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://dyson-wang.github.io/hexoStaticBlog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Nginx Notes" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/hexoStaticBlog/2024/01/06/Nginx%20Notes/" class="article-date">
+  <time class="dt-published" datetime="2024-01-06T03:40:06.467Z" itemprop="datePublished">2024-01-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Nginx Notes
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Nginx-Notes"><a href="#Nginx-Notes" class="headerlink" title="Nginx Notes"></a><a target="_blank" rel="noopener" href="https://nginx.org/en/">Nginx</a> Notes</h1><h2 id="curl"><a href="#curl" class="headerlink" title="curl"></a>curl</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o [filename] [link]</span><br></pre></td></tr></table></figure>
+
+<h2 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h2><h3 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y gcc gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel</span><br></pre></td></tr></table></figure>
+
+<h3 id="Linux-nginx"><a href="#Linux-nginx" class="headerlink" title="Linux-nginx"></a>Linux-nginx</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd ./nginx/nginx-1.16.1/</span><br><span class="line">./configure --prefix=/usr/local/nginx --user=nginx --group=nginx </span><br><span class="line">--with-http_gzip_static_module //静态压缩</span><br><span class="line">--with-http_stub_status_module //监视连接数等信息 ip/mystatus</span><br><span class="line">--with-http_ssl_module //需要安装ssl证书时候用</span><br><span class="line"></span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<p><strong>nginx安装地址：</strong> <code>/usr/local/nginx/</code></p>
+<p><strong>nginx托管页面目录：</strong> <code>/usr/local/nginx/html/</code></p>
+<p><strong>nginx配置文件目录：</strong> <code>/usr/local/nginx/conf/nginx.conf</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">#user  nobody;</span><br><span class="line">worker_processes  1;</span><br><span class="line"></span><br><span class="line">#error_log  logs/error.log;</span><br><span class="line">#error_log  logs/error.log  notice;</span><br><span class="line">#error_log  logs/error.log  info;</span><br><span class="line"></span><br><span class="line">#pid        logs/nginx.pid;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application/octet-stream;</span><br><span class="line"></span><br><span class="line">    sendfile        on;</span><br><span class="line">    keepalive_timeout  65;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        listen       80;</span><br><span class="line">        server_name  localhost;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">            root   html;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">            # proxy_pass https://192.168.131.138/;</span><br><span class="line">        &#125;</span><br><span class="line">        location /v3 &#123;</span><br><span class="line">            root   html;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">            proxy_pass https://192.168.131.138/v3;</span><br><span class="line">        &#125;</span><br><span class="line">        location /v1 &#123;</span><br><span class="line">            root   html;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">            proxy_pass https://192.168.131.138/v1;</span><br><span class="line">        &#125;</span><br><span class="line">        location /k8s &#123;</span><br><span class="line">            root   html;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">            proxy_pass https://192.168.131.138/k8s;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        error_page   500 502 503 504  /50x.html;</span><br><span class="line">        location = /50x.html &#123;</span><br><span class="line">            root   html;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>nginx启动文件：</strong> <code>/usr/local/nginx/sbin/nginx</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">./nginx</span><br><span class="line">nginx -s reopen #重启Nginx</span><br><span class="line">nginx -s reload #重新加载Nginx配置文件，然后以优雅的方式重启Nginx</span><br><span class="line">nginx -s stop #强制停止Nginx服务</span><br><span class="line">killall nginx #杀死所有nginx进程  </span><br><span class="line">nginx -s quit #优雅地停止Nginx服务（即处理完所有请求后再停止服务）</span><br><span class="line">nginx -t #检测配置文件是否有语法错误，然后退出</span><br><span class="line">nginx -v #显示版本信息并退出</span><br><span class="line">nginx -V #显示版本和配置选项信息，然后退出</span><br><span class="line">nginx -t #检测配置文件是否有语法错误，然后退出</span><br><span class="line">nginx -T #检测配置文件是否有语法错误，转储并退出</span><br><span class="line">nginx -q #在检测配置文件期间屏蔽非错误信息</span><br><span class="line">nginx -?,-h #打开帮助信息  </span><br><span class="line">nginx -p prefix #设置前缀路径(默认是:/usr/share/nginx/)</span><br><span class="line">nginx -c filename #设置配置文件(默认是:/etc/nginx/nginx.conf)</span><br><span class="line">nginx -g directives #设置配置文件外的全局指令</span><br></pre></td></tr></table></figure>
+
+<h2 id="error"><a href="#error" class="headerlink" title="error"></a>error</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getpwnam(&quot;nginx&quot;) failed //没有找到nginx用户</span><br></pre></td></tr></table></figure>
+<p>nginx编译安装之后，启动出现了：nginx: [emerg] getpwnam(“nginx”) failed<br>这个是因为我编译安装nginx的时候指定了–user&#x3D;nginx和–group&#x3D;nginx，去除就没事了<br>但是出于安全性考虑，还是用独立权限的账户运行（root权限太大，web渗透的时候可利用的机会太多了）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd -s /sbin/nologin -M nginx</span><br><span class="line">mkdir -p  /var/cache/nginx/client_temp</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dyson-wang.github.io/hexoStaticBlog/2024/01/06/Nginx%20Notes/" data-id="clr1ioec60014y8vne33hagf3" data-title="Nginx Notes" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexoStaticBlog/tags/Blogs-Articles/" rel="tag">Blogs Articles</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/hexoStaticBlog/2024/01/06/Node.js%20&%20npm/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          Node.js &amp; npm
+        
+      </div>
+    </a>
+  
+  
+    <a href="/hexoStaticBlog/2024/01/06/Markdown%20%E8%AF%AD%E6%B3%95%EF%BC%88%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">Markdown 语法（一级标题）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/hexoStaticBlog/tags/Blogs-Articles/" rel="tag">Blogs Articles</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexoStaticBlog/tags/Private/" rel="tag">Private</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexoStaticBlog/tags/Programming-Language/" rel="tag">Programming Language</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexoStaticBlog/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexoStaticBlog/tags/%E6%96%87%E7%8C%AE/" rel="tag">文献</a></li><li class="tag-list-item"><a class="tag-list-link" href="/hexoStaticBlog/tags/%E8%B4%A6%E5%8F%B7/" rel="tag">账号</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/hexoStaticBlog/tags/Blogs-Articles/" style="font-size: 20px;">Blogs Articles</a> <a href="/hexoStaticBlog/tags/Private/" style="font-size: 16.67px;">Private</a> <a href="/hexoStaticBlog/tags/Programming-Language/" style="font-size: 13.33px;">Programming Language</a> <a href="/hexoStaticBlog/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a> <a href="/hexoStaticBlog/tags/%E6%96%87%E7%8C%AE/" style="font-size: 10px;">文献</a> <a href="/hexoStaticBlog/tags/%E8%B4%A6%E5%8F%B7/" style="font-size: 10px;">账号</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hexoStaticBlog/archives/2024/01/">一月 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/hexoStaticBlog/2024/01/06/%E5%B7%B2%E9%98%85%E8%AF%BB%E6%96%87%E7%8C%AE/">已阅读文献</a>
+          </li>
+        
+          <li>
+            <a href="/hexoStaticBlog/2024/01/06/%E4%B8%89%E6%9C%88%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/">三月学习大纲</a>
+          </li>
+        
+          <li>
+            <a href="/hexoStaticBlog/2024/01/06/Web%20Docs/">Web Docs</a>
+          </li>
+        
+          <li>
+            <a href="/hexoStaticBlog/2024/01/06/TO-DO%20Items/">TO-DO Items</a>
+          </li>
+        
+          <li>
+            <a href="/hexoStaticBlog/2024/01/06/Serverless%20in%20linux/">Serverless in linux</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 Dyson Wang<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/hexoStaticBlog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/hexoStaticBlog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/hexoStaticBlog/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/hexoStaticBlog/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/hexoStaticBlog/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
