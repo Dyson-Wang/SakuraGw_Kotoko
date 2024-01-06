@@ -74,444 +74,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-rancher &amp; k8s notes" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/SakuraGw_Kotoko/2024/01/06/rancher%20&%20k8s%20notes/" class="article-date">
-  <time class="dt-published" datetime="2024-01-06T04:02:53.793Z" itemprop="datePublished">2024-01-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/SakuraGw_Kotoko/2024/01/06/rancher%20&%20k8s%20notes/">rancher &amp; k8s notes</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="rancher-k8s-notes"><a href="#rancher-k8s-notes" class="headerlink" title="rancher &amp; k8s notes"></a>rancher &amp; k8s notes</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install wget expect vim net-tools ntp bash-completion ipvsadm ipset jq iptables conntrack sysstat libseccomp conntrack ipvsadm ipset jq iptables curl sysstat libseccomp wgeta vim net-toolsgit yum-utils device-mapper-persistent-data lvm2 -y</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line"></span><br><span class="line">yum install -y docker-ce-19.03.9-3.el7</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /etc/docker</span><br><span class="line">tee /etc/docker/daemon.json &lt;&lt;-&#x27;EOF&#x27;</span><br><span class="line">&#123;</span><br><span class="line">&quot;registry-mirrors&quot;: [&quot;https://4bsnywin.mirror.aliyuncs.com&quot;],</span><br><span class="line">&quot;exec-opts&quot;:[&quot;native.cgroupdriver=systemd&quot;]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload; systemctl restart docker; systemctl enable --now docker.service</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install chrony</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">cat &gt; /etc/chrony.conf &lt;&lt;-&#x27;EOF&#x27;</span><br><span class="line">pool 192.168.131.136 iburst</span><br><span class="line">driftfile /var/lib/chrony/drift</span><br><span class="line">makestep 1.0 3</span><br><span class="line">rtcsync</span><br><span class="line">allow 192.168.131.0/24</span><br><span class="line">local stratum 10</span><br><span class="line">keyfile /etc/chrony.keys</span><br><span class="line">leapsectz right/UTC</span><br><span class="line">logdir /var/log/chrony</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart chronyd.service --now</span><br><span class="line"></span><br><span class="line">chronyc -a makestep</span><br><span class="line"></span><br><span class="line">chronyc sourcestats -v</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">mkdir /var/log/journal</span><br><span class="line">mkdir /etc/systemd/journald.conf.d</span><br><span class="line">cat &gt; /etc/systemd/journald.conf.d/99-prophet.conf &lt;&lt;-&#x27;EOF&#x27;</span><br><span class="line">[Journal]</span><br><span class="line">#持久化保存到磁盘</span><br><span class="line">Storage=persistent</span><br><span class="line">#压缩历史日志</span><br><span class="line">Compress=yes</span><br><span class="line">SyncIntervalSec=5m</span><br><span class="line">RateLimitInterval=30s</span><br><span class="line">RateLimitBurst=1000</span><br><span class="line">#最大占用空间10G</span><br><span class="line">SystemMaxUse=10G</span><br><span class="line">#单日志文件最大200M</span><br><span class="line">SystemMaxFileSize=200M</span><br><span class="line">#日志保存时间2周</span><br><span class="line">MaxRetentionSec=2week</span><br><span class="line">#不将日志转发到syslog</span><br><span class="line">ForwardToSyslog=no</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart systemd-journald</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cat &gt; /etc/hosts &lt;&lt;-&#x27;EOF&#x27;</span><br><span class="line">127.0.0.1 localhost localhost.localdomain localhost4 localhost4.localdomain4</span><br><span class="line">::1 localhost localhost.localdomain localhost6 1ocalhost6.localdomain6</span><br><span class="line">192.168.131.129 rancher</span><br><span class="line">192.168.131.134 k8s-master-01</span><br><span class="line">192.168.131.135 k8s-node-02</span><br><span class="line">192.168.131.133 k8s-node-03</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nmtui-hostname</span><br><span class="line"></span><br><span class="line">sed -ri &#x27;s/.*swap.*/#&amp;/&#x27; /etc/fstab</span><br><span class="line"></span><br><span class="line">reboot</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-<h3 id="注释：rancher主机的配置"><a href="#注释：rancher主机的配置" class="headerlink" title="注释：rancher主机的配置"></a>注释：rancher主机的配置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker pull rancher/rancher:v2.6.3-linux-amd64</span><br><span class="line"></span><br><span class="line">mkdir -p /mnt/d/rancher_data</span><br><span class="line"></span><br><span class="line">docker run -d --privileged -p 80:80 -p 443:443 -v /mnt/d/rancher_data:/var/lib/rancher/ --restart=always --name rancher-v2.6.3 rancher/rancher:v2.6.3-linux-amd64</span><br></pre></td></tr></table></figure>
-
-
-<h4 id="最小安装-centos-配置-ifconfig-命令"><a href="#最小安装-centos-配置-ifconfig-命令" class="headerlink" title="最小安装 centos 配置 ifconfig 命令"></a>最小安装 centos 配置 ifconfig 命令</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install net-tools</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/06/rancher%20&%20k8s%20notes/" data-id="clr1k5drz001ppcvndhgd8cos" data-title="rancher &amp; k8s notes" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Blogs-Articles/" rel="tag">Blogs Articles</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Python" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/SakuraGw_Kotoko/2024/01/06/Python/" class="article-date">
-  <time class="dt-published" datetime="2024-01-06T04:02:53.791Z" itemprop="datePublished">2024-01-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/SakuraGw_Kotoko/2024/01/06/Python/">Python</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><h2 id="linux-安装"><a href="#linux-安装" class="headerlink" title="linux 安装"></a>linux 安装</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">curl -o [filename] [url]</span><br><span class="line">tar -[z]xvf *.tar.xz</span><br><span class="line">/usr/local/src/</span><br><span class="line">yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make</span><br><span class="line"></span><br><span class="line">build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev</span><br></pre></td></tr></table></figure>
-
-<h3 id="依赖项"><a href="#依赖项" class="headerlink" title="依赖项"></a>依赖项</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc zlib zlib1g-dev bz2</span><br></pre></td></tr></table></figure>
-
-<h2 id="API-Server"><a href="#API-Server" class="headerlink" title="API Server"></a>API Server</h2><h3 id="flask-框架，-安装flask-cors"><a href="#flask-框架，-安装flask-cors" class="headerlink" title="flask 框架， 安装flask-cors"></a>flask 框架， 安装flask-cors</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install flask</span><br><span class="line">pip install flask-cors</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">from flask import Flask, request</span><br><span class="line">from flask_cors import CORS, cross_origin</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line">CORS(app, supports_credentials=True) // 全局跨域</span><br><span class="line"></span><br><span class="line">@app.route(&#x27;/api/dyson&#x27;)</span><br><span class="line"># @cross_origin(supports_credentials=True) // 部分路由跨域</span><br><span class="line">def index():</span><br><span class="line">    return &#123;&#x27;name&#x27;: &#x27;dyson&#x27;, &#x27;msg&#x27;: &#x27;Hello Python!&#x27;&#125;</span><br><span class="line"></span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line">    app.run()</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/06/Python/" data-id="clr1k5drs000zpcvn68c4egs5" data-title="Python" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Programming-Language/" rel="tag">Programming Language</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-openmp" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/SakuraGw_Kotoko/2024/01/06/openmp/" class="article-date">
-  <time class="dt-published" datetime="2024-01-06T04:02:53.789Z" itemprop="datePublished">2024-01-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/SakuraGw_Kotoko/2024/01/06/openmp/">openmp</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="openmp"><a href="#openmp" class="headerlink" title="openmp"></a>openmp</h1><h2 id="p"><a href="#p" class="headerlink" title="-p"></a>-p</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 90-1000-146146</span><br><span class="line">2. 121-1000-204525</span><br><span class="line">3. 52-1000-60153</span><br><span class="line">4. 36-1000-61632</span><br><span class="line">5. 88-1000-174049</span><br><span class="line">6. 170-171-205061</span><br><span class="line">7. 144-145-235589</span><br><span class="line">8. 198-199-371482</span><br></pre></td></tr></table></figure>
-
-<h2 id="c"><a href="#c" class="headerlink" title="-c"></a>-c</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 143-21-13752</span><br><span class="line">2. 106-27-6851</span><br><span class="line">3. 181-21-20332</span><br><span class="line">4. 73-20-3250</span><br><span class="line">5. 163-30-18056</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/06/openmp/" data-id="clr1k5drz001npcvn1pzr1ema" data-title="openmp" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Private/" rel="tag">Private</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Node.js &amp; npm" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/SakuraGw_Kotoko/2024/01/06/Node.js%20&%20npm/" class="article-date">
-  <time class="dt-published" datetime="2024-01-06T04:02:53.788Z" itemprop="datePublished">2024-01-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/SakuraGw_Kotoko/2024/01/06/Node.js%20&%20npm/">Node.js &amp; npm</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="Node-js-npm"><a href="#Node-js-npm" class="headerlink" title="Node.js &amp; npm"></a>Node.js &amp; npm</h1><p>源码安装nodejs</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/node/0.10.24</span><br></pre></td></tr></table></figure>
-
-<h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a><code>package.json</code></h3><h4 id="proxy-选项"><a href="#proxy-选项" class="headerlink" title="proxy 选项"></a><code>proxy</code> 选项</h4><p>作用过程为APP向自身路由请求API，如果404，则由代理转发请求<code>proxy</code>指向的服务器上的API。</p>
-<p><a target="_blank" rel="noopener" href="https://localhost:3000/clusters/projects/projects/pods/hhh666-dd88895c4-55v6n">https://localhost:3000/clusters/projects/projects/pods/hhh666-dd88895c4-55v6n</a><br><a target="_blank" rel="noopener" href="https://localhost:3000/clusters/projects/projects/pods/pushprox-kube-etcd-client-2ncmj">https://localhost:3000/clusters/projects/projects/pods/pushprox-kube-etcd-client-2ncmj</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/06/Node.js%20&%20npm/" data-id="clr1k5drr000xpcvncm384ndl" data-title="Node.js &amp; npm" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Blogs-Articles/" rel="tag">Blogs Articles</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Nginx Notes" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/SakuraGw_Kotoko/2024/01/06/Nginx%20Notes/" class="article-date">
-  <time class="dt-published" datetime="2024-01-06T04:02:53.786Z" itemprop="datePublished">2024-01-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/SakuraGw_Kotoko/2024/01/06/Nginx%20Notes/">Nginx Notes</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="Nginx-Notes"><a href="#Nginx-Notes" class="headerlink" title="Nginx Notes"></a><a target="_blank" rel="noopener" href="https://nginx.org/en/">Nginx</a> Notes</h1><h2 id="curl"><a href="#curl" class="headerlink" title="curl"></a>curl</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o [filename] [link]</span><br></pre></td></tr></table></figure>
-
-<h2 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h2><h3 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y gcc gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel</span><br></pre></td></tr></table></figure>
-
-<h3 id="Linux-nginx"><a href="#Linux-nginx" class="headerlink" title="Linux-nginx"></a>Linux-nginx</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd ./nginx/nginx-1.16.1/</span><br><span class="line">./configure --prefix=/usr/local/nginx --user=nginx --group=nginx </span><br><span class="line">--with-http_gzip_static_module //静态压缩</span><br><span class="line">--with-http_stub_status_module //监视连接数等信息 ip/mystatus</span><br><span class="line">--with-http_ssl_module //需要安装ssl证书时候用</span><br><span class="line"></span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
-
-<p><strong>nginx安装地址：</strong> <code>/usr/local/nginx/</code></p>
-<p><strong>nginx托管页面目录：</strong> <code>/usr/local/nginx/html/</code></p>
-<p><strong>nginx配置文件目录：</strong> <code>/usr/local/nginx/conf/nginx.conf</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">#user  nobody;</span><br><span class="line">worker_processes  1;</span><br><span class="line"></span><br><span class="line">#error_log  logs/error.log;</span><br><span class="line">#error_log  logs/error.log  notice;</span><br><span class="line">#error_log  logs/error.log  info;</span><br><span class="line"></span><br><span class="line">#pid        logs/nginx.pid;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application/octet-stream;</span><br><span class="line"></span><br><span class="line">    sendfile        on;</span><br><span class="line">    keepalive_timeout  65;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        listen       80;</span><br><span class="line">        server_name  localhost;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">            root   html;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">            # proxy_pass https://192.168.131.138/;</span><br><span class="line">        &#125;</span><br><span class="line">        location /v3 &#123;</span><br><span class="line">            root   html;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">            proxy_pass https://192.168.131.138/v3;</span><br><span class="line">        &#125;</span><br><span class="line">        location /v1 &#123;</span><br><span class="line">            root   html;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">            proxy_pass https://192.168.131.138/v1;</span><br><span class="line">        &#125;</span><br><span class="line">        location /k8s &#123;</span><br><span class="line">            root   html;</span><br><span class="line">            index  index.html index.htm;</span><br><span class="line">            proxy_pass https://192.168.131.138/k8s;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        error_page   500 502 503 504  /50x.html;</span><br><span class="line">        location = /50x.html &#123;</span><br><span class="line">            root   html;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>nginx启动文件：</strong> <code>/usr/local/nginx/sbin/nginx</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">./nginx</span><br><span class="line">nginx -s reopen #重启Nginx</span><br><span class="line">nginx -s reload #重新加载Nginx配置文件，然后以优雅的方式重启Nginx</span><br><span class="line">nginx -s stop #强制停止Nginx服务</span><br><span class="line">killall nginx #杀死所有nginx进程  </span><br><span class="line">nginx -s quit #优雅地停止Nginx服务（即处理完所有请求后再停止服务）</span><br><span class="line">nginx -t #检测配置文件是否有语法错误，然后退出</span><br><span class="line">nginx -v #显示版本信息并退出</span><br><span class="line">nginx -V #显示版本和配置选项信息，然后退出</span><br><span class="line">nginx -t #检测配置文件是否有语法错误，然后退出</span><br><span class="line">nginx -T #检测配置文件是否有语法错误，转储并退出</span><br><span class="line">nginx -q #在检测配置文件期间屏蔽非错误信息</span><br><span class="line">nginx -?,-h #打开帮助信息  </span><br><span class="line">nginx -p prefix #设置前缀路径(默认是:/usr/share/nginx/)</span><br><span class="line">nginx -c filename #设置配置文件(默认是:/etc/nginx/nginx.conf)</span><br><span class="line">nginx -g directives #设置配置文件外的全局指令</span><br></pre></td></tr></table></figure>
-
-<h2 id="error"><a href="#error" class="headerlink" title="error"></a>error</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getpwnam(&quot;nginx&quot;) failed //没有找到nginx用户</span><br></pre></td></tr></table></figure>
-<p>nginx编译安装之后，启动出现了：nginx: [emerg] getpwnam(“nginx”) failed<br>这个是因为我编译安装nginx的时候指定了–user&#x3D;nginx和–group&#x3D;nginx，去除就没事了<br>但是出于安全性考虑，还是用独立权限的账户运行（root权限太大，web渗透的时候可利用的机会太多了）</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd -s /sbin/nologin -M nginx</span><br><span class="line">mkdir -p  /var/cache/nginx/client_temp</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/06/Nginx%20Notes/" data-id="clr1k5drr000vpcvn51jcbrci" data-title="Nginx Notes" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Blogs-Articles/" rel="tag">Blogs Articles</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Markdown 语法（一级标题）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/SakuraGw_Kotoko/2024/01/06/Markdown%20%E8%AF%AD%E6%B3%95%EF%BC%88%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98%EF%BC%89/" class="article-date">
-  <time class="dt-published" datetime="2024-01-06T04:02:53.785Z" itemprop="datePublished">2024-01-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/SakuraGw_Kotoko/2024/01/06/Markdown%20%E8%AF%AD%E6%B3%95%EF%BC%88%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98%EF%BC%89/">Markdown 语法（一级标题）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="Markdown-语法（一级标题）"><a href="#Markdown-语法（一级标题）" class="headerlink" title="Markdown 语法（一级标题）"></a>Markdown 语法（一级标题）</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h1 id="下划线一级标题（任意个-）"><a href="#下划线一级标题（任意个-）" class="headerlink" title="下划线一级标题（任意个&#x3D;）"></a>下划线一级标题（任意个&#x3D;）</h1><h2 id="下划线二级标题（任意个-）"><a href="#下划线二级标题（任意个-）" class="headerlink" title="下划线二级标题（任意个-）"></a>下划线二级标题（任意个-）</h2><p><strong>强调粗体（前后两个星星）</strong></p>
-<p><strong>强调粗体（前后两个下划线）</strong></p>
-<p><em>斜体（前后一个星星）</em></p>
-<p><em>斜体（前后一个下划线）</em></p>
-<blockquote>
-<p>引用与嵌套引用</p>
-</blockquote>
-<blockquote>
-<p>Dorothy followed her through many of the beautiful rooms in her castle.</p>
-<blockquote>
-<p>The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</p>
-</blockquote>
-</blockquote>
-<ol>
-<li>有序列表</li>
-<li>与开头数字有关</li>
-<li>与顺序无关<ol>
-<li>可嵌套</li>
-<li>四个空格</li>
-</ol>
-</li>
-</ol>
-<ul>
-<li>无序列表<ul>
-<li>可嵌套<ul>
-<li>（-*+都可以）</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>句子中的<code>代码</code>短语</p>
-<p><code>一整句的转义`引号中的代码` </code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码块三个引号</span><br></pre></td></tr></table></figure>
-
-<pre><code>&lt;h1&gt;
-  或者缩进也行
-&lt;/h1&gt;
-</code></pre>
-<p>加入一个 <a target="_blank" rel="noopener" href="https://www.baidu.com/" title="Title:百度首页">百度链接</a></p>
-<p>单链接 <a target="_blank" rel="noopener" href="https://www.baidu.com/">https://www.baidu.com/</a><br>email <a href="mailto:&#100;&#x79;&#x73;&#x6f;&#x6e;&#x2e;&#x77;&#x61;&#x6e;&#103;&#64;&#111;&#x75;&#116;&#x6c;&#111;&#x6f;&#107;&#x2e;&#x63;&#111;&#x6d;">&#100;&#x79;&#x73;&#x6f;&#x6e;&#x2e;&#x77;&#x61;&#x6e;&#103;&#64;&#111;&#x75;&#116;&#x6c;&#111;&#x6f;&#107;&#x2e;&#x63;&#111;&#x6d;</a></p>
-<p>带格式化的链接<br>I love supporting the <strong><a target="_blank" rel="noopener" href="https://eff.org/">EFF</a></strong>.<br>This is the <em><a target="_blank" rel="noopener" href="https://www.markdownguide.org/">Markdown Guide</a></em>.<br>See the section on <a href="#%E4%B8%89%E7%BA%A7%E6%A0%87%E9%A2%98"><code>code</code></a>.</p>
-<p>Albedo.jpg<br><a target="_blank" rel="noopener" href="https://zh.moegirl.org.cn/%E9%98%BF%E8%B4%9D%E5%A4%9A" title="萌娘百科-阿贝多"><img src="C:\Users\Dyson\Pictures\Saved Pictures\albedo.jpg" width="60%" /></a></p>
-<p>* 转义字符<code>\</code></p>
-<hr>
-<p>分（加空行）</p>
-<hr>
-<p>隔</p>
-<hr>
-<p>线</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/06/Markdown%20%E8%AF%AD%E6%B3%95%EF%BC%88%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98%EF%BC%89/" data-id="clr1k5drq000spcvn7at2hqne" data-title="Markdown 语法（一级标题）" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Blogs-Articles/" rel="tag">Blogs Articles</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-mariadb" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/SakuraGw_Kotoko/2024/01/06/mariadb/" class="article-date">
-  <time class="dt-published" datetime="2024-01-06T04:02:53.783Z" itemprop="datePublished">2024-01-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/SakuraGw_Kotoko/2024/01/06/mariadb/">mariadb</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="mariadb"><a href="#mariadb" class="headerlink" title="mariadb"></a>mariadb</h1><h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y mariadb-server</span><br><span class="line"></span><br><span class="line">sudo systemctl status mariadb</span><br><span class="line"></span><br><span class="line">sudo systemctl start mariadb</span><br><span class="line"></span><br><span class="line">sudo systemctl enable mariadb</span><br><span class="line"></span><br><span class="line">sudo mysql_secure_installation</span><br><span class="line"></span><br><span class="line">sudo mysql</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/06/mariadb/" data-id="clr1k5dry001lpcvndaq12rtj" data-title="mariadb" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Blogs-Articles/" rel="tag">Blogs Articles</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-mac" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/SakuraGw_Kotoko/2024/01/06/mac/" class="article-date">
-  <time class="dt-published" datetime="2024-01-06T04:02:53.781Z" itemprop="datePublished">2024-01-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/SakuraGw_Kotoko/2024/01/06/mac/">mac</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="mac"><a href="#mac" class="headerlink" title="mac"></a>mac</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python macrecovery.py -b Mac-4B682C642B45593E -m 00000000000000000 download</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c:\&quot;Program Files&quot;\qemu\qemu-img convert -O vmdk -o compat6 BaseSystem.dmg recovery.vmdk</span><br></pre></td></tr></table></figure>
-
-<p>.vmx </p>
-<p>ethenet0 &#x3D; “vmxnet3”</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/06/mac/" data-id="clr1k5drx001jpcvn3wn410hz" data-title="mac" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Private/" rel="tag">Private</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
     <article id="post-Logs" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/SakuraGw_Kotoko/2024/01/06/Logs/" class="article-date">
-  <time class="dt-published" datetime="2024-01-06T04:02:53.779Z" itemprop="datePublished">2024-01-06</time>
+    <a href="/SakuraGw_Kotoko/2023/04/19/Logs/" class="article-date">
+  <time class="dt-published" datetime="2023-04-19T03:23:25.000Z" itemprop="datePublished">2023-04-19</time>
 </a>
     
   </div>
@@ -522,7 +88,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/SakuraGw_Kotoko/2024/01/06/Logs/">Logs</a>
+      <a class="p-name article-title" href="/SakuraGw_Kotoko/2023/04/19/Logs/">Logs</a>
     </h1>
   
 
@@ -542,7 +108,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/06/Logs/" data-id="clr1k5drn000lpcvn64ojew71" data-title="Logs" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/04/19/Logs/" data-id="clr1uqlki000oh8vn5mlhfrpr" data-title="Logs" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -556,10 +122,10 @@
 
 
   
-    <article id="post-linux" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-BND" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/SakuraGw_Kotoko/2024/01/06/linux/" class="article-date">
-  <time class="dt-published" datetime="2024-01-06T04:02:53.778Z" itemprop="datePublished">2024-01-06</time>
+    <a href="/SakuraGw_Kotoko/2023/04/17/BND/" class="article-date">
+  <time class="dt-published" datetime="2023-04-17T12:18:09.000Z" itemprop="datePublished">2023-04-17</time>
 </a>
     
   </div>
@@ -570,7 +136,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/SakuraGw_Kotoko/2024/01/06/linux/">linux</a>
+      <a class="p-name article-title" href="/SakuraGw_Kotoko/2023/04/17/BND/">BND</a>
     </h1>
   
 
@@ -578,25 +144,442 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2><ul>
-<li>git</li>
-<li>nodejs</li>
-<li>docker</li>
-<li>kubernetes</li>
-<li>ngnix</li>
-<li>mariadb</li>
-<li>gitlab</li>
-<li>github</li>
+        <h1 id="BND"><a href="#BND" class="headerlink" title="BND"></a>BND</h1><p>设每个用户下每个命名空间，可以单独配置一个数据库用于所建云函数的链接。</p>
+<h3 id="新建函数"><a href="#新建函数" class="headerlink" title="新建函数"></a>新建函数</h3><p>API种类<br>1、数据库交互<br>2、静态资源上传与请求<br>3、函数内运算响应</p>
+<p>沙箱逃逸</p>
+<p>vm</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const vm = require(&#x27;vm&#x27;);</span><br><span class="line">vm.runInNewContext(&#x27;this.constructor.constructor(&quot;return process&quot;)().exit()&#x27;);</span><br><span class="line">console.log(&#x27;Never gets executed.&#x27;);</span><br></pre></td></tr></table></figure>
+<p>vm2</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const &#123;VM&#125; = require(&#x27;vm2&#x27;);</span><br><span class="line">new VM().run(&#x27;this.constructor.constructor(&quot;return process&quot;)().exit()&#x27;);</span><br><span class="line">// Throws ReferenceError: process is not defined</span><br></pre></td></tr></table></figure>
+
+<h1 id="API"><a href="#API" class="headerlink" title="API"></a>API</h1><h2 id="func部分"><a href="#func部分" class="headerlink" title="func部分"></a>func部分</h2><h3 id="调用函数-GET方法"><a href="#调用函数-GET方法" class="headerlink" title="调用函数(GET方法)"></a>调用函数(GET方法)</h3><p><strong>GET</strong> <em>&#x2F;faas&#x2F;:id</em></p>
+<p><strong>return</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  //标准返回对象</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="调用函数-POST方法"><a href="#调用函数-POST方法" class="headerlink" title="调用函数(POST方法)"></a>调用函数(POST方法)</h3><p><strong>POST</strong> <em>&#x2F;faas&#x2F;:id</em></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  //示例对象</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>return</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  //标准返回对象</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="backend部分"><a href="#backend部分" class="headerlink" title="backend部分"></a>backend部分</h2><h3 id="添加函数"><a href="#添加函数" class="headerlink" title="添加函数"></a>添加函数</h3><p><strong>POST</strong> <em>&#x2F;addfunc</em></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  user-token,</span><br><span class="line">  codeStr:String, //代码字符串</span><br><span class="line">  method:String, //函数方法</span><br><span class="line">  objScan:Object, //输入实例对象</span><br><span class="line">  comment:String, //函数功能备注</span><br><span class="line">  maxruntime</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>return</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  status,</span><br><span class="line">  message,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="请求函数列表"><a href="#请求函数列表" class="headerlink" title="请求函数列表"></a>请求函数列表</h3><h4 id="用户下全部函数"><a href="#用户下全部函数" class="headerlink" title="用户下全部函数"></a>用户下全部函数</h4><p><strong>GET</strong> <em>&#x2F;funclist</em></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">user-token</span><br></pre></td></tr></table></figure>
+
+<p><strong>return</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  funcarray:Array[&#123;</span><br><span class="line">      functionid,</span><br><span class="line">      createTime,</span><br><span class="line">      invokeTimes,</span><br><span class="line">      namespaceid,</span><br><span class="line">      master,</span><br><span class="line">      ...</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="命名空间下全部函数"><a href="#命名空间下全部函数" class="headerlink" title="命名空间下全部函数"></a>命名空间下全部函数</h4><p><strong>GET</strong> <em>&#x2F;funclist&#x2F;:namespaceid</em></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">user-token</span><br></pre></td></tr></table></figure>
+
+<p><strong>return</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  funcarray:Array[&#123;</span><br><span class="line">      functionid,</span><br><span class="line">      createTime,</span><br><span class="line">      invokeTimes,</span><br><span class="line">      namespaceid,</span><br><span class="line">      master,</span><br><span class="line">      ...</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/04/17/BND/" data-id="clr1uqljw0000h8vn8x3c4diu" data-title="BND" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Private/" rel="tag">Private</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Serverless in linux" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/SakuraGw_Kotoko/2023/04/09/Serverless%20in%20linux/" class="article-date">
+  <time class="dt-published" datetime="2023-04-09T07:13:31.000Z" itemprop="datePublished">2023-04-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/SakuraGw_Kotoko/2023/04/09/Serverless%20in%20linux/">Serverless in linux</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Serverless-in-linux"><a href="#Serverless-in-linux" class="headerlink" title="Serverless in linux"></a>Serverless in linux</h1><h2 id="rocky-linux-安装-git、nodejs"><a href="#rocky-linux-安装-git、nodejs" class="headerlink" title="rocky linux 安装 git、nodejs"></a>rocky linux 安装 git、nodejs</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install git nodejs</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/04/09/Serverless%20in%20linux/" data-id="clr1uqlkp0019h8vn2v5084qx" data-title="Serverless in linux" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Private/" rel="tag">Private</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-三月学习大纲" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/SakuraGw_Kotoko/2023/02/24/%E4%B8%89%E6%9C%88%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/" class="article-date">
+  <time class="dt-published" datetime="2023-02-24T11:01:12.000Z" itemprop="datePublished">2023-02-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/SakuraGw_Kotoko/2023/02/24/%E4%B8%89%E6%9C%88%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/">三月学习大纲</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="三月学习大纲"><a href="#三月学习大纲" class="headerlink" title="三月学习大纲"></a>三月学习大纲</h1><p>8：00 - 12：00 离散数学</p>
+<p>14：00 - 18：00 英语听说、数据库</p>
+<p>19：00 - 23：00 LeetCode Dev-C++ 专业课复习</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/02/24/%E4%B8%89%E6%9C%88%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/" data-id="clr1uqlkx001vh8vn6q3odm5u" data-title="三月学习大纲" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/%E8%B4%A6%E5%8F%B7/" rel="tag">账号</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-graduate exam" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/SakuraGw_Kotoko/2022/10/08/graduate%20exam/" class="article-date">
+  <time class="dt-published" datetime="2022-10-08T00:53:25.000Z" itemprop="datePublished">2022-10-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/SakuraGw_Kotoko/2022/10/08/graduate%20exam/">graduate exam</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="graduate-exam"><a href="#graduate-exam" class="headerlink" title="graduate exam"></a>graduate exam</h1><h2 id="十月底强化结束"><a href="#十月底强化结束" class="headerlink" title="十月底强化结束"></a>十月底强化结束</h2><p>英语长难句梳理，单词！！！（五星紧急）3h</p>
+<p>可以开始做真题了，数二 刷！！！</p>
+<p>政治看课，做每章课后题 3h</p>
+<p>李永乐强化视频跟完，108、330、其他题 4h</p>
+<p>17堂课梳理知识点</p>
+<p>408大题+教材 4h</p>
+<h2 id="11-12月卷子真题-政治"><a href="#11-12月卷子真题-政治" class="headerlink" title="11 12月卷子真题+政治"></a>11 12月卷子真题+政治</h2><p>英语直接英一英二80-22真题</p>
+<p>政治肖四肖八+94-22真题</p>
+<p>数学87-22真题+挑几套模拟做做</p>
+<p>408 王道天勤8套模拟，09-22真题</p>
+<p>模拟卷+真题卷</p>
+<h2 id="平板资料"><a href="#平板资料" class="headerlink" title="平板资料"></a>平板资料</h2><p>徐涛课后习题，看答案，看解析视频</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/10/08/graduate%20exam/" data-id="clr1uqlkr001hh8vn5xw874ef" data-title="graduate exam" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Private/" rel="tag">Private</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-rancher monitor api" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/SakuraGw_Kotoko/2022/09/22/rancher%20monitor%20api/" class="article-date">
+  <time class="dt-published" datetime="2022-09-22T08:21:18.000Z" itemprop="datePublished">2022-09-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/SakuraGw_Kotoko/2022/09/22/rancher%20monitor%20api/">rancher monitor api</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="rancher-monitor-api"><a href="#rancher-monitor-api" class="headerlink" title="rancher monitor api"></a>rancher monitor api</h1><p>CPU SYSTEM</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">URL/k8s/clusters/$&#123;cluster-id&#125;/api/v1/namespaces/cattle-monitoring-system/services/http:rancher-monitoring-grafana:80/proxy/api/datasources/proxy/1/api/v1/query_range?query=(sum(rate(container_cpu_system_seconds_total&#123;namespace=~&quot;$&#123;namespace-id&#125;&quot;&#125;[240s])) by (pod) OR sum(rate(windows_container_cpu_usage_seconds_kernelmode&#123;namespace=~&quot;$&#123;namespace-id&#125;&quot;&#125;[240s])) by (pod)) * on(pod) kube_pod_info&#123;namespace=~&quot;$&#123;namespace-id&#125;&quot;, created_by_kind=&quot;$&#123;type&#125;&quot;, created_by_name=&quot;$&#123;resource-id&#125;&quot;&#125;&amp;start=$&#123;time-start&#125;&amp;end=$&#123;time-end&#125;&amp;step=$&#123;step&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/22/rancher%20monitor%20api/" data-id="clr1uqlkx001th8vn72is1wzg" data-title="rancher monitor api" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Private/" rel="tag">Private</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-React-Router" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/SakuraGw_Kotoko/2022/09/11/React-Router/" class="article-date">
+  <time class="dt-published" datetime="2022-09-11T03:10:45.000Z" itemprop="datePublished">2022-09-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/SakuraGw_Kotoko/2022/09/11/React-Router/">React-Router</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="React-Router"><a href="#React-Router" class="headerlink" title="React-Router"></a>React-Router</h1><p>React Router 中有三种类型的组件： router components, route matching components，和 navigation components。</p>
+<h2 id="React-router-dom"><a href="#React-router-dom" class="headerlink" title="React-router-dom"></a>React-router-dom</h2><h3 id="router-components"><a href="#router-components" class="headerlink" title="router components"></a>router components</h3><h4 id=""><a href="#" class="headerlink" title="&lt;Router&gt;"></a><code>&lt;Router&gt;</code></h4><p>Router 是所有路由组件共用的底层接口。通常，我们的应用程序将使用其中一个高级路由器代替：</p>
+<ul>
+<li><code>&lt;BrowserRouter&gt;</code></li>
+<li><code>&lt;HashRouter&gt;</code></li>
+<li><code>&lt;MemoryRouter&gt;</code></li>
+<li><code>&lt;NativeRouter&gt;</code></li>
+<li><code>&lt;StaticRouter&gt;</code></li>
+</ul>
+<p>最常见的使用底层的 <Router> 的情形就是用来与 Redux 或者 Mobx 之类的状态管理库的定制的 history 保持同步。注意不是说使用状态管理库就必须使用 React Router ，它仅用作于深度集成。</p>
+<h4 id="-1"><a href="#-1" class="headerlink" title="&lt;BrowserRouter&gt;"></a><code>&lt;BrowserRouter&gt;</code></h4><h4 id="-2"><a href="#-2" class="headerlink" title="&lt;HashRouter&gt;"></a><code>&lt;HashRouter&gt;</code></h4><h4 id="-3"><a href="#-3" class="headerlink" title="&lt;MemoryRouter&gt;"></a><code>&lt;MemoryRouter&gt;</code></h4><h4 id="-4"><a href="#-4" class="headerlink" title="&lt;NativeRouter&gt;"></a><code>&lt;NativeRouter&gt;</code></h4><h4 id="-5"><a href="#-5" class="headerlink" title="&lt;StaticRouter&gt;"></a><code>&lt;StaticRouter&gt;</code></h4><h3 id="route-matching-components"><a href="#route-matching-components" class="headerlink" title="route matching components"></a>route matching components</h3><h4 id="Route"><a href="#Route" class="headerlink" title="Route"></a><code>Route</code></h4><p>没有路径总会匹配挂载，如果不需要请用<code>Switch</code></p>
+<p>以下所有的三种渲染方法都会通过三个相同的Route属性</p>
+<ul>
+<li>match</li>
+<li>location</li>
+<li>history</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/06/linux/" data-id="clr1k5drx001hpcvngrq339ci" data-title="linux" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/11/React-Router/" data-id="clr1uqlkm0013h8vnaetp2ryj" data-title="React-Router" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Blogs-Articles/" rel="tag">Blogs Articles</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Github" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/SakuraGw_Kotoko/2022/09/11/Github/" class="article-date">
+  <time class="dt-published" datetime="2022-09-11T02:34:29.000Z" itemprop="datePublished">2022-09-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/SakuraGw_Kotoko/2022/09/11/Github/">Github</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h1><ol>
+<li>获取GitHub官方CDN地址</li>
+</ol>
+<p>首先,打开</p>
+<p>The Best IP Address, Email and Networking Tools<br>​<a target="_blank" rel="noopener" href="http://www.ipaddress.com/">www.ipaddress.com/</a><br>查询以下三个链接的DNS解析地址</p>
+<p>github.com<br>assets-cdn.github.com<br>github.global.ssl.fastly.net</p>
+<p>140.82.113.4<br>185.199.108.153<br>151.101.1.194</p>
+<ol start="2">
+<li>修改系统Hosts文件</li>
+</ol>
+<p>接着,打开系统hosts文件(需管理员权限)。<br>路径：C:\Windows\System32\drivers\etc</p>
+<p>mac或者其他linux系统的话,是&#x2F;etc下的hosts文件,需要切入到root用户修改</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"># Copyright (c) 1993-2009 Microsoft Corp. </span><br><span class="line"># </span><br><span class="line"># This is a sample HOSTS file used by Microsoft TCP/IP for Windows. </span><br><span class="line"># </span><br><span class="line"># This file contains the mappings of IP addresses to host names. Each </span><br><span class="line"># entry should be kept on an individual line. The IP address should </span><br><span class="line"># be placed in the first column followed by the corresponding host name. </span><br><span class="line"># The IP address and the host name should be separated by at least one </span><br><span class="line"># space. </span><br><span class="line"># </span><br><span class="line"># Additionally, comments (such as these) may be inserted on individual </span><br><span class="line"># lines or following the machine name denoted by a &#x27;#&#x27; symbol. </span><br><span class="line"># </span><br><span class="line"># For example: </span><br><span class="line"># </span><br><span class="line">#      102.54.94.97     rhino.acme.com          # source server </span><br><span class="line">#       38.25.63.10     x.acme.com              # x client host </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># localhost name resolution is handled within DNS itself. </span><br><span class="line">#   127.0.0.1       localhost </span><br><span class="line">#   ::1             localhost </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">140.82.113.3    github.com</span><br><span class="line">185.199.108.153 assets-cdn.github.com</span><br><span class="line">199.232.69.194  github.global.ssl.fastly.net</span><br></pre></td></tr></table></figure>
+<p>并在末尾添加三行记录并保存。(需管理员权限，注意IP地址与域名间需留有空格)<br>感谢评论区<br>@trans-bug<br> 的分享， 对于ubuntu系统，修改完hosts文件执行如下命令: sudo &#x2F;etc&#x2F;init.d&#x2F;network-manager restart<br>3. 刷新系统DNS缓存</p>
+<p>最后,Windows+X 打开系统命令行（管理员身份）或powershell</p>
+<p>运行 <code>ipconfig /flushdns</code> 手动刷新系统DNS缓存。</p>
+<ul>
+<li>mac系统修改完hosts文件,保存并退出就可以了.不要要多一步刷新操作.</li>
+<li>centos系统执行&#x2F;etc&#x2F;init.d&#x2F;network restart命令 使得hosts生效</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/11/Github/" data-id="clr1uqlkb0008h8vn50pw5t7k" data-title="Github" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Private/" rel="tag">Private</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-TO-DO Items" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/SakuraGw_Kotoko/2022/09/11/TO-DO%20Items/" class="article-date">
+  <time class="dt-published" datetime="2022-09-11T01:43:21.000Z" itemprop="datePublished">2022-09-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/SakuraGw_Kotoko/2022/09/11/TO-DO%20Items/">TO-DO Items</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="TO-DO-Items"><a href="#TO-DO-Items" class="headerlink" title="TO-DO Items"></a>TO-DO Items</h1><h2 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h2><ul>
+<li>js-cookie npm package</li>
+<li>react-highlight-words</li>
+<li>react-router-dom</li>
+<li>react-ace</li>
+<li>craco</li>
+<li>reduxjs&#x2F;toolkit</li>
+</ul>
+<h2 id="mathematics"><a href="#mathematics" class="headerlink" title="mathematics"></a>mathematics</h2><h2 id="CS-Basics"><a href="#CS-Basics" class="headerlink" title="CS Basics"></a>CS Basics</h2><h2 id="English"><a href="#English" class="headerlink" title="English"></a>English</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/11/TO-DO%20Items/" data-id="clr1uqlkn0015h8vnaafy6lk0" data-title="TO-DO Items" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Private/" rel="tag">Private</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Git Notes" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/SakuraGw_Kotoko/2022/09/10/Git%20Notes/" class="article-date">
+  <time class="dt-published" datetime="2022-09-10T09:32:17.000Z" itemprop="datePublished">2022-09-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/SakuraGw_Kotoko/2022/09/10/Git%20Notes/">Git Notes</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Git-Notes"><a href="#Git-Notes" class="headerlink" title="Git Notes"></a>Git Notes</h1><h2 id="git-源码安装"><a href="#git-源码安装" class="headerlink" title="git 源码安装"></a>git 源码安装</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//依赖库 gcc gcc-c++</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="git-log"><a href="#git-log" class="headerlink" title="git log "></a><code>git log </code></h3><ul>
+<li><code>-p</code> 显示diff补丁 -2 限定数量</li>
+<li><code>--stat</code> 显示简略统计信息</li>
+<li><code>--pretty</code> &#x3D;oneline一行输出 &#x3D;short,full,fuller<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git log --pretty=format:&quot;%h - %an, %ar : %s&quot;</span><br><span class="line">  ca82a6d - Scott Chacon, 6 years ago : changed the version number</span><br><span class="line">  085bb3b - Scott Chacon, 6 years ago : removed unnecessary test</span><br><span class="line">  a11bef0 - Scott Chacon, 6 years ago : first commit</span><br></pre></td></tr></table></figure>
+  <img src="/SakuraGw_Kotoko/@attachment/Clipboard_2022-09-10-17-37-34.png"></li>
+<li><img src="/SakuraGw_Kotoko/@attachment/Clipboard_2022-09-10-17-38-20.png"></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/10/Git%20Notes/" data-id="clr1uqlk90004h8vn8p6x1czj" data-title="Git Notes" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Blogs-Articles/" rel="tag">Blogs Articles</a></li></ul>
 
     </footer>
   </div>
@@ -643,7 +626,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archiv</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2024/01/">一月 2024</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2024/01/">一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/12/">十二月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/11/">十一月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/09/">九月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/04/">四月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/02/">二月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2022/09/">九月 2022</a></li></ul>
     </div>
   </div>
 
@@ -656,23 +639,23 @@
       <ul>
         
           <li>
-            <a href="/SakuraGw_Kotoko/2024/01/06/%E5%B7%B2%E9%98%85%E8%AF%BB%E6%96%87%E7%8C%AE/">已阅读文献</a>
+            <a href="/SakuraGw_Kotoko/2024/01/03/%E5%B7%B2%E9%98%85%E8%AF%BB%E6%96%87%E7%8C%AE/">已阅读文献</a>
           </li>
         
           <li>
-            <a href="/SakuraGw_Kotoko/2024/01/06/%E4%B8%89%E6%9C%88%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/">三月学习大纲</a>
+            <a href="/SakuraGw_Kotoko/2024/01/02/GitLab/">GitLab</a>
           </li>
         
           <li>
-            <a href="/SakuraGw_Kotoko/2024/01/06/Web%20Docs/">Web Docs</a>
+            <a href="/SakuraGw_Kotoko/2023/12/28/openmp/">openmp</a>
           </li>
         
           <li>
-            <a href="/SakuraGw_Kotoko/2024/01/06/TO-DO%20Items/">TO-DO Items</a>
+            <a href="/SakuraGw_Kotoko/2023/11/02/Gem5/">Gem5</a>
           </li>
         
           <li>
-            <a href="/SakuraGw_Kotoko/2024/01/06/Serverless%20in%20linux/">Serverless in linux</a>
+            <a href="/SakuraGw_Kotoko/2023/09/21/mariadb/">mariadb</a>
           </li>
         
       </ul>

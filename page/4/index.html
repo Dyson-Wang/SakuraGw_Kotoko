@@ -74,10 +74,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Git Notes" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-Linux Notes (2)" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/SakuraGw_Kotoko/2024/01/06/Git%20Notes/" class="article-date">
-  <time class="dt-published" datetime="2024-01-06T04:02:53.759Z" itemprop="datePublished">2024-01-06</time>
+    <a href="/SakuraGw_Kotoko/2022/09/05/Linux%20Notes%20(2)/" class="article-date">
+  <time class="dt-published" datetime="2022-09-05T10:52:59.000Z" itemprop="datePublished">2022-09-05</time>
 </a>
     
   </div>
@@ -88,7 +88,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/SakuraGw_Kotoko/2024/01/06/Git%20Notes/">Git Notes</a>
+      <a class="p-name article-title" href="/SakuraGw_Kotoko/2022/09/05/Linux%20Notes%20(2)/">Linux Notes</a>
     </h1>
   
 
@@ -96,55 +96,109 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="Git-Notes"><a href="#Git-Notes" class="headerlink" title="Git Notes"></a>Git Notes</h1><h2 id="git-源码安装"><a href="#git-源码安装" class="headerlink" title="git 源码安装"></a>git 源码安装</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//依赖库 gcc gcc-c++</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <h1 id="Linux-Notes"><a href="#Linux-Notes" class="headerlink" title="Linux Notes"></a>Linux Notes</h1><h3 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h3><p><code>su</code> 切换用户</p>
+<h3 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h3><p><code>/etc/sysconfig/network-scripts/ifcfg-ens33</code> 网卡ens33配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">BOOTPROTO=(static|dhcp)</span><br><span class="line">...</span><br><span class="line">ONBOOT=yes</span><br><span class="line"># 固定IP地址</span><br><span class="line">IPADDR=192.168.131.138</span><br><span class="line">NETMASK=255.255.255.0</span><br><span class="line">GATEWAY=192.168.131.2</span><br><span class="line">DNS=4.2.2.1</span><br></pre></td></tr></table></figure>
 
-<h3 id="git-log"><a href="#git-log" class="headerlink" title="git log "></a><code>git log </code></h3><ul>
-<li><code>-p</code> 显示diff补丁 -2 限定数量</li>
-<li><code>--stat</code> 显示简略统计信息</li>
-<li><code>--pretty</code> &#x3D;oneline一行输出 &#x3D;short,full,fuller<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git log --pretty=format:&quot;%h - %an, %ar : %s&quot;</span><br><span class="line">  ca82a6d - Scott Chacon, 6 years ago : changed the version number</span><br><span class="line">  085bb3b - Scott Chacon, 6 years ago : removed unnecessary test</span><br><span class="line">  a11bef0 - Scott Chacon, 6 years ago : first commit</span><br></pre></td></tr></table></figure>
-  <img src="/SakuraGw_Kotoko/@attachment/Clipboard_2022-09-10-17-37-34.png"></li>
-<li><img src="/SakuraGw_Kotoko/@attachment/Clipboard_2022-09-10-17-38-20.png"></li>
+<h3 id="系统控制"><a href="#系统控制" class="headerlink" title="系统控制"></a>系统控制</h3><p>抓取进程 <code>ps -aux | grep (filename|username)</code></p>
+<p>重启 <code>reboot</code></p>
+<p>立刻关机 <code>shutdown -h now</code></p>
+<p>查看系统发行版 <code>cat /etc/issue</code></p>
+<p>安装ifconfig <code>yum install net-tools</code></p>
+<h3 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h3><p>查看防火墙状态 systemctl status firewalld<br>开启防火墙 systemctl start firewalld<br>关闭防火墙 systemctl stop firewalld<br>开启防火墙 service firewalld start<br>若遇到无法开启<br>先用：systemctl unmask firewalld.service<br>然后：systemctl start firewalld.service</p>
+<h3 id="开放端口"><a href="#开放端口" class="headerlink" title="开放端口"></a>开放端口</h3><p>查看想开的端口是否已开：firewall-cmd –query-port&#x3D;6379&#x2F;tcp<br>添加指定需要开放的端口：firewall-cmd –add-port&#x3D;123&#x2F;tcp –permanent<br>重载入添加的端口：firewall-cmd –reload<br>查询指定端口是否开启成功：firewall-cmd –query-port&#x3D;123&#x2F;tcp<br>移除指定端口：firewall-cmd –permanent –remove-port&#x3D;123&#x2F;tcp</p>
+<h3 id="修改环境变量"><a href="#修改环境变量" class="headerlink" title="修改环境变量"></a>修改环境变量</h3><p>.bashrc 当前用户打开shell就会读取<br>&#x2F;etc&#x2F;profile env 等 系统级<br>thirdpartysoftware 保存在&#x2F;usr&#x2F;local&#x2F;src&#x2F;下</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/05/Linux%20Notes%20(2)/" data-id="clr1uqlkh000mh8vnfhrp2xln" data-title="Linux Notes" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Blogs-Articles/" rel="tag">Blogs Articles</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Markdown 语法（一级标题）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/SakuraGw_Kotoko/2022/09/05/Markdown%20%E8%AF%AD%E6%B3%95%EF%BC%88%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98%EF%BC%89/" class="article-date">
+  <time class="dt-published" datetime="2022-09-05T09:50:47.000Z" itemprop="datePublished">2022-09-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/SakuraGw_Kotoko/2022/09/05/Markdown%20%E8%AF%AD%E6%B3%95%EF%BC%88%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98%EF%BC%89/">Markdown 语法（一级标题）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Markdown-语法（一级标题）"><a href="#Markdown-语法（一级标题）" class="headerlink" title="Markdown 语法（一级标题）"></a>Markdown 语法（一级标题）</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h1 id="下划线一级标题（任意个-）"><a href="#下划线一级标题（任意个-）" class="headerlink" title="下划线一级标题（任意个&#x3D;）"></a>下划线一级标题（任意个&#x3D;）</h1><h2 id="下划线二级标题（任意个-）"><a href="#下划线二级标题（任意个-）" class="headerlink" title="下划线二级标题（任意个-）"></a>下划线二级标题（任意个-）</h2><p><strong>强调粗体（前后两个星星）</strong></p>
+<p><strong>强调粗体（前后两个下划线）</strong></p>
+<p><em>斜体（前后一个星星）</em></p>
+<p><em>斜体（前后一个下划线）</em></p>
+<blockquote>
+<p>引用与嵌套引用</p>
+</blockquote>
+<blockquote>
+<p>Dorothy followed her through many of the beautiful rooms in her castle.</p>
+<blockquote>
+<p>The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</p>
+</blockquote>
+</blockquote>
+<ol>
+<li>有序列表</li>
+<li>与开头数字有关</li>
+<li>与顺序无关<ol>
+<li>可嵌套</li>
+<li>四个空格</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li>无序列表<ul>
+<li>可嵌套<ul>
+<li>（-*+都可以）</li>
 </ul>
-<hr>
-<h3 id="git-commit-amend"><a href="#git-commit-amend" class="headerlink" title="git commit --amend"></a><code>git commit --amend</code></h3><p>  <img src="/SakuraGw_Kotoko/@attachment/Clipboard_2022-09-10-17-40-13.png"></p>
-<hr>
-<h4 id="git-commit-a-m-msg"><a href="#git-commit-a-m-msg" class="headerlink" title="git commit -a -m &quot;msg&quot;"></a><code>git commit -a -m &quot;msg&quot;</code></h4><p>提交所有跟踪的文件（不包括新建的），省去了add</p>
-<h3 id="git-reset-HEAD"><a href="#git-reset-HEAD" class="headerlink" title="git reset HEAD &lt;file&gt;"></a><code>git reset HEAD &lt;file&gt;</code></h3><p>取消暂存</p>
-<hr>
-<h3 id="git-checkout"><a href="#git-checkout" class="headerlink" title="git checkout -- &lt;file&gt;"></a><code>git checkout -- &lt;file&gt;</code></h3><p>用最近提交的版本覆盖现在的文件</p>
-<h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><h3 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch &lt;branchname&gt;"></a><code>git branch &lt;branchname&gt;</code></h3><p>创建分支，HEAD指针为当前分支的别名</p>
-<h3 id="git-checkout-1"><a href="#git-checkout-1" class="headerlink" title="git checkout &lt;branchname&gt;"></a><code>git checkout &lt;branchname&gt;</code></h3><p>切换分支</p>
-<h3 id="git-checkout-a"><a href="#git-checkout-a" class="headerlink" title="git checkout -a &lt;branchname&gt;"></a><code>git checkout -a &lt;branchname&gt;</code></h3><p>自动创建并切换到该分支</p>
-<h3 id="git-merge"><a href="#git-merge" class="headerlink" title="git merge &lt;branchname&gt;"></a><code>git merge &lt;branchname&gt;</code></h3><p>如果合并分支是顺序推进，则会指向一个较新的版本</p>
-<h3 id="git-merge-1"><a href="#git-merge-1" class="headerlink" title="git merge &lt;branchname&gt;"></a><code>git merge &lt;branchname&gt;</code></h3><p>寻找共同的祖先快照，git自动合并分支，如果发生冲突见下</p>
-<h3 id=""><a href="#" class="headerlink" title="&lt;merge conflict&gt;"></a><code>&lt;merge conflict&gt;</code></h3><h4 id="git-status"><a href="#git-status" class="headerlink" title="git status"></a><code>git status</code></h4><p>查看包含冲突而为合并(unmerged)的文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git merge iss53</span><br><span class="line">Auto-merging index.html</span><br><span class="line">CONFLICT (content): Merge conflict in index.html</span><br><span class="line">Automatic merge failed; fix conflicts and then commit the result.</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">You have unmerged paths.</span><br><span class="line">  (fix conflicts and run &quot;git commit&quot;)</span><br><span class="line">Unmerged paths:</span><br><span class="line">  (use &quot;git add &lt;file&gt;...&quot; to mark resolution)</span><br><span class="line">  both modified: index.html</span><br><span class="line">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</span><br></pre></td></tr></table></figure>
-<p>it looks like</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:index.html</span><br><span class="line">&lt;div id=&quot;footer&quot;&gt;contact : email.support@github.com&lt;/div&gt;</span><br><span class="line">=======</span><br><span class="line">&lt;div id=&quot;footer&quot;&gt;</span><br><span class="line"> please contact us at support@github.com</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; iss53:index.html</span><br></pre></td></tr></table></figure>
-<p>在你解决了所有文件里的冲突之后，对每个文件使用 git add 命令来将其标记为冲突已解决。 一旦暂存这 些原本有冲突的文件，Git 就会将它们标记为冲突已解决。</p>
-<hr>
-<h3 id="git-branch-v"><a href="#git-branch-v" class="headerlink" title="git branch (-v)"></a><code>git branch (-v)</code></h3><p>得到所有分支的列表，or查看每个分支的最后一个提交</p>
-<h3 id="git-branch-merged"><a href="#git-branch-merged" class="headerlink" title="git branch --merged (&lt;branchname&gt;)"></a><code>git branch --merged (&lt;branchname&gt;)</code></h3><p>查看哪些分支已经合并到当前分支，在这个列表中分支名字前没有 * 号的分支通常可以使用 git branch -d 删除掉；你已经将它们的工作整合到了另一个分支，所以并不会失去任何东西。</p>
-<h3 id="git-branch-no-merged"><a href="#git-branch-no-merged" class="headerlink" title="git branch --no-merged (&lt;branchname&gt;)"></a><code>git branch --no-merged (&lt;branchname&gt;)</code></h3><p>这里显示了其他分支。 因为它包含了还未合并的工作，尝试使用 git branch -d 命令删除它时会失败：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git branch -d testing</span><br><span class="line">error: The branch &#x27;testing&#x27; is not fully merged.</span><br><span class="line">If you are sure you want to delete it, run &#x27;git branch -D testing&#x27;.</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p>句子中的<code>代码</code>短语</p>
+<p><code>一整句的转义`引号中的代码` </code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">代码块三个引号</span><br></pre></td></tr></table></figure>
 
-<h3 id="Git-编译安装"><a href="#Git-编译安装" class="headerlink" title="Git 编译安装"></a>Git 编译安装</h3><p><code>wget [url]</code></p>
-<p><code>tar -xzvf *.tar.gz</code></p>
-<p>x extract 解压</p>
-<p>z gzip格式</p>
-<p>v 显示执行过程</p>
-<p>f 指定文件名，相当于执行后重命名</p>
-<h4 id="安装依赖项"><a href="#安装依赖项" class="headerlink" title="安装依赖项"></a>安装依赖项</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker</span><br></pre></td></tr></table></figure>
-
-<h4 id="配置安装路径"><a href="#配置安装路径" class="headerlink" title="配置安装路径"></a>配置安装路径</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure prefix=/usr/local/git/</span><br><span class="line"></span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-
-<h4 id="添加PATH到bash"><a href="#添加PATH到bash" class="headerlink" title="添加PATH到bash"></a>添加PATH到bash</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile</span><br><span class="line"></span><br><span class="line">export PATH=$PATH:/usr/local/git/bin</span><br><span class="line"></span><br><span class="line">source /etc/profile</span><br><span class="line"></span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;h1&gt;
+  或者缩进也行
+&lt;/h1&gt;
+</code></pre>
+<p>加入一个 <a target="_blank" rel="noopener" href="https://www.baidu.com/" title="Title:百度首页">百度链接</a></p>
+<p>单链接 <a target="_blank" rel="noopener" href="https://www.baidu.com/">https://www.baidu.com/</a><br>email <a href="mailto:&#100;&#121;&#x73;&#x6f;&#110;&#46;&#x77;&#97;&#x6e;&#x67;&#x40;&#111;&#x75;&#116;&#x6c;&#x6f;&#111;&#107;&#x2e;&#x63;&#x6f;&#109;">&#100;&#121;&#x73;&#x6f;&#110;&#46;&#x77;&#97;&#x6e;&#x67;&#x40;&#111;&#x75;&#116;&#x6c;&#x6f;&#111;&#107;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<p>带格式化的链接<br>I love supporting the <strong><a target="_blank" rel="noopener" href="https://eff.org/">EFF</a></strong>.<br>This is the <em><a target="_blank" rel="noopener" href="https://www.markdownguide.org/">Markdown Guide</a></em>.<br>See the section on <a href="#%E4%B8%89%E7%BA%A7%E6%A0%87%E9%A2%98"><code>code</code></a>.</p>
+<p>Albedo.jpg<br><a target="_blank" rel="noopener" href="https://zh.moegirl.org.cn/%E9%98%BF%E8%B4%9D%E5%A4%9A" title="萌娘百科-阿贝多"><img src="C:\Users\Dyson\Pictures\Saved Pictures\albedo.jpg" width="60%" /></a></p>
+<p>* 转义字符<code>\</code></p>
+<hr>
+<p>分（加空行）</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/06/Git%20Notes/" data-id="clr1k5drf0004pcvn42qqd183" data-title="Git Notes" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/05/Markdown%20%E8%AF%AD%E6%B3%95%EF%BC%88%E4%B8%80%E7%BA%A7%E6%A0%87%E9%A2%98%EF%BC%89/" data-id="clr1uqlkk000th8vn39002qzi" data-title="Markdown 语法（一级标题）" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -158,10 +212,10 @@
 
 
   
-    <article id="post-Gem5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-Web Docs" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/SakuraGw_Kotoko/2024/01/06/Gem5/" class="article-date">
-  <time class="dt-published" datetime="2024-01-06T04:02:53.757Z" itemprop="datePublished">2024-01-06</time>
+    <a href="/SakuraGw_Kotoko/2022/09/05/Web%20Docs/" class="article-date">
+  <time class="dt-published" datetime="2022-09-05T09:46:20.000Z" itemprop="datePublished">2022-09-05</time>
 </a>
     
   </div>
@@ -172,7 +226,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/SakuraGw_Kotoko/2024/01/06/Gem5/">Gem5</a>
+      <a class="p-name article-title" href="/SakuraGw_Kotoko/2022/09/05/Web%20Docs/">Web Docs</a>
     </h1>
   
 
@@ -180,63 +234,16 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="Gem5"><a href="#Gem5" class="headerlink" title="Gem5"></a>Gem5</h1>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/06/Gem5/" data-id="clr1k5dre0003pcvneavzb6vx" data-title="Gem5" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Private/" rel="tag">Private</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-docker in rocky" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/SakuraGw_Kotoko/2024/01/06/docker%20in%20rocky/" class="article-date">
-  <time class="dt-published" datetime="2024-01-06T04:02:53.756Z" itemprop="datePublished">2024-01-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/SakuraGw_Kotoko/2024/01/06/docker%20in%20rocky/">docker in rocky</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="docker-in-rocky"><a href="#docker-in-rocky" class="headerlink" title="docker in rocky"></a>docker in rocky</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y yum-utils</span><br><span class="line">sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line"></span><br><span class="line">yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line">yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// daemon.json</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    &quot;registry-mirrors&quot;: [</span><br><span class="line">        &quot;https://24fgpaf5.mirror.aliyuncs.com&quot;,</span><br><span class="line">        &quot;https://83f60d800b31479a97ed45ce119dab75.mirror.swr.myhuaweicloud.com&quot;,</span><br><span class="line">        &quot;https://hub-mirror.c.163.com&quot;,</span><br><span class="line">        &quot;https://docker.mirrors.ustc.edu.cn&quot;,</span><br><span class="line">        &quot;https://mirror.baidubce.com&quot;,</span><br><span class="line">        &quot;https://reg-mirror.qiniu.com&quot;,</span><br><span class="line">        &quot;https://mirror.ccs.tencentyun.com&quot;,</span><br><span class="line">        &quot;https://registry.docker-cn.com&quot;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl restart docker</span><br><span class="line">docker info</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo dnf check-update</span><br><span class="line">sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line">sudo dnf install docker-ce docker-ce-cli containerd.io -y</span><br><span class="line">sudo systemctl start docker</span><br><span class="line">sudo systemctl status docker</span><br><span class="line">sudo systemctl enable docker</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker pull mysql:latest</span><br><span class="line">docker images</span><br><span class="line">docker ps -a</span><br><span class="line"></span><br><span class="line">docker run -itd --name mysql-test -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 mysql</span><br></pre></td></tr></table></figure>
-
-<p>-i 以交互模式运行容器，通常与 -t 同时使用<br>-t 为容器重新分配一个伪输入终端，通常与 -i 同时使用<br>-d 后台运行容器，并返回容器ID<br>–name&#x3D;”nginx-lb”: 为容器指定一个名称<br>-e username&#x3D;”ritchie”: 设置环境变量<br>-p: 指定端口映射，格式为：主机(宿主)端口:容器端口</p>
-<h2 id="drone"><a href="#drone" class="headerlink" title="drone"></a>drone</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">docker run</span><br><span class="line">  --volume=/srv/drone:/data</span><br><span class="line">  --env=DRONE_GITLAB_SERVER=HTTP://192.168.1.104:8888</span><br><span class="line">  --env=DRONE_GITLAB_CLIENT_ID=b19a3167484bf0d283e16a57b4f4e31e63617b48ebf4fc1714a2078eecaef00c</span><br><span class="line">  --env=DRONE_GITLAB_CLIENT_SECRET=56bba1c6fa31998b6e0923c54300f60ba513b9ffcdc41696c258975ff1537f54</span><br><span class="line">  --env=DRONE_RPC_SECRET=323c3689a93a2853c38b28e78736a482</span><br><span class="line">  --env=DRONE_SERVER_HOST=192.168.1.104</span><br><span class="line">  --env=DRONE_SERVER_PROTO=http</span><br><span class="line">  --publish=32222:80</span><br><span class="line">  --publish=32221:443</span><br><span class="line">  --restart=always</span><br><span class="line">  --detach=true</span><br><span class="line">  --name=drone</span><br><span class="line">  drone/drone:latest</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">version: &#x27;3.9&#x27;</span><br><span class="line"># 创建自定义网络</span><br><span class="line">networks:</span><br><span class="line">  drone:</span><br><span class="line">    name: drone</span><br><span class="line">    driver: bridge</span><br><span class="line">services:</span><br><span class="line">  # 数据库服务</span><br><span class="line">  db:</span><br><span class="line">    image: postgres:latest</span><br><span class="line">    container_name: drone_db</span><br><span class="line">    restart: always</span><br><span class="line">    networks:</span><br><span class="line">      - drone # 加入到drone网络</span><br><span class="line">    ports:</span><br><span class="line">      - &#x27;32000:5432&#x27;</span><br><span class="line">    environment:</span><br><span class="line">      - POSTGRES_USER=drone # PGSQL默认用户</span><br><span class="line">      - POSTGRES_PASSWORD=drone # PGSQL默认密码</span><br><span class="line">      - POSTGRES_DB=drone # PGSQL默认数据库</span><br><span class="line">    volumes:</span><br><span class="line">      - /srv/drone/db:/var/lib/postgresql/data</span><br><span class="line">  # Drone Server 服务</span><br><span class="line">  server:</span><br><span class="line">    image: drone/drone:latest # 目前drone最新版本为 2.8.0</span><br><span class="line">    container_name: drone_server</span><br><span class="line">    restart: always</span><br><span class="line">    networks:</span><br><span class="line">      - drone # 加入到drone网络</span><br><span class="line">    ports:</span><br><span class="line">      - &#x27;32222:80&#x27;</span><br><span class="line">    environment:</span><br><span class="line">      - DRONE_SERVER_PROTO=http # 访问协议，创建webHooks和重定向</span><br><span class="line">      - DRONE_SERVER_HOST=192.168.1.104:32222 # 主机名称，创建webHooks和重定向</span><br><span class="line">      - DRONE_RPC_SECRET=323c3689a93a2853c38b28e78736a482 # 与 drone runner 通讯的密钥</span><br><span class="line">      - DRONE_USER_CREATE=username:root,admin:true # 管理员账户</span><br><span class="line">      - DRONE_DATABASE_DRIVER=postgres # 数据库类型</span><br><span class="line">      - DRONE_DATABASE_DATASOURCE=postgres://drone:drone@db/drone?sslmode=disable # 数据库连接</span><br><span class="line">      - DRONE_GIT_ALWAYS_AUTH=true # 使用 oauth 身份验证信息拉取代码</span><br><span class="line">      - DRONE_GITLAB_SERVER=HTTP://192.168.1.104:8888</span><br><span class="line">      - DRONE_GITLAB_CLIENT_ID=b19a3167484bf0d283e16a57b4f4e31e63617b48ebf4fc1714a2078eecaef00c</span><br><span class="line">      - DRONE_GITLAB_CLIENT_SECRET=56bba1c6fa31998b6e0923c54300f60ba513b9ffcdc41696c258975ff1537f54</span><br><span class="line">    volumes:</span><br><span class="line">      - /srv/drone/server:/data</span><br><span class="line">      - /var/run/docker.sock:/var/run/docker.sock</span><br><span class="line">    depends_on:</span><br><span class="line">      - db</span><br><span class="line">  # Drone Docker Runner</span><br><span class="line">  runner:</span><br><span class="line">    image: drone/drone-runner-docker:latest # 目前drone-runner-docker最新版本为 1.8.0</span><br><span class="line">    container_name: drone_runner</span><br><span class="line">    restart: always</span><br><span class="line">    networks:</span><br><span class="line">      - drone # 加入到drone网络</span><br><span class="line">    ports:</span><br><span class="line">      - &#x27;32220:3000&#x27;</span><br><span class="line">    environment:</span><br><span class="line">      - DRONE_RUNNER_NAME=docker-runner</span><br><span class="line">      - DRONE_RUNNER_CAPACITY=10 # 限制runner可执行的并发管道数量</span><br><span class="line">      - DRONE_RPC_PROTO=http # 访问drone server 协议</span><br><span class="line">      - DRONE_RPC_HOST=192.168.1.104:32222 # 访问drone server 服务器地址</span><br><span class="line">      - DRONE_RPC_SECRET=e1ad8a7f3dbc68ca9c21bcc949335009 # 与 drone server 通讯的密钥</span><br><span class="line">      - DRONE_UI_USERNAME=root # Drone Runner 的 UI 用户账号</span><br><span class="line">      - DRONE_UI_PASSWORD=8888 # Drone Runner 的 UI 用户密码</span><br><span class="line">    volumes:</span><br><span class="line">      - &#x27;/var/run/docker.sock:/var/run/docker.sock&#x27;</span><br><span class="line">    depends_on:</span><br><span class="line">      - server</span><br></pre></td></tr></table></figure>
+        <h1 id="Web-Docs"><a href="#Web-Docs" class="headerlink" title="Web Docs"></a>Web Docs</h1><ul>
+<li><h3 id="React-Docs-中文"><a href="#React-Docs-中文" class="headerlink" title="React Docs 中文"></a><a target="_blank" rel="noopener" href="https://zh-hans.reactjs.org/docs/getting-started.html">React Docs</a> <a target="_blank" rel="noopener" href="https://react.docschina.org/docs/getting-started.html">中文</a></h3></li>
+<li><h3 id="React-Redux-Docs-中文"><a href="#React-Redux-Docs-中文" class="headerlink" title="React Redux Docs 中文"></a><a target="_blank" rel="noopener" href="https://react-redux.js.org/">React Redux Docs</a> <a target="_blank" rel="noopener" href="https://www.redux.org.cn/docs/react-redux/">中文</a></h3></li>
+<li><h3 id="Redux-Docs-中文"><a href="#Redux-Docs-中文" class="headerlink" title="Redux Docs 中文"></a><a target="_blank" rel="noopener" href="https://redux.js.org/">Redux Docs</a> <a target="_blank" rel="noopener" href="https://cn.redux.js.org/">中文</a></h3></li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/06/docker%20in%20rocky/" data-id="clr1k5drv001bpcvnbhz4h4nc" data-title="docker in rocky" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/05/Web%20Docs/" data-id="clr1uqlkp001bh8vn1kmocejf" data-title="Web Docs" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -250,10 +257,10 @@
 
 
   
-    <article id="post-C++" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-React Notes" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/SakuraGw_Kotoko/2024/01/06/C++/" class="article-date">
-  <time class="dt-published" datetime="2024-01-06T04:02:53.754Z" itemprop="datePublished">2024-01-06</time>
+    <a href="/SakuraGw_Kotoko/2022/09/05/React%20Notes/" class="article-date">
+  <time class="dt-published" datetime="2022-09-05T09:44:29.000Z" itemprop="datePublished">2022-09-05</time>
 </a>
     
   </div>
@@ -264,7 +271,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/SakuraGw_Kotoko/2024/01/06/C++/">C++</a>
+      <a class="p-name article-title" href="/SakuraGw_Kotoko/2022/09/05/React%20Notes/">React Notes</a>
     </h1>
   
 
@@ -272,20 +279,49 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h1><h2 id="封装-encapsulation-继承-多态性"><a href="#封装-encapsulation-继承-多态性" class="headerlink" title="封装 encapsulation 继承 多态性"></a>封装 encapsulation 继承 多态性</h2><h3 id=""><a href="#" class="headerlink" title=""></a></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a.cpp 类definition</span><br><span class="line">a.h   头文件declaration</span><br><span class="line">a.ii  预处理后的代码文件 a.h + a.cpp</span><br><span class="line">a.o   目标代码</span><br><span class="line">a.out 可执行程序</span><br><span class="line">a.s   汇编代码</span><br></pre></td></tr></table></figure>
+        <h1 id="React-Notes"><a href="#React-Notes" class="headerlink" title="React Notes"></a>React Notes</h1><h2 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h2><h3 id="root-组件"><a href="#root-组件" class="headerlink" title="root 组件"></a>root 组件</h3><p><code>ReactDOM.render()</code> 已不推荐使用，使用以下新方法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const root = ReactDOM.createRoot(DOMElement);  </span><br><span class="line">root.render(&lt;Component /&gt;);</span><br></pre></td></tr></table></figure>
 
-<h3 id="条件编译"><a href="#条件编译" class="headerlink" title="条件编译"></a>条件编译</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#ifndef _如果未定义_ 常用于重复引用 多次声明定义（类）</span><br><span class="line">#define </span><br><span class="line">... 标准头文件结构</span><br><span class="line">#endif</span><br></pre></td></tr></table></figure>
+<h2 id="React项目"><a href="#React项目" class="headerlink" title="React项目"></a>React项目</h2><h3 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack webpack-cli --save-dev</span><br></pre></td></tr></table></figure>
 
-<p>cpp 编译<br>g++ –save-temps 保留中间文件 -c 只编译 -D 定义变量<br>  -m32 以32位编译 -Wall</p>
+<ul>
+<li><p><code>entry</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  entry: &#123;</span><br><span class="line">    a2: &#x27;dependingfile.js&#x27;,</span><br><span class="line">    b2: &#123;</span><br><span class="line">      dependOn: &#x27;a2&#x27;, // 当前入口所依赖的入口。它们必须在该入口被加载前被加载。</span><br><span class="line">      filename: &#x27;output.js&#x27; // 指定要输出的文件名称。</span><br><span class="line">      import: &#x27;./src/app.js&#x27;, // 启动时需加载的模块。</span><br><span class="line">      library: &#123;&#125;,</span><br><span class="line">      runtime: false, // runtime 和 dependOn 不应在同一个入口上同时使用</span><br><span class="line">      publicPath: &#x27;&#x27;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>output</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  entry: &#123;</span><br><span class="line">    app: &#x27;./src/app.js&#x27;,</span><br><span class="line">    search: &#x27;./src/search.js&#x27;,</span><br><span class="line">  &#125;,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: &#x27;[name].js&#x27;, // 使用占位符分别输出</span><br><span class="line">    path: __dirname + &#x27;/dist&#x27;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// 写入到硬盘：./dist/app.js, ./dist/search.js</span><br></pre></td></tr></table></figure></li>
+<li><p><code>loader</code></p>
+<p>loader 从右到左（或从下到上）地取值(evaluate)&#x2F;执行(execute)。在下面的示例中，从 sass-loader 开始执行，然后继续执行 css-loader，最后以 style-loader 为结束。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  module: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: /\.css$/,</span><br><span class="line">        use: [</span><br><span class="line">          &#123; loader: &#x27;style-loader&#x27; &#125;, // 支持query参数</span><br><span class="line">          &#123;</span><br><span class="line">            loader: &#x27;css-loader&#x27;,</span><br><span class="line">            options: &#123; // loader options</span><br><span class="line">              modules: true</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;,</span><br><span class="line">          &#123; loader: &#x27;sass-loader&#x27; &#125;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+<li><p><code>plugin</code></p>
+<p>webpack 插件是一个具有 apply 方法的 JavaScript 对象。</p>
+<p>由于插件可以携带参数&#x2F;选项，你必须在 webpack 配置中，向 plugins 属性传入一个 new 实例。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const HtmlWebpackPlugin = require(&#x27;html-webpack-plugin&#x27;);</span><br><span class="line">const webpack = require(&#x27;webpack&#x27;); // 访问内置的插件</span><br><span class="line">const path = require(&#x27;path&#x27;);</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line">  ...</span><br><span class="line">  plugins: [</span><br><span class="line">    new webpack.ProgressPlugin(), // 内置插件实例</span><br><span class="line">    new HtmlWebpackPlugin(&#123; template: &#x27;./src/index.html&#x27; &#125;),</span><br><span class="line">  ],</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>ProgressPlugin 用于自定义编译过程中的进度报告，HtmlWebpackPlugin 将生成一个 HTML 文件，并在其中使用 script 引入一个名为 my-first-webpack.bundle.js 的 JS 文件。</p>
+</li>
+</ul>
+<h3 id="babel"><a href="#babel" class="headerlink" title="babel"></a>babel</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install babel-loader @babel/core @babel/preset-env @babel/preset-react --save-dev</span><br><span class="line">npm install @babel/polyfill --save-dev</span><br><span class="line">npm install @babel/runtime @babel/plugin-transform-runtime @babel/plugin-syntax-dynamic-import --save-dev</span><br></pre></td></tr></table></figure>
+<p>以上插件中babel-loader主要用于高级语法转换成低级语法，它是webpack的一个loader，用来预处理文件；@babel&#x2F;core是babel的核心模块，提供转换的API；@babel&#x2F;preset-env可以根据配置的目标浏览器或者运行环境将ES5+代码自动转换为ES5代码，也是babel的一个模块；@babel&#x2F;preset-react用来解析React中的JSX语法，同样也是babel的模块。以上的模块写法中，前面加有”@”符号的写法是babel 7.0+版本的写法，具体的可以查看babel官网。</p>
+<h3 id="less-sass-css预处理器"><a href="#less-sass-css预处理器" class="headerlink" title="less&#x2F;sass css预处理器"></a>less&#x2F;sass css预处理器</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install stylus stylus-loader less less-loader sass-loader node-sass css-loader style-loader --save-dev</span><br></pre></td></tr></table></figure>
+
+<p>css-loader主要的作用是解析css文件, 像@import等动态语法；style-loader主要的作用是解析的css文件渲染到html的style标签内；stylus、less、sass是CSS的常见预处理器；stylus-loader、less-loader、sass-loader主要是将其对应的语法转换成css语法。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install postcss-loader autoprefixer --save-dev</span><br></pre></td></tr></table></figure>
+<p>但是如果我们使用CSS3的一些新特性时，需要为不同的浏览器在CSS代码中添加不同的前缀，在开发中手动添加太麻烦，所以我们可以通过postcss来自动添加各种浏览器前缀。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install file-loader url-loader --save-dev</span><br></pre></td></tr></table></figure>
+<p>解析字体、图片等静态资源</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install mini-css-extract-plugin --save-dev</span><br></pre></td></tr></table></figure>
+<p>压缩css文件，不针对less</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack-dev-server --save-dev</span><br><span class="line">npm install html-webpack-plugin --save-dev</span><br></pre></td></tr></table></figure>
+<p>代码热更新</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/06/C++/" data-id="clr1k5drb0001pcvnf0fp5y5r" data-title="C++" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/05/React%20Notes/" data-id="clr1uqlkm0011h8vn8h2z0gif" data-title="React Notes" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Programming-Language/" rel="tag">Programming Language</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Blogs-Articles/" rel="tag">Blogs Articles</a></li></ul>
 
     </footer>
   </div>
@@ -295,10 +331,10 @@
 
 
   
-    <article id="post-BND" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-rancher &amp; k8s notes" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/SakuraGw_Kotoko/2024/01/06/BND/" class="article-date">
-  <time class="dt-published" datetime="2024-01-06T04:02:53.753Z" itemprop="datePublished">2024-01-06</time>
+    <a href="/SakuraGw_Kotoko/2022/09/05/rancher%20&%20k8s%20notes/" class="article-date">
+  <time class="dt-published" datetime="2022-09-05T09:38:21.000Z" itemprop="datePublished">2022-09-05</time>
 </a>
     
   </div>
@@ -309,7 +345,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/SakuraGw_Kotoko/2024/01/06/BND/">BND</a>
+      <a class="p-name article-title" href="/SakuraGw_Kotoko/2022/09/05/rancher%20&%20k8s%20notes/">rancher &amp; k8s notes</a>
     </h1>
   
 
@@ -317,50 +353,42 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="BND"><a href="#BND" class="headerlink" title="BND"></a>BND</h1><p>设每个用户下每个命名空间，可以单独配置一个数据库用于所建云函数的链接。</p>
-<h3 id="新建函数"><a href="#新建函数" class="headerlink" title="新建函数"></a>新建函数</h3><p>API种类<br>1、数据库交互<br>2、静态资源上传与请求<br>3、函数内运算响应</p>
-<p>沙箱逃逸</p>
-<p>vm</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const vm = require(&#x27;vm&#x27;);</span><br><span class="line">vm.runInNewContext(&#x27;this.constructor.constructor(&quot;return process&quot;)().exit()&#x27;);</span><br><span class="line">console.log(&#x27;Never gets executed.&#x27;);</span><br></pre></td></tr></table></figure>
-<p>vm2</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const &#123;VM&#125; = require(&#x27;vm2&#x27;);</span><br><span class="line">new VM().run(&#x27;this.constructor.constructor(&quot;return process&quot;)().exit()&#x27;);</span><br><span class="line">// Throws ReferenceError: process is not defined</span><br></pre></td></tr></table></figure>
+        <h1 id="rancher-k8s-notes"><a href="#rancher-k8s-notes" class="headerlink" title="rancher &amp; k8s notes"></a>rancher &amp; k8s notes</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install wget expect vim net-tools ntp bash-completion ipvsadm ipset jq iptables conntrack sysstat libseccomp conntrack ipvsadm ipset jq iptables curl sysstat libseccomp wgeta vim net-toolsgit yum-utils device-mapper-persistent-data lvm2 -y</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h1 id="API"><a href="#API" class="headerlink" title="API"></a>API</h1><h2 id="func部分"><a href="#func部分" class="headerlink" title="func部分"></a>func部分</h2><h3 id="调用函数-GET方法"><a href="#调用函数-GET方法" class="headerlink" title="调用函数(GET方法)"></a>调用函数(GET方法)</h3><p><strong>GET</strong> <em>&#x2F;faas&#x2F;:id</em></p>
-<p><strong>return</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  //标准返回对象</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line"></span><br><span class="line">yum install -y docker-ce-19.03.9-3.el7</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h3 id="调用函数-POST方法"><a href="#调用函数-POST方法" class="headerlink" title="调用函数(POST方法)"></a>调用函数(POST方法)</h3><p><strong>POST</strong> <em>&#x2F;faas&#x2F;:id</em></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  //示例对象</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /etc/docker</span><br><span class="line">tee /etc/docker/daemon.json &lt;&lt;-&#x27;EOF&#x27;</span><br><span class="line">&#123;</span><br><span class="line">&quot;registry-mirrors&quot;: [&quot;https://4bsnywin.mirror.aliyuncs.com&quot;],</span><br><span class="line">&quot;exec-opts&quot;:[&quot;native.cgroupdriver=systemd&quot;]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
 
-<p><strong>return</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  //标准返回对象</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload; systemctl restart docker; systemctl enable --now docker.service</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h2 id="backend部分"><a href="#backend部分" class="headerlink" title="backend部分"></a>backend部分</h2><h3 id="添加函数"><a href="#添加函数" class="headerlink" title="添加函数"></a>添加函数</h3><p><strong>POST</strong> <em>&#x2F;addfunc</em></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  user-token,</span><br><span class="line">  codeStr:String, //代码字符串</span><br><span class="line">  method:String, //函数方法</span><br><span class="line">  objScan:Object, //输入实例对象</span><br><span class="line">  comment:String, //函数功能备注</span><br><span class="line">  maxruntime</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install chrony</span><br></pre></td></tr></table></figure>
 
-<p><strong>return</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  status,</span><br><span class="line">  message,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">cat &gt; /etc/chrony.conf &lt;&lt;-&#x27;EOF&#x27;</span><br><span class="line">pool 192.168.131.136 iburst</span><br><span class="line">driftfile /var/lib/chrony/drift</span><br><span class="line">makestep 1.0 3</span><br><span class="line">rtcsync</span><br><span class="line">allow 192.168.131.0/24</span><br><span class="line">local stratum 10</span><br><span class="line">keyfile /etc/chrony.keys</span><br><span class="line">leapsectz right/UTC</span><br><span class="line">logdir /var/log/chrony</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
 
-<h3 id="请求函数列表"><a href="#请求函数列表" class="headerlink" title="请求函数列表"></a>请求函数列表</h3><h4 id="用户下全部函数"><a href="#用户下全部函数" class="headerlink" title="用户下全部函数"></a>用户下全部函数</h4><p><strong>GET</strong> <em>&#x2F;funclist</em></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">user-token</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart chronyd.service --now</span><br><span class="line"></span><br><span class="line">chronyc -a makestep</span><br><span class="line"></span><br><span class="line">chronyc sourcestats -v</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p><strong>return</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  funcarray:Array[&#123;</span><br><span class="line">      functionid,</span><br><span class="line">      createTime,</span><br><span class="line">      invokeTimes,</span><br><span class="line">      namespaceid,</span><br><span class="line">      master,</span><br><span class="line">      ...</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">mkdir /var/log/journal</span><br><span class="line">mkdir /etc/systemd/journald.conf.d</span><br><span class="line">cat &gt; /etc/systemd/journald.conf.d/99-prophet.conf &lt;&lt;-&#x27;EOF&#x27;</span><br><span class="line">[Journal]</span><br><span class="line">#持久化保存到磁盘</span><br><span class="line">Storage=persistent</span><br><span class="line">#压缩历史日志</span><br><span class="line">Compress=yes</span><br><span class="line">SyncIntervalSec=5m</span><br><span class="line">RateLimitInterval=30s</span><br><span class="line">RateLimitBurst=1000</span><br><span class="line">#最大占用空间10G</span><br><span class="line">SystemMaxUse=10G</span><br><span class="line">#单日志文件最大200M</span><br><span class="line">SystemMaxFileSize=200M</span><br><span class="line">#日志保存时间2周</span><br><span class="line">MaxRetentionSec=2week</span><br><span class="line">#不将日志转发到syslog</span><br><span class="line">ForwardToSyslog=no</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart systemd-journald</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cat &gt; /etc/hosts &lt;&lt;-&#x27;EOF&#x27;</span><br><span class="line">127.0.0.1 localhost localhost.localdomain localhost4 localhost4.localdomain4</span><br><span class="line">::1 localhost localhost.localdomain localhost6 1ocalhost6.localdomain6</span><br><span class="line">192.168.131.129 rancher</span><br><span class="line">192.168.131.134 k8s-master-01</span><br><span class="line">192.168.131.135 k8s-node-02</span><br><span class="line">192.168.131.133 k8s-node-03</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nmtui-hostname</span><br><span class="line"></span><br><span class="line">sed -ri &#x27;s/.*swap.*/#&amp;/&#x27; /etc/fstab</span><br><span class="line"></span><br><span class="line">reboot</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h4 id="命名空间下全部函数"><a href="#命名空间下全部函数" class="headerlink" title="命名空间下全部函数"></a>命名空间下全部函数</h4><p><strong>GET</strong> <em>&#x2F;funclist&#x2F;:namespaceid</em></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">user-token</span><br></pre></td></tr></table></figure>
 
-<p><strong>return</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  funcarray:Array[&#123;</span><br><span class="line">      functionid,</span><br><span class="line">      createTime,</span><br><span class="line">      invokeTimes,</span><br><span class="line">      namespaceid,</span><br><span class="line">      master,</span><br><span class="line">      ...</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="注释：rancher主机的配置"><a href="#注释：rancher主机的配置" class="headerlink" title="注释：rancher主机的配置"></a>注释：rancher主机的配置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker pull rancher/rancher:v2.6.3-linux-amd64</span><br><span class="line"></span><br><span class="line">mkdir -p /mnt/d/rancher_data</span><br><span class="line"></span><br><span class="line">docker run -d --privileged -p 80:80 -p 443:443 -v /mnt/d/rancher_data:/var/lib/rancher/ --restart=always --name rancher-v2.6.3 rancher/rancher:v2.6.3-linux-amd64</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="最小安装-centos-配置-ifconfig-命令"><a href="#最小安装-centos-配置-ifconfig-命令" class="headerlink" title="最小安装 centos 配置 ifconfig 命令"></a>最小安装 centos 配置 ifconfig 命令</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install net-tools</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/06/BND/" data-id="clr1k5dr50000pcvnbnu9bbqz" data-title="BND" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/05/rancher%20&%20k8s%20notes/" data-id="clr1uqlkw001ph8vn7xrq5iwc" data-title="rancher &amp; k8s notes" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Private/" rel="tag">Private</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Blogs-Articles/" rel="tag">Blogs Articles</a></li></ul>
 
     </footer>
   </div>
@@ -407,7 +435,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archiv</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2024/01/">一月 2024</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2024/01/">一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/12/">十二月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/11/">十一月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/09/">九月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/04/">四月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/02/">二月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2022/09/">九月 2022</a></li></ul>
     </div>
   </div>
 
@@ -420,23 +448,23 @@
       <ul>
         
           <li>
-            <a href="/SakuraGw_Kotoko/2024/01/06/%E5%B7%B2%E9%98%85%E8%AF%BB%E6%96%87%E7%8C%AE/">已阅读文献</a>
+            <a href="/SakuraGw_Kotoko/2024/01/03/%E5%B7%B2%E9%98%85%E8%AF%BB%E6%96%87%E7%8C%AE/">已阅读文献</a>
           </li>
         
           <li>
-            <a href="/SakuraGw_Kotoko/2024/01/06/%E4%B8%89%E6%9C%88%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/">三月学习大纲</a>
+            <a href="/SakuraGw_Kotoko/2024/01/02/GitLab/">GitLab</a>
           </li>
         
           <li>
-            <a href="/SakuraGw_Kotoko/2024/01/06/Web%20Docs/">Web Docs</a>
+            <a href="/SakuraGw_Kotoko/2023/12/28/openmp/">openmp</a>
           </li>
         
           <li>
-            <a href="/SakuraGw_Kotoko/2024/01/06/TO-DO%20Items/">TO-DO Items</a>
+            <a href="/SakuraGw_Kotoko/2023/11/02/Gem5/">Gem5</a>
           </li>
         
           <li>
-            <a href="/SakuraGw_Kotoko/2024/01/06/Serverless%20in%20linux/">Serverless in linux</a>
+            <a href="/SakuraGw_Kotoko/2023/09/21/mariadb/">mariadb</a>
           </li>
         
       </ul>
