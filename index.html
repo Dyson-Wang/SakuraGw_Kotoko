@@ -62,12 +62,12 @@
       <nav id="sub-nav">
         
         
-          <a class="nav-icon" href="/SakuraGw_Kotoko/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+          <a class="nav-icon" href="/SakuraGw_Kotoko/atom.xml" title="RSS"><span class="fa fa-rss"></span></a>
         
-        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+        <a class="nav-icon nav-search-btn" title="Buscar"><span class="fa fa-search"></span></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://dyson-wang.github.io/SakuraGw_Kotoko"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Buscar"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://dyson-wang.github.io/SakuraGw_Kotoko"></form>
       </div>
     </div>
   </div>
@@ -76,9 +76,56 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-关于自己" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-server" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/SakuraGw_Kotoko/2024/01/06/%E5%85%B3%E4%BA%8E%E8%87%AA%E5%B7%B1/" class="article-date">
+    <a href="/SakuraGw_Kotoko/2024/01/07/server/" class="article-date">
+  <time class="dt-published" datetime="2024-01-07T06:38:45.000Z" itemprop="datePublished">2024-01-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/SakuraGw_Kotoko/2024/01/07/server/">server</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="server"><a href="#server" class="headerlink" title="server"></a>server</h1><h2 id="apt"><a href="#apt" class="headerlink" title="apt"></a>apt</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 清华源 /etc/apt/source.list</span><br><span class="line"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware</span><br><span class="line"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware</span><br><span class="line"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware</span><br><span class="line"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware</span><br><span class="line"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config</span><br><span class="line">#PermitRootLogin yes</span><br><span class="line">#PasswordAuthentication yes</span><br><span class="line">/etc/init.d/ssh restart</span><br></pre></td></tr></table></figure>
+
+<h2 id="第三方"><a href="#第三方" class="headerlink" title="第三方"></a>第三方</h2><h3 id="apt-下载"><a href="#apt-下载" class="headerlink" title="apt 下载"></a>apt 下载</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install -y curl vim net-tools nginx</span><br></pre></td></tr></table></figure>
+
+<h3 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">curl -O https://nginx.org/download/nginx-1.24.0.tar.gz</span><br><span class="line">tar -xzvf nginx-1.24.0.tar.gz</span><br><span class="line"># 默认托管目录</span><br><span class="line">/var/www/html/</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/07/server/" data-id="clr4apmug0022x8vnbh4ud8w1" data-title="server" class="article-share-link"><span class="fa fa-share">Compartir</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/server/" rel="tag">server</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-About me." class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/SakuraGw_Kotoko/2024/01/06/About%20me./" class="article-date">
   <time class="dt-published" datetime="2024-01-06T11:28:57.000Z" itemprop="datePublished">2024-01-06</time>
 </a>
     
@@ -90,7 +137,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/SakuraGw_Kotoko/2024/01/06/%E5%85%B3%E4%BA%8E%E8%87%AA%E5%B7%B1/">关于自己</a>
+      <a class="p-name article-title" href="/SakuraGw_Kotoko/2024/01/06/About%20me./">About me.</a>
     </h1>
   
 
@@ -98,15 +145,15 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="关于自己"><a href="#关于自己" class="headerlink" title="关于自己"></a>关于自己</h1><h2 id="WangXingHao"><a href="#WangXingHao" class="headerlink" title="WangXingHao"></a>WangXingHao</h2><h2 id="Dyson-Wang"><a href="#Dyson-Wang" class="headerlink" title="Dyson Wang"></a>Dyson Wang</h2><h2 id="樱川琴子aka-SakuraGw-Kotoko"><a href="#樱川琴子aka-SakuraGw-Kotoko" class="headerlink" title="樱川琴子aka.SakuraGw_Kotoko"></a>樱川琴子aka.SakuraGw_Kotoko</h2>
+        <h1 id="About-me"><a href="#About-me" class="headerlink" title="About me."></a>About me.</h1><h3 id="WangXingHao"><a href="#WangXingHao" class="headerlink" title="WangXingHao"></a>WangXingHao</h3><h3 id="Dyson-Wang"><a href="#Dyson-Wang" class="headerlink" title="Dyson Wang"></a>Dyson Wang</h3><h3 id="樱川琴子aka-SakuraGw-Kotoko"><a href="#樱川琴子aka-SakuraGw-Kotoko" class="headerlink" title="樱川琴子aka.SakuraGw_Kotoko"></a>樱川琴子aka.SakuraGw_Kotoko</h3>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/06/%E5%85%B3%E4%BA%8E%E8%87%AA%E5%B7%B1/" data-id="clr1zvmu1001wwwvnglqr5tjd" data-title="关于自己" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/06/About%20me./" data-id="clr4apmt90000x8vn4v33as7g" data-title="About me." class="article-share-link"><span class="fa fa-share">Compartir</span></a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/%E6%96%87%E7%8C%AE/" rel="tag">文献</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/" rel="tag">个人</a></li></ul>
 
     </footer>
   </div>
@@ -161,7 +208,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/03/%E5%B7%B2%E9%98%85%E8%AF%BB%E6%96%87%E7%8C%AE/" data-id="clr1zvmu1001ywwvn941q8l5f" data-title="已阅读文献" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/03/%E5%B7%B2%E9%98%85%E8%AF%BB%E6%96%87%E7%8C%AE/" data-id="clr4apmuh0025x8vn74gx2ph1" data-title="已阅读文献" class="article-share-link"><span class="fa fa-share">Compartir</span></a>
       
       
       
@@ -292,7 +339,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/02/GitLab/" data-id="clr1zvmt90005wwvng1x8fkdd" data-title="GitLab" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/02/GitLab/" data-id="clr4apmto0008x8vn500335lt" data-title="GitLab" class="article-share-link"><span class="fa fa-share">Compartir</span></a>
       
       
       
@@ -335,11 +382,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/12/28/openmp/" data-id="clr1zvmtx001lwwvn2unyh4ew" data-title="openmp" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/12/28/openmp/" data-id="clr4apmu7001qx8vn81k37tk0" data-title="openmp" class="article-share-link"><span class="fa fa-share">Compartir</span></a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Private/" rel="tag">Private</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/" rel="tag">个人</a></li></ul>
 
     </footer>
   </div>
@@ -375,11 +422,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/11/02/Gem5/" data-id="clr1zvmt70003wwvn5ebm1eme" data-title="Gem5" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/11/02/Gem5/" data-id="clr4apmtk0004x8vn0ssp05bb" data-title="Gem5" class="article-share-link"><span class="fa fa-share">Compartir</span></a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Private/" rel="tag">Private</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/" rel="tag">个人</a></li></ul>
 
     </footer>
   </div>
@@ -416,11 +463,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/09/21/mariadb/" data-id="clr1zvmtw001jwwvn895a83jp" data-title="mariadb" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/09/21/mariadb/" data-id="clr4apmu7001ox8vn0tia5vyr" data-title="mariadb" class="article-share-link"><span class="fa fa-share">Compartir</span></a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Blogs-Articles/" rel="tag">Blogs Articles</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li></ul>
 
     </footer>
   </div>
@@ -462,11 +509,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/09/20/Https%20Notes/" data-id="clr1zvmtd000cwwvn6nhl7h8f" data-title="Https Notes" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/09/20/Https%20Notes/" data-id="clr4apmtp000ax8vn7apx8xte" data-title="Https Notes" class="article-share-link"><span class="fa fa-share">Compartir</span></a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Blogs-Articles/" rel="tag">Blogs Articles</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li></ul>
 
     </footer>
   </div>
@@ -512,11 +559,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/09/10/linux/" data-id="clr1zvmtt001fwwvn7p2g5n1c" data-title="linux" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/09/10/linux/" data-id="clr4apmu5001gx8vnh4snaztg" data-title="linux" class="article-share-link"><span class="fa fa-share">Compartir</span></a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Private/" rel="tag">Private</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/" rel="tag">个人</a></li></ul>
 
     </footer>
   </div>
@@ -576,63 +623,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/06/24/rocky%20logs/" data-id="clr1zvmu0001twwvnhmri1u7f" data-title="rocky logs" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/06/24/rocky%20logs/" data-id="clr4apmu8001ux8vn4bsh7wjw" data-title="rocky logs" class="article-share-link"><span class="fa fa-share">Compartir</span></a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Blogs-Articles/" rel="tag">Blogs Articles</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Private/" rel="tag">Private</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-docker in rocky" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/SakuraGw_Kotoko/2023/05/09/docker%20in%20rocky/" class="article-date">
-  <time class="dt-published" datetime="2023-05-09T11:19:11.000Z" itemprop="datePublished">2023-05-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/SakuraGw_Kotoko/2023/05/09/docker%20in%20rocky/">docker in rocky</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="docker-in-rocky"><a href="#docker-in-rocky" class="headerlink" title="docker in rocky"></a>docker in rocky</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y yum-utils</span><br><span class="line">sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line"></span><br><span class="line">yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line">yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// daemon.json</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    &quot;registry-mirrors&quot;: [</span><br><span class="line">        &quot;https://24fgpaf5.mirror.aliyuncs.com&quot;,</span><br><span class="line">        &quot;https://83f60d800b31479a97ed45ce119dab75.mirror.swr.myhuaweicloud.com&quot;,</span><br><span class="line">        &quot;https://hub-mirror.c.163.com&quot;,</span><br><span class="line">        &quot;https://docker.mirrors.ustc.edu.cn&quot;,</span><br><span class="line">        &quot;https://mirror.baidubce.com&quot;,</span><br><span class="line">        &quot;https://reg-mirror.qiniu.com&quot;,</span><br><span class="line">        &quot;https://mirror.ccs.tencentyun.com&quot;,</span><br><span class="line">        &quot;https://registry.docker-cn.com&quot;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl restart docker</span><br><span class="line">docker info</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo dnf check-update</span><br><span class="line">sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line">sudo dnf install docker-ce docker-ce-cli containerd.io -y</span><br><span class="line">sudo systemctl start docker</span><br><span class="line">sudo systemctl status docker</span><br><span class="line">sudo systemctl enable docker</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker pull mysql:latest</span><br><span class="line">docker images</span><br><span class="line">docker ps -a</span><br><span class="line"></span><br><span class="line">docker run -itd --name mysql-test -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 mysql</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>-i 以交互模式运行容器，通常与 -t 同时使用<br>-t 为容器重新分配一个伪输入终端，通常与 -i 同时使用<br>-d 后台运行容器，并返回容器ID<br>–name&#x3D;”nginx-lb”: 为容器指定一个名称<br>-e username&#x3D;”ritchie”: 设置环境变量<br>-p: 指定端口映射，格式为：主机(宿主)端口:容器端口</p>
-<h2 id="drone"><a href="#drone" class="headerlink" title="drone"></a>drone</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">docker run</span><br><span class="line">  --volume=/srv/drone:/data</span><br><span class="line">  --env=DRONE_GITLAB_SERVER=HTTP://192.168.1.104:8888</span><br><span class="line">  --env=DRONE_GITLAB_CLIENT_ID=b19a3167484bf0d283e16a57b4f4e31e63617b48ebf4fc1714a2078eecaef00c</span><br><span class="line">  --env=DRONE_GITLAB_CLIENT_SECRET=56bba1c6fa31998b6e0923c54300f60ba513b9ffcdc41696c258975ff1537f54</span><br><span class="line">  --env=DRONE_RPC_SECRET=323c3689a93a2853c38b28e78736a482</span><br><span class="line">  --env=DRONE_SERVER_HOST=192.168.1.104</span><br><span class="line">  --env=DRONE_SERVER_PROTO=http</span><br><span class="line">  --publish=32222:80</span><br><span class="line">  --publish=32221:443</span><br><span class="line">  --restart=always</span><br><span class="line">  --detach=true</span><br><span class="line">  --name=drone</span><br><span class="line">  drone/drone:latest</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">version: &#x27;3.9&#x27;</span><br><span class="line"># 创建自定义网络</span><br><span class="line">networks:</span><br><span class="line">  drone:</span><br><span class="line">    name: drone</span><br><span class="line">    driver: bridge</span><br><span class="line">services:</span><br><span class="line">  # 数据库服务</span><br><span class="line">  db:</span><br><span class="line">    image: postgres:latest</span><br><span class="line">    container_name: drone_db</span><br><span class="line">    restart: always</span><br><span class="line">    networks:</span><br><span class="line">      - drone # 加入到drone网络</span><br><span class="line">    ports:</span><br><span class="line">      - &#x27;32000:5432&#x27;</span><br><span class="line">    environment:</span><br><span class="line">      - POSTGRES_USER=drone # PGSQL默认用户</span><br><span class="line">      - POSTGRES_PASSWORD=drone # PGSQL默认密码</span><br><span class="line">      - POSTGRES_DB=drone # PGSQL默认数据库</span><br><span class="line">    volumes:</span><br><span class="line">      - /srv/drone/db:/var/lib/postgresql/data</span><br><span class="line">  # Drone Server 服务</span><br><span class="line">  server:</span><br><span class="line">    image: drone/drone:latest # 目前drone最新版本为 2.8.0</span><br><span class="line">    container_name: drone_server</span><br><span class="line">    restart: always</span><br><span class="line">    networks:</span><br><span class="line">      - drone # 加入到drone网络</span><br><span class="line">    ports:</span><br><span class="line">      - &#x27;32222:80&#x27;</span><br><span class="line">    environment:</span><br><span class="line">      - DRONE_SERVER_PROTO=http # 访问协议，创建webHooks和重定向</span><br><span class="line">      - DRONE_SERVER_HOST=192.168.1.104:32222 # 主机名称，创建webHooks和重定向</span><br><span class="line">      - DRONE_RPC_SECRET=323c3689a93a2853c38b28e78736a482 # 与 drone runner 通讯的密钥</span><br><span class="line">      - DRONE_USER_CREATE=username:root,admin:true # 管理员账户</span><br><span class="line">      - DRONE_DATABASE_DRIVER=postgres # 数据库类型</span><br><span class="line">      - DRONE_DATABASE_DATASOURCE=postgres://drone:drone@db/drone?sslmode=disable # 数据库连接</span><br><span class="line">      - DRONE_GIT_ALWAYS_AUTH=true # 使用 oauth 身份验证信息拉取代码</span><br><span class="line">      - DRONE_GITLAB_SERVER=HTTP://192.168.1.104:8888</span><br><span class="line">      - DRONE_GITLAB_CLIENT_ID=b19a3167484bf0d283e16a57b4f4e31e63617b48ebf4fc1714a2078eecaef00c</span><br><span class="line">      - DRONE_GITLAB_CLIENT_SECRET=56bba1c6fa31998b6e0923c54300f60ba513b9ffcdc41696c258975ff1537f54</span><br><span class="line">    volumes:</span><br><span class="line">      - /srv/drone/server:/data</span><br><span class="line">      - /var/run/docker.sock:/var/run/docker.sock</span><br><span class="line">    depends_on:</span><br><span class="line">      - db</span><br><span class="line">  # Drone Docker Runner</span><br><span class="line">  runner:</span><br><span class="line">    image: drone/drone-runner-docker:latest # 目前drone-runner-docker最新版本为 1.8.0</span><br><span class="line">    container_name: drone_runner</span><br><span class="line">    restart: always</span><br><span class="line">    networks:</span><br><span class="line">      - drone # 加入到drone网络</span><br><span class="line">    ports:</span><br><span class="line">      - &#x27;32220:3000&#x27;</span><br><span class="line">    environment:</span><br><span class="line">      - DRONE_RUNNER_NAME=docker-runner</span><br><span class="line">      - DRONE_RUNNER_CAPACITY=10 # 限制runner可执行的并发管道数量</span><br><span class="line">      - DRONE_RPC_PROTO=http # 访问drone server 协议</span><br><span class="line">      - DRONE_RPC_HOST=192.168.1.104:32222 # 访问drone server 服务器地址</span><br><span class="line">      - DRONE_RPC_SECRET=e1ad8a7f3dbc68ca9c21bcc949335009 # 与 drone server 通讯的密钥</span><br><span class="line">      - DRONE_UI_USERNAME=root # Drone Runner 的 UI 用户账号</span><br><span class="line">      - DRONE_UI_PASSWORD=8888 # Drone Runner 的 UI 用户密码</span><br><span class="line">    volumes:</span><br><span class="line">      - &#x27;/var/run/docker.sock:/var/run/docker.sock&#x27;</span><br><span class="line">    depends_on:</span><br><span class="line">      - server</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/05/09/docker%20in%20rocky/" data-id="clr1zvmts001bwwvnbz4ihhvb" data-title="docker in rocky" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/Blogs-Articles/" rel="tag">Blogs Articles</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/" rel="tag">个人</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li></ul>
 
     </footer>
   </div>
@@ -646,7 +641,7 @@
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/SakuraGw_Kotoko/page/2/">2</a><a class="page-number" href="/SakuraGw_Kotoko/page/3/">3</a><a class="page-number" href="/SakuraGw_Kotoko/page/4/">4</a><a class="extend next" rel="next" href="/SakuraGw_Kotoko/page/2/">weiter &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/SakuraGw_Kotoko/page/2/">2</a><a class="page-number" href="/SakuraGw_Kotoko/page/3/">3</a><a class="page-number" href="/SakuraGw_Kotoko/page/4/">4</a><a class="extend next" rel="next" href="/SakuraGw_Kotoko/page/2/">Siguiente &raquo;</a>
   </nav>
 
 </section>
@@ -660,7 +655,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/Blogs-Articles/" rel="tag">Blogs Articles</a></li><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/Private/" rel="tag">Private</a></li><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/Programming-Language/" rel="tag">Programming Language</a></li><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/" rel="tag">个人</a></li><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/%E6%96%87%E7%8C%AE/" rel="tag">文献</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/server/" rel="tag">server</a></li><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/" rel="tag">个人</a></li><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/%E6%96%87%E7%8C%AE/" rel="tag">文献</a></li><li class="tag-list-item"><a class="tag-list-link" href="/SakuraGw_Kotoko/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a></li></ul>
     </div>
   </div>
 
@@ -668,16 +663,16 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nube de Tags</h3>
     <div class="widget tagcloud">
-      <a href="/SakuraGw_Kotoko/tags/Blogs-Articles/" style="font-size: 20px;">Blogs Articles</a> <a href="/SakuraGw_Kotoko/tags/Private/" style="font-size: 17.5px;">Private</a> <a href="/SakuraGw_Kotoko/tags/Programming-Language/" style="font-size: 15px;">Programming Language</a> <a href="/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/" style="font-size: 10px;">个人</a> <a href="/SakuraGw_Kotoko/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a> <a href="/SakuraGw_Kotoko/tags/%E6%96%87%E7%8C%AE/" style="font-size: 12.5px;">文献</a>
+      <a href="/SakuraGw_Kotoko/tags/server/" style="font-size: 10px;">server</a> <a href="/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/" style="font-size: 20px;">个人</a> <a href="/SakuraGw_Kotoko/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 16.67px;">博客</a> <a href="/SakuraGw_Kotoko/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a> <a href="/SakuraGw_Kotoko/tags/%E6%96%87%E7%8C%AE/" style="font-size: 10px;">文献</a> <a href="/SakuraGw_Kotoko/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 13.33px;">编程</a>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archivos</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2024/01/">一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/12/">十二月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/11/">十一月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/09/">九月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/04/">四月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/02/">二月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2022/09/">九月 2022</a></li></ul>
     </div>
@@ -687,12 +682,16 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Posts recientes</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/SakuraGw_Kotoko/2024/01/06/%E5%85%B3%E4%BA%8E%E8%87%AA%E5%B7%B1/">关于自己</a>
+            <a href="/SakuraGw_Kotoko/2024/01/07/server/">server</a>
+          </li>
+        
+          <li>
+            <a href="/SakuraGw_Kotoko/2024/01/06/About%20me./">About me.</a>
           </li>
         
           <li>
@@ -705,10 +704,6 @@
         
           <li>
             <a href="/SakuraGw_Kotoko/2023/12/28/openmp/">openmp</a>
-          </li>
-        
-          <li>
-            <a href="/SakuraGw_Kotoko/2023/11/02/Gem5/">Gem5</a>
           </li>
         
       </ul>
@@ -725,7 +720,7 @@
     <div id="footer-info" class="inner">
       
       &copy; 2024 Dyson Wang<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+      Construido por <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
