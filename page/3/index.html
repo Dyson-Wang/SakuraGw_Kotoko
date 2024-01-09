@@ -62,12 +62,12 @@
       <nav id="sub-nav">
         
         
-          <a class="nav-icon" href="/SakuraGw_Kotoko/atom.xml" title="RSS"><span class="fa fa-rss"></span></a>
+          <a class="nav-icon" href="/SakuraGw_Kotoko/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
         
-        <a class="nav-icon nav-search-btn" title="Buscar"><span class="fa fa-search"></span></a>
+        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Buscar"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://dyson-wang.github.io/SakuraGw_Kotoko"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://dyson-wang.github.io/SakuraGw_Kotoko"></form>
       </div>
     </div>
   </div>
@@ -75,6 +75,66 @@
 
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Github" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/SakuraGw_Kotoko/2022/09/11/Github/" class="article-date">
+  <time class="dt-published" datetime="2022-09-11T02:34:29.000Z" itemprop="datePublished">2022-09-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/SakuraGw_Kotoko/2022/09/11/Github/">Github</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h1><ol>
+<li>获取GitHub官方CDN地址</li>
+</ol>
+<p>首先,打开</p>
+<p>The Best IP Address, Email and Networking Tools<br>​<a target="_blank" rel="noopener" href="http://www.ipaddress.com/">www.ipaddress.com/</a><br>查询以下三个链接的DNS解析地址</p>
+<p>github.com<br>assets-cdn.github.com<br>github.global.ssl.fastly.net</p>
+<p>140.82.113.4<br>185.199.108.153<br>151.101.1.194</p>
+<ol start="2">
+<li>修改系统Hosts文件</li>
+</ol>
+<p>接着,打开系统hosts文件(需管理员权限)。<br>路径：C:\Windows\System32\drivers\etc</p>
+<p>mac或者其他linux系统的话,是&#x2F;etc下的hosts文件,需要切入到root用户修改</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"># Copyright (c) 1993-2009 Microsoft Corp. </span><br><span class="line"># </span><br><span class="line"># This is a sample HOSTS file used by Microsoft TCP/IP for Windows. </span><br><span class="line"># </span><br><span class="line"># This file contains the mappings of IP addresses to host names. Each </span><br><span class="line"># entry should be kept on an individual line. The IP address should </span><br><span class="line"># be placed in the first column followed by the corresponding host name. </span><br><span class="line"># The IP address and the host name should be separated by at least one </span><br><span class="line"># space. </span><br><span class="line"># </span><br><span class="line"># Additionally, comments (such as these) may be inserted on individual </span><br><span class="line"># lines or following the machine name denoted by a &#x27;#&#x27; symbol. </span><br><span class="line"># </span><br><span class="line"># For example: </span><br><span class="line"># </span><br><span class="line">#      102.54.94.97     rhino.acme.com          # source server </span><br><span class="line">#       38.25.63.10     x.acme.com              # x client host </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># localhost name resolution is handled within DNS itself. </span><br><span class="line">#   127.0.0.1       localhost </span><br><span class="line">#   ::1             localhost </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">140.82.113.3    github.com</span><br><span class="line">185.199.108.153 assets-cdn.github.com</span><br><span class="line">199.232.69.194  github.global.ssl.fastly.net</span><br></pre></td></tr></table></figure>
+<p>并在末尾添加三行记录并保存。(需管理员权限，注意IP地址与域名间需留有空格)<br>感谢评论区<br>@trans-bug<br> 的分享， 对于ubuntu系统，修改完hosts文件执行如下命令: sudo &#x2F;etc&#x2F;init.d&#x2F;network-manager restart<br>3. 刷新系统DNS缓存</p>
+<p>最后,Windows+X 打开系统命令行（管理员身份）或powershell</p>
+<p>运行 <code>ipconfig /flushdns</code> 手动刷新系统DNS缓存。</p>
+<ul>
+<li>mac系统修改完hosts文件,保存并退出就可以了.不要要多一步刷新操作.</li>
+<li>centos系统执行&#x2F;etc&#x2F;init.d&#x2F;network restart命令 使得hosts生效</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/11/Github/" data-id="clr6htjrv000514vnh3dq564n" data-title="Github" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/" rel="tag">个人</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
   
     <article id="post-TO-DO Items" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
@@ -110,7 +170,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/11/TO-DO%20Items/" data-id="clr4apmu20016x8vnaj2ecyqi" data-title="TO-DO Items" class="article-share-link"><span class="fa fa-share">Compartir</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/11/TO-DO%20Items/" data-id="clr6htjsd001a14vn54j10gu2" data-title="TO-DO Items" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -159,7 +219,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/10/Git%20Notes/" data-id="clr4apmtj0003x8vn95eqcgpm" data-title="Git Notes" class="article-share-link"><span class="fa fa-share">Compartir</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/10/Git%20Notes/" data-id="clr6htjs0000a14vnbx7d4mjf" data-title="Git Notes" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -206,7 +266,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/07/JetBrains/" data-id="clr4apmtu000mx8vn0byu0j8s" data-title="JetBrains" class="article-share-link"><span class="fa fa-share">Compartir</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/07/JetBrains/" data-id="clr6htjs6000m14vn5gw9bcvl" data-title="JetBrains" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -526,7 +586,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/06/KT-Cloud-Management/" data-id="clr4apmtu000ox8vngvryf75c" data-title="KT-Cloud-Management" class="article-share-link"><span class="fa fa-share">Compartir</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/06/KT-Cloud-Management/" data-id="clr6htjs7000o14vn10s5c42r" data-title="KT-Cloud-Management" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -582,7 +642,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/06/Nginx%20Notes/" data-id="clr4apmtx000wx8vn5q374w70" data-title="Nginx Notes" class="article-share-link"><span class="fa fa-share">Compartir</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/06/Nginx%20Notes/" data-id="clr6htjs9000w14vn7ngc9wtv" data-title="Nginx Notes" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -627,7 +687,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/06/Node.js%20&%20npm/" data-id="clr4apmty000yx8vn00p3boaq" data-title="Node.js &amp; npm" class="article-share-link"><span class="fa fa-share">Compartir</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/06/Node.js%20&%20npm/" data-id="clr6htjsa000y14vnegd46u61" data-title="Node.js &amp; npm" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -673,7 +733,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/06/Redux%20Notes/" data-id="clr4apmu20018x8vncy4v33hn" data-title="Redux Notes" class="article-share-link"><span class="fa fa-share">Compartir</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/06/Redux%20Notes/" data-id="clr6htjsd001814vn54x29oco" data-title="Redux Notes" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -719,7 +779,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/05/Go/" data-id="clr4apmtr000ex8vn4zte3n8f" data-title="Go" class="article-share-link"><span class="fa fa-share">Compartir</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/05/Go/" data-id="clr6htjrz000814vnhvhu7iha" data-title="Go" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -762,54 +822,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/05/Java/" data-id="clr4apmts000hx8vnfqyhhbyr" data-title="Java" class="article-share-link"><span class="fa fa-share">Compartir</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/SakuraGw_Kotoko/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Python" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/SakuraGw_Kotoko/2022/09/05/Python/" class="article-date">
-  <time class="dt-published" datetime="2022-09-05T12:52:31.000Z" itemprop="datePublished">2022-09-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/SakuraGw_Kotoko/2022/09/05/Python/">Python</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><h2 id="linux-安装"><a href="#linux-安装" class="headerlink" title="linux 安装"></a>linux 安装</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">curl -o [filename] [url]</span><br><span class="line">tar -[z]xvf *.tar.xz</span><br><span class="line">/usr/local/src/</span><br><span class="line">yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make</span><br><span class="line"></span><br><span class="line">build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev</span><br></pre></td></tr></table></figure>
-
-<h3 id="依赖项"><a href="#依赖项" class="headerlink" title="依赖项"></a>依赖项</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc zlib zlib1g-dev bz2</span><br></pre></td></tr></table></figure>
-
-<h2 id="API-Server"><a href="#API-Server" class="headerlink" title="API Server"></a>API Server</h2><h3 id="flask-框架，-安装flask-cors"><a href="#flask-框架，-安装flask-cors" class="headerlink" title="flask 框架， 安装flask-cors"></a>flask 框架， 安装flask-cors</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install flask</span><br><span class="line">pip install flask-cors</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">from flask import Flask, request</span><br><span class="line">from flask_cors import CORS, cross_origin</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line">CORS(app, supports_credentials=True) // 全局跨域</span><br><span class="line"></span><br><span class="line">@app.route(&#x27;/api/dyson&#x27;)</span><br><span class="line"># @cross_origin(supports_credentials=True) // 部分路由跨域</span><br><span class="line">def index():</span><br><span class="line">    return &#123;&#x27;name&#x27;: &#x27;dyson&#x27;, &#x27;msg&#x27;: &#x27;Hello Python!&#x27;&#125;</span><br><span class="line"></span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line">    app.run()</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/05/Python/" data-id="clr4apmu00010x8vncx3wglyr" data-title="Python" class="article-share-link"><span class="fa fa-share">Compartir</span></a>
+      <a data-url="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/05/Java/" data-id="clr6htjs4000h14vnb3nba6rv" data-title="Java" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
@@ -827,7 +840,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/SakuraGw_Kotoko/page/2/">&laquo; Previo</a><a class="page-number" href="/SakuraGw_Kotoko/">1</a><a class="page-number" href="/SakuraGw_Kotoko/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/SakuraGw_Kotoko/page/4/">4</a><a class="extend next" rel="next" href="/SakuraGw_Kotoko/page/4/">Siguiente &raquo;</a>
+    <a class="extend prev" rel="prev" href="/SakuraGw_Kotoko/page/2/">&laquo; zurück</a><a class="page-number" href="/SakuraGw_Kotoko/">1</a><a class="page-number" href="/SakuraGw_Kotoko/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/SakuraGw_Kotoko/page/4/">4</a><a class="extend next" rel="next" href="/SakuraGw_Kotoko/page/4/">weiter &raquo;</a>
   </nav>
 
 </section>
@@ -849,16 +862,16 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nube de Tags</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/SakuraGw_Kotoko/tags/server/" style="font-size: 10px;">server</a> <a href="/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/" style="font-size: 20px;">个人</a> <a href="/SakuraGw_Kotoko/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 16.67px;">博客</a> <a href="/SakuraGw_Kotoko/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a> <a href="/SakuraGw_Kotoko/tags/%E6%96%87%E7%8C%AE/" style="font-size: 10px;">文献</a> <a href="/SakuraGw_Kotoko/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 13.33px;">编程</a>
+      <a href="/SakuraGw_Kotoko/tags/server/" style="font-size: 10px;">server</a> <a href="/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/" style="font-size: 20px;">个人</a> <a href="/SakuraGw_Kotoko/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 17.5px;">博客</a> <a href="/SakuraGw_Kotoko/tags/%E6%95%99%E7%A8%8B/" style="font-size: 10px;">教程</a> <a href="/SakuraGw_Kotoko/tags/%E6%96%87%E7%8C%AE/" style="font-size: 12.5px;">文献</a> <a href="/SakuraGw_Kotoko/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 15px;">编程</a>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archivos</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2024/01/">一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/12/">十二月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/11/">十一月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/09/">九月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/04/">四月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2023/02/">二月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2022/10/">十月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/SakuraGw_Kotoko/archives/2022/09/">九月 2022</a></li></ul>
     </div>
@@ -868,9 +881,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Posts recientes</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/SakuraGw_Kotoko/2024/01/08/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%98%AF%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%A2%86%E5%9F%9F%E7%9A%84%E4%B8%80%E4%B8%AA%E5%88%86%E6%94%AF%EF%BC%8C%E6%B6%89%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B%E6%9D%A5%E5%AD%A6%E4%B9%A0%E5%92%8C%E6%89%A7%E8%A1%8C%E4%BB%BB%E5%8A%A1%E3%80%82%E4%BB%A5%E4%B8%8B%E6%98%AF%E4%B8%80%E4%BA%9B%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%95%99%E7%A8%8B%E5%92%8C%E8%B5%84%E6%BA%90%EF%BC%8C%E9%80%82%E7%94%A8%E4%BA%8E%E4%B8%8D%E5%90%8C%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%B0%B4%E5%B9%B3%EF%BC%9A/">深度学习是机器学习领域的一个分支，涉及使用神经网络模型来学习和执行任务。以下是一些深度学习的教程和资源，适用于不同的学习水平：</a>
+          </li>
         
           <li>
             <a href="/SakuraGw_Kotoko/2024/01/07/server/">server</a>
@@ -888,10 +905,6 @@
             <a href="/SakuraGw_Kotoko/2024/01/02/GitLab/">GitLab</a>
           </li>
         
-          <li>
-            <a href="/SakuraGw_Kotoko/2023/12/28/openmp/">openmp</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -906,7 +919,7 @@
     <div id="footer-info" class="inner">
       
       &copy; 2024 Dyson Wang<br>
-      Construido por <a href="https://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
