@@ -6,7 +6,7 @@
   <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/atom.xml" rel="self"/>
   
   <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/"/>
-  <updated>2024-01-11T06:32:02.000Z</updated>
+  <updated>2024-01-26T11:59:00.000Z</updated>
   <id>https://dyson-wang.github.io/SakuraGw_Kotoko/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>目标</title>
+    <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/26/%E7%9B%AE%E6%A0%87/"/>
+    <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/26/%E7%9B%AE%E6%A0%87/</id>
+    <published>2024-01-26T11:57:34.000Z</published>
+    <updated>2024-01-26T11:59:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><ul><li>日常编程开发</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;目标&quot;&gt;&lt;a href=&quot;#目标&quot; class=&quot;headerlink&quot; title=&quot;目标&quot;&gt;&lt;/a&gt;目标&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;日常编程开发&lt;/li&gt;
+&lt;/ul&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="个人" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>DNNShifter</title>
@@ -162,7 +187,7 @@
     <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/12/28/openmp/"/>
     <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2023/12/28/openmp/</id>
     <published>2023-12-28T07:17:56.000Z</published>
-    <updated>2024-01-08T02:17:46.000Z</updated>
+    <updated>2024-01-26T11:57:12.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="openmp"><a href="#openmp" class="headerlink" title="openmp"></a>openmp</h1><h2 id="p"><a href="#p" class="headerlink" title="-p"></a>-p</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 90-1000-146146</span><br><span class="line">2. 121-1000-204525</span><br><span class="line">3. 52-1000-60153</span><br><span class="line">4. 36-1000-61632</span><br><span class="line">5. 88-1000-174049</span><br><span class="line">6. 170-171-205061</span><br><span class="line">7. 144-145-235589</span><br><span class="line">8. 198-199-371482</span><br></pre></td></tr></table></figure><h2 id="c"><a href="#c" class="headerlink" title="-c"></a>-c</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 143-21-13752</span><br><span class="line">2. 106-27-6851</span><br><span class="line">3. 181-21-20332</span><br><span class="line">4. 73-20-3250</span><br><span class="line">5. 163-30-18056</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -175,7 +200,7 @@
     
     
     
-    <category term="个人" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/"/>
+    <category term="文档" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E6%96%87%E6%A1%A3/"/>
     
   </entry>
   
@@ -184,7 +209,7 @@
     <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/11/02/Gem5/"/>
     <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2023/11/02/Gem5/</id>
     <published>2023-11-02T06:59:31.000Z</published>
-    <updated>2024-01-08T02:17:46.000Z</updated>
+    <updated>2024-01-26T11:57:12.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Gem5"><a href="#Gem5" class="headerlink" title="Gem5"></a>Gem5</h1>]]></content>
     
@@ -197,7 +222,7 @@
     
     
     
-    <category term="个人" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/"/>
+    <category term="文档" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E6%96%87%E6%A1%A3/"/>
     
   </entry>
   
@@ -250,7 +275,7 @@
     <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/09/10/linux/"/>
     <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2023/09/10/linux/</id>
     <published>2023-09-10T08:13:34.000Z</published>
-    <updated>2024-01-08T02:17:46.000Z</updated>
+    <updated>2024-01-26T11:57:12.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2><ul><li>git</li><li>nodejs</li><li>docker</li><li>kubernetes</li><li>ngnix</li><li>mariadb</li><li>gitlab</li><li>github</li></ul>]]></content>
     
@@ -263,7 +288,7 @@
     
     
     
-    <category term="个人" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/"/>
+    <category term="文档" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E6%96%87%E6%A1%A3/"/>
     
   </entry>
   
@@ -272,7 +297,7 @@
     <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/06/24/rocky%20logs/"/>
     <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2023/06/24/rocky%20logs/</id>
     <published>2023-06-24T01:06:05.000Z</published>
-    <updated>2024-01-08T02:17:46.000Z</updated>
+    <updated>2024-01-26T11:57:12.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="rocky-logs"><a href="#rocky-logs" class="headerlink" title="rocky logs"></a>rocky logs</h1><h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><ul><li><p>切换yum源nju mirror</p></li><li><p>安装net-tools</p></li><li><p>git 2.39.1</p></li><li><p>tar 1.34</p></li><li><p>手动全局安装nodejs</p></li><li><p>配置npm mirror</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm get registry</span><br><span class="line">npm config set registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn config get registry</span><br><span class="line">yarn config set registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure></li><li><p>yum-utils</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y yum-utils</span><br><span class="line"></span><br><span class="line">sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure></li><li><p>docker</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y</span><br><span class="line"></span><br><span class="line">systemctl start docker</span><br><span class="line"></span><br><span class="line">systemctl enable docker</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// /etc/docker/daemon.json</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    &quot;registry-mirrors&quot;: [</span><br><span class="line">        &quot;https://24fgpaf5.mirror.aliyuncs.com&quot;,</span><br><span class="line">        &quot;https://83f60d800b31479a97ed45ce119dab75.mirror.swr.myhuaweicloud.com&quot;,</span><br><span class="line">        &quot;https://hub-mirror.c.163.com&quot;,</span><br><span class="line">        &quot;https://docker.mirrors.ustc.edu.cn&quot;,</span><br><span class="line">        &quot;https://mirror.baidubce.com&quot;,</span><br><span class="line">        &quot;https://reg-mirror.qiniu.com&quot;,</span><br><span class="line">        &quot;https://mirror.ccs.tencentyun.com&quot;,</span><br><span class="line">        &quot;https://registry.docker-cn.com&quot;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl restart docker</span><br><span class="line">docker info</span><br></pre></td></tr></table></figure></li></ul><h1 id="softwares"><a href="#softwares" class="headerlink" title="softwares"></a>softwares</h1><h2 id="gitlab"><a href="#gitlab" class="headerlink" title="gitlab"></a>gitlab</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">docker pull gitlab/gitlab-ce</span><br><span class="line">docker images</span><br><span class="line"></span><br><span class="line">docker run --detach \</span><br><span class="line">  --publish 16443:443 --publish 16680:80 --publish 16622:22 \</span><br><span class="line">  --name gitlab \</span><br><span class="line">  --restart always \</span><br><span class="line">  --volume $GITLAB_HOME/config:/etc/gitlab:Z \</span><br><span class="line">  --volume $GITLAB_HOME/logs:/var/log/gitlab:Z \</span><br><span class="line">  --volume $GITLAB_HOME/data:/var/opt/gitlab:Z \</span><br><span class="line">  gitlab/gitlab-ce</span><br><span class="line"></span><br><span class="line">docker run </span><br><span class="line">  -d</span><br><span class="line">  -p 443:443 -p 9000:80 -p 22:22 //外：内</span><br><span class="line">  --name gitlab</span><br><span class="line">  --restart always</span><br><span class="line">  -v $HOME/docker/gitlab/config:/etc/gitlab</span><br><span class="line">  -v $HOME/docker/gitlab/logs:/var/log/gitlab</span><br><span class="line">  -v $HOME/docker/gitlab/data:/var/opt/gitlab</span><br><span class="line">  gitlab/gitlab-ce</span><br><span class="line"></span><br><span class="line"># -d：后台运行</span><br><span class="line"># -p：将容器内部端口向外映射</span><br><span class="line"># --name：命名容器名称</span><br><span class="line"># -v：将容器内数据文件夹或者日志、配置等文件夹挂载到宿主机指定目录</span><br><span class="line"></span><br><span class="line"># 443:443：将http：443映射到外部端口443</span><br><span class="line"># 9000:80：将web：80映射到外部端口9000</span><br><span class="line"># 22:22：将ssh：22映射到外部端口22</span><br><span class="line"></span><br><span class="line">port 8888 root 15630148029</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="nginx-usr-local-nginx"><a href="#nginx-usr-local-nginx" class="headerlink" title="nginx &#x2F;usr&#x2F;local&#x2F;nginx"></a>nginx &#x2F;usr&#x2F;local&#x2F;nginx</h2>]]></content>
     
@@ -285,7 +310,7 @@
     
     
     
-    <category term="个人" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/"/>
+    <category term="文档" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E6%96%87%E6%A1%A3/"/>
     
     <category term="博客" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E5%8D%9A%E5%AE%A2/"/>
     
@@ -318,7 +343,7 @@
     <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/04/25/mac/"/>
     <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2023/04/25/mac/</id>
     <published>2023-04-25T09:10:20.000Z</published>
-    <updated>2024-01-08T02:17:46.000Z</updated>
+    <updated>2024-01-26T11:57:12.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="mac"><a href="#mac" class="headerlink" title="mac"></a>mac</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python macrecovery.py -b Mac-4B682C642B45593E -m 00000000000000000 download</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c:\&quot;Program Files&quot;\qemu\qemu-img convert -O vmdk -o compat6 BaseSystem.dmg recovery.vmdk</span><br></pre></td></tr></table></figure><p>.vmx </p><p>ethenet0 &#x3D; “vmxnet3”</p>]]></content>
     
@@ -331,7 +356,7 @@
     
     
     
-    <category term="个人" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/"/>
+    <category term="文档" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E6%96%87%E6%A1%A3/"/>
     
   </entry>
   
@@ -340,7 +365,7 @@
     <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/04/19/Logs/"/>
     <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2023/04/19/Logs/</id>
     <published>2023-04-19T03:23:25.000Z</published>
-    <updated>2024-01-08T02:17:46.000Z</updated>
+    <updated>2024-01-26T11:57:12.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Logs"><a href="#Logs" class="headerlink" title="Logs"></a>Logs</h1><ul><li>安装 net-tools</li><li>安装 git</li><li>安装 nodejs</li><li>安装 mariadb-server</li><li>mysql_secure_installation 00125</li><li></li></ul>]]></content>
     
@@ -357,7 +382,7 @@
     
     
     
-    <category term="个人" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/"/>
+    <category term="文档" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E6%96%87%E6%A1%A3/"/>
     
   </entry>
   
@@ -366,7 +391,7 @@
     <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/04/17/BND/"/>
     <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2023/04/17/BND/</id>
     <published>2023-04-17T12:18:09.000Z</published>
-    <updated>2024-01-08T02:17:45.000Z</updated>
+    <updated>2024-01-26T11:57:12.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="BND"><a href="#BND" class="headerlink" title="BND"></a>BND</h1><p>设每个用户下每个命名空间，可以单独配置一个数据库用于所建云函数的链接。</p><h3 id="新建函数"><a href="#新建函数" class="headerlink" title="新建函数"></a>新建函数</h3><p>API种类<br>1、数据库交互<br>2、静态资源上传与请求<br>3、函数内运算响应</p><p>沙箱逃逸</p><p>vm</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const vm = require(&#x27;vm&#x27;);</span><br><span class="line">vm.runInNewContext(&#x27;this.constructor.constructor(&quot;return process&quot;)().exit()&#x27;);</span><br><span class="line">console.log(&#x27;Never gets executed.&#x27;);</span><br></pre></td></tr></table></figure><p>vm2</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const &#123;VM&#125; = require(&#x27;vm2&#x27;);</span><br><span class="line">new VM().run(&#x27;this.constructor.constructor(&quot;return process&quot;)().exit()&#x27;);</span><br><span class="line">// Throws ReferenceError: process is not defined</span><br></pre></td></tr></table></figure><h1 id="API"><a href="#API" class="headerlink" title="API"></a>API</h1><h2 id="func部分"><a href="#func部分" class="headerlink" title="func部分"></a>func部分</h2><h3 id="调用函数-GET方法"><a href="#调用函数-GET方法" class="headerlink" title="调用函数(GET方法)"></a>调用函数(GET方法)</h3><p><strong>GET</strong> <em>&#x2F;faas&#x2F;:id</em></p><p><strong>return</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  //标准返回对象</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="调用函数-POST方法"><a href="#调用函数-POST方法" class="headerlink" title="调用函数(POST方法)"></a>调用函数(POST方法)</h3><p><strong>POST</strong> <em>&#x2F;faas&#x2F;:id</em></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  //示例对象</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>return</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  //标准返回对象</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="backend部分"><a href="#backend部分" class="headerlink" title="backend部分"></a>backend部分</h2><h3 id="添加函数"><a href="#添加函数" class="headerlink" title="添加函数"></a>添加函数</h3><p><strong>POST</strong> <em>&#x2F;addfunc</em></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  user-token,</span><br><span class="line">  codeStr:String, //代码字符串</span><br><span class="line">  method:String, //函数方法</span><br><span class="line">  objScan:Object, //输入实例对象</span><br><span class="line">  comment:String, //函数功能备注</span><br><span class="line">  maxruntime</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>return</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  status,</span><br><span class="line">  message,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="请求函数列表"><a href="#请求函数列表" class="headerlink" title="请求函数列表"></a>请求函数列表</h3><h4 id="用户下全部函数"><a href="#用户下全部函数" class="headerlink" title="用户下全部函数"></a>用户下全部函数</h4><p><strong>GET</strong> <em>&#x2F;funclist</em></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">user-token</span><br></pre></td></tr></table></figure><p><strong>return</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  funcarray:Array[&#123;</span><br><span class="line">      functionid,</span><br><span class="line">      createTime,</span><br><span class="line">      invokeTimes,</span><br><span class="line">      namespaceid,</span><br><span class="line">      master,</span><br><span class="line">      ...</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="命名空间下全部函数"><a href="#命名空间下全部函数" class="headerlink" title="命名空间下全部函数"></a>命名空间下全部函数</h4><p><strong>GET</strong> <em>&#x2F;funclist&#x2F;:namespaceid</em></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">user-token</span><br></pre></td></tr></table></figure><p><strong>return</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  funcarray:Array[&#123;</span><br><span class="line">      functionid,</span><br><span class="line">      createTime,</span><br><span class="line">      invokeTimes,</span><br><span class="line">      namespaceid,</span><br><span class="line">      master,</span><br><span class="line">      ...</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -380,7 +405,7 @@
     
     
     
-    <category term="个人" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/"/>
+    <category term="文档" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E6%96%87%E6%A1%A3/"/>
     
   </entry>
   
@@ -389,7 +414,7 @@
     <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/04/09/Serverless%20in%20linux/"/>
     <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2023/04/09/Serverless%20in%20linux/</id>
     <published>2023-04-09T07:13:31.000Z</published>
-    <updated>2024-01-08T02:17:46.000Z</updated>
+    <updated>2024-01-26T11:57:12.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Serverless-in-linux"><a href="#Serverless-in-linux" class="headerlink" title="Serverless in linux"></a>Serverless in linux</h1><h2 id="rocky-linux-安装-git、nodejs"><a href="#rocky-linux-安装-git、nodejs" class="headerlink" title="rocky linux 安装 git、nodejs"></a>rocky linux 安装 git、nodejs</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install git nodejs</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -402,7 +427,7 @@
     
     
     
-    <category term="个人" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/"/>
+    <category term="文档" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E6%96%87%E6%A1%A3/"/>
     
   </entry>
   
@@ -411,7 +436,7 @@
     <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/02/24/%E4%B8%89%E6%9C%88%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/"/>
     <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2023/02/24/%E4%B8%89%E6%9C%88%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/</id>
     <published>2023-02-24T11:01:12.000Z</published>
-    <updated>2024-01-06T11:28:50.000Z</updated>
+    <updated>2024-01-26T11:57:27.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="三月学习大纲"><a href="#三月学习大纲" class="headerlink" title="三月学习大纲"></a>三月学习大纲</h1><p>8：00 - 12：00 离散数学</p><p>14：00 - 18：00 英语听说、数据库</p><p>19：00 - 23：00 LeetCode Dev-C++ 专业课复习</p>]]></content>
     
@@ -426,7 +451,7 @@
     
     
     
-    <category term="个人" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/"/>
+    <category term="文档" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E6%96%87%E6%A1%A3/"/>
     
   </entry>
   
@@ -435,7 +460,7 @@
     <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/10/08/graduate%20exam/"/>
     <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2022/10/08/graduate%20exam/</id>
     <published>2022-10-08T00:53:25.000Z</published>
-    <updated>2024-01-08T02:17:46.000Z</updated>
+    <updated>2024-01-26T11:57:12.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="graduate-exam"><a href="#graduate-exam" class="headerlink" title="graduate exam"></a>graduate exam</h1><h2 id="十月底强化结束"><a href="#十月底强化结束" class="headerlink" title="十月底强化结束"></a>十月底强化结束</h2><p>英语长难句梳理，单词！！！（五星紧急）3h</p><p>可以开始做真题了，数二 刷！！！</p><p>政治看课，做每章课后题 3h</p><p>李永乐强化视频跟完，108、330、其他题 4h</p><p>17堂课梳理知识点</p><p>408大题+教材 4h</p><h2 id="11-12月卷子真题-政治"><a href="#11-12月卷子真题-政治" class="headerlink" title="11 12月卷子真题+政治"></a>11 12月卷子真题+政治</h2><p>英语直接英一英二80-22真题</p><p>政治肖四肖八+94-22真题</p><p>数学87-22真题+挑几套模拟做做</p><p>408 王道天勤8套模拟，09-22真题</p><p>模拟卷+真题卷</p><h2 id="平板资料"><a href="#平板资料" class="headerlink" title="平板资料"></a>平板资料</h2><p>徐涛课后习题，看答案，看解析视频</p>]]></content>
     
@@ -448,29 +473,7 @@
     
     
     
-    <category term="个人" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>rancher monitor api</title>
-    <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/22/rancher%20monitor%20api/"/>
-    <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2022/09/22/rancher%20monitor%20api/</id>
-    <published>2022-09-22T08:21:18.000Z</published>
-    <updated>2024-01-08T02:17:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="rancher-monitor-api"><a href="#rancher-monitor-api" class="headerlink" title="rancher monitor api"></a>rancher monitor api</h1><p>CPU SYSTEM</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">URL/k8s/clusters/$&#123;cluster-id&#125;/api/v1/namespaces/cattle-monitoring-system/services/http:rancher-monitoring-grafana:80/proxy/api/datasources/proxy/1/api/v1/query_range?query=(sum(rate(container_cpu_system_seconds_total&#123;namespace=~&quot;$&#123;namespace-id&#125;&quot;&#125;[240s])) by (pod) OR sum(rate(windows_container_cpu_usage_seconds_kernelmode&#123;namespace=~&quot;$&#123;namespace-id&#125;&quot;&#125;[240s])) by (pod)) * on(pod) kube_pod_info&#123;namespace=~&quot;$&#123;namespace-id&#125;&quot;, created_by_kind=&quot;$&#123;type&#125;&quot;, created_by_name=&quot;$&#123;resource-id&#125;&quot;&#125;&amp;start=$&#123;time-start&#125;&amp;end=$&#123;time-end&#125;&amp;step=$&#123;step&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;rancher-monitor-api&quot;&gt;&lt;a href=&quot;#rancher-monitor-api&quot; class=&quot;headerlink&quot; title=&quot;rancher monitor api&quot;&gt;&lt;/a&gt;rancher monitor api&lt;/h1&gt;&lt;p&gt;CP</summary>
-      
-    
-    
-    
-    
-    <category term="个人" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E4%B8%AA%E4%BA%BA/"/>
+    <category term="文档" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E6%96%87%E6%A1%A3/"/>
     
   </entry>
   
