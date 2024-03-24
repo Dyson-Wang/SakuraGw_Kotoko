@@ -6,7 +6,7 @@
   <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/atom.xml" rel="self"/>
   
   <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/"/>
-  <updated>2024-01-26T11:59:00.000Z</updated>
+  <updated>2024-03-24T07:43:44.000Z</updated>
   <id>https://dyson-wang.github.io/SakuraGw_Kotoko/</id>
   
   <author>
@@ -15,6 +15,210 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo源码阅读</title>
+    <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/03/24/hexo%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/"/>
+    <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2024/03/24/hexo%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB/</id>
+    <published>2024-03-24T07:39:16.000Z</published>
+    <updated>2024-03-24T07:43:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="hexo源码阅读"><a href="#hexo源码阅读" class="headerlink" title="hexo源码阅读"></a>hexo源码阅读</h1><h2 id="pkg"><a href="#pkg" class="headerlink" title="pkg"></a>pkg</h2><ul><li>bluebird promise库</li><li>tildify 绝对路径转~</li><li>warehouse json数据库</li><li>picocolors 终端输出格式化与ANSI颜色</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;hexo源码阅读&quot;&gt;&lt;a href=&quot;#hexo源码阅读&quot; class=&quot;headerlink&quot; title=&quot;hexo源码阅读&quot;&gt;&lt;/a&gt;hexo源码阅读&lt;/h1&gt;&lt;h2 id=&quot;pkg&quot;&gt;&lt;a href=&quot;#pkg&quot; class=&quot;headerlink&quot; ti</summary>
+      
+    
+    
+    
+    
+    <category term="α" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%CE%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexotable</title>
+    <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/03/24/Hexotable/"/>
+    <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2024/03/24/Hexotable/</id>
+    <published>2024-03-24T06:59:02.000Z</published>
+    <updated>2024-03-24T07:18:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Hexotable"><a href="#Hexotable" class="headerlink" title="Hexotable"></a>Hexotable</h1><h2 id="一个notable和hexo的md编写-博客发布的工具"><a href="#一个notable和hexo的md编写-博客发布的工具" class="headerlink" title="一个notable和hexo的md编写+博客发布的工具"></a>一个notable和hexo的md编写+博客发布的工具</h2><h3 id="notable负责GUI下的md文档编写，hexo格式化md文档并且生成html静态文件可以发布到github托管。"><a href="#notable负责GUI下的md文档编写，hexo格式化md文档并且生成html静态文件可以发布到github托管。" class="headerlink" title="notable负责GUI下的md文档编写，hexo格式化md文档并且生成html静态文件可以发布到github托管。"></a>notable负责GUI下的md文档编写，hexo格式化md文档并且生成html静态文件可以发布到github托管。</h3><ul><li>diff文件</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Hexotable&quot;&gt;&lt;a href=&quot;#Hexotable&quot; class=&quot;headerlink&quot; title=&quot;Hexotable&quot;&gt;&lt;/a&gt;Hexotable&lt;/h1&gt;&lt;h2 id=&quot;一个notable和hexo的md编写-博客发布的工具&quot;&gt;&lt;a href=</summary>
+      
+    
+    
+    
+    
+    <category term="α" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%CE%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C</title>
+    <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/03/24/C/"/>
+    <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2024/03/24/C/</id>
+    <published>2024-03-24T05:18:19.000Z</published>
+    <updated>2024-03-24T05:18:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="C"><a href="#C" class="headerlink" title="C"></a>C</h1><h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;C&quot;&gt;&lt;a href=&quot;#C&quot; class=&quot;headerlink&quot; title=&quot;C&quot;&gt;&lt;/a&gt;C&lt;/h1&gt;&lt;h2 id=&quot;Windows&quot;&gt;&lt;a href=&quot;#Windows&quot; class=&quot;headerlink&quot; title=&quot;Windows&quot;&gt;&lt;/a&gt;Wi</summary>
+      
+    
+    
+    
+    
+    <category term="α" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%CE%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>P</title>
+    <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/03/24/P/"/>
+    <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2024/03/24/P/</id>
+    <published>2024-03-24T05:16:14.000Z</published>
+    <updated>2024-03-24T06:40:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="P"><a href="#P" class="headerlink" title="P"></a>P</h1><h2 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h2><p>Cookie</p><h2 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;P&quot;&gt;&lt;a href=&quot;#P&quot; class=&quot;headerlink&quot; title=&quot;P&quot;&gt;&lt;/a&gt;P&lt;/h1&gt;&lt;h2 id=&quot;iOS&quot;&gt;&lt;a href=&quot;#iOS&quot; class=&quot;headerlink&quot; title=&quot;iOS&quot;&gt;&lt;/a&gt;iOS&lt;/h2&gt;&lt;p&gt;Coo</summary>
+      
+    
+    
+    
+    
+    <category term="α" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%CE%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>物联网与云计算</title>
+    <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/03/20/%E7%89%A9%E8%81%94%E7%BD%91%E4%B8%8E%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
+    <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2024/03/20/%E7%89%A9%E8%81%94%E7%BD%91%E4%B8%8E%E4%BA%91%E8%AE%A1%E7%AE%97/</id>
+    <published>2024-03-20T09:06:15.000Z</published>
+    <updated>2024-03-24T05:17:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="物联网与云计算"><a href="#物联网与云计算" class="headerlink" title="物联网与云计算"></a>物联网与云计算</h1><p>标准化在实现大规模物联网应用中扮演着至关重要的角色，其作用包括：</p><ol><li><p><strong>互操作性：</strong> 标准化确保了不同厂商生产的物联网设备和系统可以互相通信和协作，促进了设备和系统之间的互操作性。这意味着用户可以更灵活地选择设备和系统，并且可以避免封闭的生态系统限制。</p></li><li><p><strong>可靠性：</strong> 通过制定统一的通信协议和数据格式标准，可以减少设备之间的兼容性问题，提高系统的可靠性和稳定性。这有助于降低因兼容性问题导致的系统故障和服务中断的风险。</p></li><li><p><strong>安全性：</strong> 标准化可以帮助建立统一的安全标准和最佳实践，包括数据加密、身份认证和访问控制等方面的安全措施。这有助于提高物联网系统的安全性，防止恶意攻击和数据泄露。</p></li><li><p><strong>可扩展性：</strong> 通过统一的标准，可以更容易地扩展物联网系统，支持更多的设备和应用场景。这使得物联网系统可以适应不断增长的需求，并且更容易实现规模化部署。</p></li><li><p><strong>降低成本：</strong> 标准化可以降低开发和部署物联网应用的成本。通过采用统一的标准和通用的组件，可以减少重复开发工作，并且可以更容易地集成不同厂商的设备和系统，从而降低了整体成本。</p></li></ol><p>总的来说，标准化可以帮助推动物联网技术的发展和应用，促进物联网市场的成熟和规模化，为用户提供更好的体验和服务。</p><p>物联网（IoT）和云计算的结合可以极大地拓展物联网的应用场景和能力，并提供更强大的数据处理、存储和分析功能。以下是一些思路和结合方式：</p><ol><li><p><strong>数据收集与存储：</strong> 物联网设备通过传感器收集大量实时数据，将这些数据上传至云端进行存储和管理。云计算平台提供可扩展的存储服务，以满足不同规模和类型的数据存储需求。</p></li><li><p><strong>数据处理与分析：</strong> 云计算平台提供强大的数据处理和分析功能，可以对物联网设备收集的数据进行实时处理和分析。通过使用机器学习和人工智能算法，可以从海量数据中提取有价值的信息和洞见。</p></li><li><p><strong>远程监控与控制：</strong> 物联网设备通过与云端的连接，可以实现远程监控和控制。用户可以通过云端应用程序或者Web界面远程监控设备状态、执行控制命令，实现对设备的远程管理和操作。</p></li><li><p><strong>安全与隐私保护：</strong> 云计算平台提供多层次的安全机制和数据保护措施，可以保障物联网数据的安全性和隐私性。例如，数据加密、身份认证和访问控制等技术可以确保数据的安全传输和存储。</p></li><li><p><strong>扩展性与灵活性：</strong> 云计算平台具有良好的扩展性和灵活性，可以根据需求动态调整计算和存储资源。这使得物联网系统可以轻松应对不断增长的数据量和用户规模，同时也可以支持不同类型的应用场景和业务需求。</p></li><li><p><strong>服务化与共享经济：</strong> 云计算平台可以将物联网功能和服务以服务化的方式提供给用户，从而降低了物联网应用的部署和运维成本。此外，还可以通过共享经济模式，将物联网设备和资源共享给其他用户，实现资源的最大化利用和价值的最大化释放。</p></li></ol><p>综上所述，物联网和云计算的结合可以为物联网应用提供更强大的功能和服务，推动物联网技术的发展和应用。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;物联网与云计算&quot;&gt;&lt;a href=&quot;#物联网与云计算&quot; class=&quot;headerlink&quot; title=&quot;物联网与云计算&quot;&gt;&lt;/a&gt;物联网与云计算&lt;/h1&gt;&lt;p&gt;标准化在实现大规模物联网应用中扮演着至关重要的角色，其作用包括：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;</summary>
+      
+    
+    
+    
+    
+    <category term="α" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%CE%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>README</title>
+    <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/03/05/README/"/>
+    <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2024/03/05/README/</id>
+    <published>2024-03-05T02:51:11.000Z</published>
+    <updated>2024-03-24T05:17:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="awesome-pruning"><a href="#awesome-pruning" class="headerlink" title="awesome-pruning"></a>awesome-pruning</h1><p><img src="https://img.shields.io/badge/PRs-Welcome-green" alt="PRs Welcome"><a href="https://awesome.re/"><img src="https://awesome.re/badge.svg" alt="Awesome"></a></p><h2 id="Table-of-Contents"><a href="#Table-of-Contents" class="headerlink" title="Table of Contents"></a>Table of Contents</h2><ul><li><a href="#0-overview">0. Overview</a></li><li><a href="#1-when-to-prune">1. When to prune</a><!-- - [Variational Gap Optimization](#Variational-Gap-Optimization) --><!-- - [Dimension Deduction](#Dimension-Deduction) --><ul><li><a href="#11-static-pruning">1.1 Static Pruning</a><ul><li><a href="#111-pruning-before-training">1.1.1 Pruning Before Training</a></li><li><a href="#112-pruning-during-training">1.1.2 Pruning During Training</a></li><li><a href="#113-pruning-after-training">1.1.3 Pruning After Training</a><ul><li><a href="#1131-post-training">1.1.3.1 Post Training</a></li><li><a href="#1132-pruning-LLMs">1.1.3.2 Pruning LLMs</a></li></ul></li><li><a href="#114-pruning-in-early-training">1.1.4 Pruning In Early Training</a></li></ul></li><li><a href="#12-dynamic-pruning">1.2 Dynamic Pruning</a></li></ul></li><li><a href="#2-learning-and-pruning">2. Learning and Pruning</a><ul><li><a href="#21-continual-learning">2.1 Continual learning</a></li><li><a href="#22-contrastive-learning">2.2 Contrastive learning</a></li><li><a href="#23-federated-learning">2.3 Federated learning</a></li></ul></li><li><a href="#3-application">3. Application</a> <ul><li><a href="#31-computer-vision">3.1 Computer Vision</a></li><li><a href="#32-natural-language-processing">3.2 Natural Language Processing</a></li><li><a href="#33-audio-signal-processing">3.3 Audio Signal Processing</a></li></ul></li><li><a href="#4-combination">4. Combination</a> <ul><li><a href="#41-pruning-and-quantization">4.1 pruning and quantization</a></li></ul></li><li><a href="#5-survey-of-pruning">5. Survey of Pruning</a>  </li><li><a href="#6-other-works">6. Other Works</a></li><li><a href="#acknowledgements">Acknowledgements</a></li></ul><h2 id="0-Overview"><a href="#0-Overview" class="headerlink" title="0. Overview"></a>0. Overview</h2><p>The repo includes the ongoing updates of representative neural network pruning papers and open-source codes.<br>Our paper [<em><strong>A Survey on Deep Neural Network Pruning-Taxonomy, Comparison, Analysis, and Recommendations</strong></em>] (<a href="https://arxiv.org/abs/2308.06767">Paper Link</a>) is under review.</p><p><strong>Taxonomy</strong>: In our survey, we provide a comprehensive review of the state-of-the-art in deep neural network pruning, which we categorize along five orthogonal axes: Universal&#x2F;Specific Speedup, When to Prune, Pruning Criteria, Learn to Prune, and Fusion of Pruning and Other Techniques. </p><p align="center">  <img src=taxonomy.png width="500"></p><h2 id="1-When-to-Prune"><a href="#1-When-to-Prune" class="headerlink" title="1. When to Prune"></a>1. When to Prune</h2><h3 id="1-1-Static-Pruning"><a href="#1-1-Static-Pruning" class="headerlink" title="1.1 Static Pruning"></a>1.1 Static Pruning</h3><p>| Type        |<code>L</code>             | <code>F</code>            | <code>C</code>             | <code>N</code>             | ‘H’            | <code>W</code>            | <code>P</code>        | <code>Other</code>     |<br>|:</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;awesome-pruning&quot;&gt;&lt;a href=&quot;#awesome-pruning&quot; class=&quot;headerlink&quot; title=&quot;awesome-pruning&quot;&gt;&lt;/a&gt;awesome-pruning&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://</summary>
+      
+    
+    
+    
+    
+    <category term="α" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%CE%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>logs</title>
+    <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/02/03/logs%20(2)/"/>
+    <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2024/02/03/logs%20(2)/</id>
+    <published>2024-02-03T14:03:11.000Z</published>
+    <updated>2024-02-03T14:47:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="logs"><a href="#logs" class="headerlink" title="logs"></a>logs</h1><h2 id="VM-install"><a href="#VM-install" class="headerlink" title="VM install"></a>VM install</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rocky-9.3-x86_64-minimal</span><br></pre></td></tr></table></figure><p>– blogs<br>– env</p><h2 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h2><ul><li><strong>配置nju源</strong></li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo sed -e &#x27;s|^mirrorlist=|#mirrorlist=|g&#x27; \</span><br><span class="line">         -e &#x27;s|^#baseurl=http://dl.rockylinux.org/$contentdir|baseurl=https://mirror.nju.edu.cn/rocky|g&#x27; \</span><br><span class="line">         -i.bak \</span><br><span class="line">         /etc/yum.repos.d/rocky-extras.repo \</span><br><span class="line">         /etc/yum.repos.d/rocky.repo</span><br><span class="line">dnf makecache</span><br></pre></td></tr></table></figure><ul><li><strong>yum</strong></li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y git nodejs net-tools tar </span><br></pre></td></tr></table></figure><ul><li><strong>git 代理设置</strong></li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;Dyson Wang&quot;</span><br><span class="line">git config --global user.email &quot;Dyson.Wang@outlook.com&quot;</span><br><span class="line">git config --global http.proxy &#x27;http://192.168.237.1:7890&#x27;</span><br><span class="line">git config --global https.proxy &#x27;http://192.168.237.1:7890&#x27;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;logs&quot;&gt;&lt;a href=&quot;#logs&quot; class=&quot;headerlink&quot; title=&quot;logs&quot;&gt;&lt;/a&gt;logs&lt;/h1&gt;&lt;h2 id=&quot;VM-install&quot;&gt;&lt;a href=&quot;#VM-install&quot; class=&quot;headerlink&quot; titl</summary>
+      
+    
+    
+    
+    
+    <category term="server" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/server/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DIY</title>
+    <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/02/03/DIY/"/>
+    <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2024/02/03/DIY/</id>
+    <published>2024-02-03T13:13:55.000Z</published>
+    <updated>2024-02-03T13:30:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="DIY"><a href="#DIY" class="headerlink" title="DIY"></a>DIY</h1><ul><li>主板</li><li>CPU</li><li>GPU</li><li>SSD</li><li>内存</li><li>机箱</li><li>电源</li><li>散热器</li><li>风扇</li><li>键盘</li><li>鼠标</li><li>显示器</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;DIY&quot;&gt;&lt;a href=&quot;#DIY&quot; class=&quot;headerlink&quot; title=&quot;DIY&quot;&gt;&lt;/a&gt;DIY&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;主板&lt;/li&gt;
+&lt;li&gt;CPU&lt;/li&gt;
+&lt;li&gt;GPU&lt;/li&gt;
+&lt;li&gt;SSD&lt;/li&gt;
+&lt;li&gt;内存&lt;/li&gt;
+&lt;</summary>
+      
+    
+    
+    
+    
+    <category term="server" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/server/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Index</title>
+    <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/30/Index/"/>
+    <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/30/Index/</id>
+    <published>2024-01-30T15:48:25.000Z</published>
+    <updated>2024-03-24T08:51:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h1><p><em>This is a simple page for academic website based on Hexo. It just provides a theme frame and all depends on your markdown posts’ styles.</em></p><p><strong>This is the index page which organized with the posts you write in markdown files.</strong></p><h3 id="News"><a href="#News" class="headerlink" title="News"></a>News</h3><ul><li>2020-04-23: ver 1.2.0 publish, support pjax.</li><li>2020 February, Join in Test University.</li><li>A new theme for academic page is published.</li></ul><h3 id="Publications"><a href="#Publications" class="headerlink" title="Publications"></a>Publications</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[1] Einstein, Albert, Boris Podolsky, and Nathan Rosen. “Can quantum-mechanical description of physical reality be considered complete?.” Physical review 47.10 (1935): 777.</span><br></pre></td></tr></table></figure><h3 id="Add-more-informations-in-your-posts…"><a href="#Add-more-informations-in-your-posts…" class="headerlink" title="Add more informations in your posts…"></a>Add more informations in your posts…</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Index&quot;&gt;&lt;a href=&quot;#Index&quot; class=&quot;headerlink&quot; title=&quot;Index&quot;&gt;&lt;/a&gt;Index&lt;/h1&gt;&lt;p&gt;&lt;em&gt;This is a simple page for academic website based on He</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>目标</title>
@@ -91,14 +295,14 @@
     <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/07/server/"/>
     <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/07/server/</id>
     <published>2024-01-07T06:38:45.000Z</published>
-    <updated>2024-01-07T07:55:45.000Z</updated>
+    <updated>2024-02-03T15:16:52.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="server"><a href="#server" class="headerlink" title="server"></a>server</h1><h2 id="apt"><a href="#apt" class="headerlink" title="apt"></a>apt</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 清华源 /etc/apt/source.list</span><br><span class="line"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware</span><br><span class="line"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware</span><br><span class="line"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware</span><br><span class="line"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware</span><br><span class="line"></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware</span><br><span class="line"># deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config</span><br><span class="line">#PermitRootLogin yes</span><br><span class="line">#PasswordAuthentication yes</span><br><span class="line">/etc/init.d/ssh restart</span><br></pre></td></tr></table></figure><h2 id="第三方"><a href="#第三方" class="headerlink" title="第三方"></a>第三方</h2><h3 id="apt-下载"><a href="#apt-下载" class="headerlink" title="apt 下载"></a>apt 下载</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install -y curl vim net-tools nginx</span><br></pre></td></tr></table></figure><h3 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">curl -O https://nginx.org/download/nginx-1.24.0.tar.gz</span><br><span class="line">tar -xzvf nginx-1.24.0.tar.gz</span><br><span class="line"># 默认托管目录</span><br><span class="line">/var/www/html/</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h1 id="server"><a href="#server" class="headerlink" title="server"></a>server</h1><h3 id="build-a"><a href="#build-a" class="headerlink" title="build a"></a>build a</h3><ul><li><strong>数据库服务器</strong></li><li><strong>网站服务器</strong></li></ul>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;server&quot;&gt;&lt;a href=&quot;#server&quot; class=&quot;headerlink&quot; title=&quot;server&quot;&gt;&lt;/a&gt;server&lt;/h1&gt;&lt;h2 id=&quot;apt&quot;&gt;&lt;a href=&quot;#apt&quot; class=&quot;headerlink&quot; title=&quot;apt</summary>
+    <summary type="html">&lt;h1 id=&quot;server&quot;&gt;&lt;a href=&quot;#server&quot; class=&quot;headerlink&quot; title=&quot;server&quot;&gt;&lt;/a&gt;server&lt;/h1&gt;&lt;h3 id=&quot;build-a&quot;&gt;&lt;a href=&quot;#build-a&quot; class=&quot;headerlink&quot; ti</summary>
       
     
     
@@ -109,18 +313,18 @@
   </entry>
   
   <entry>
-    <title>About me.</title>
-    <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/06/About%20me./"/>
-    <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/06/About%20me./</id>
+    <title>About</title>
+    <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/06/About/"/>
+    <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/06/About/</id>
     <published>2024-01-06T11:28:57.000Z</published>
-    <updated>2024-01-07T07:08:00.000Z</updated>
+    <updated>2024-01-30T15:43:21.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="About-me"><a href="#About-me" class="headerlink" title="About me."></a>About me.</h1><h3 id="WangXingHao"><a href="#WangXingHao" class="headerlink" title="WangXingHao"></a>WangXingHao</h3><h3 id="Dyson-Wang"><a href="#Dyson-Wang" class="headerlink" title="Dyson Wang"></a>Dyson Wang</h3><h3 id="樱川琴子aka-SakuraGw-Kotoko"><a href="#樱川琴子aka-SakuraGw-Kotoko" class="headerlink" title="樱川琴子aka.SakuraGw_Kotoko"></a>樱川琴子aka.SakuraGw_Kotoko</h3>]]></content>
+    <content type="html"><![CDATA[<h1 id="About"><a href="#About" class="headerlink" title="About"></a>About</h1><h3 id="WangXingHao"><a href="#WangXingHao" class="headerlink" title="WangXingHao"></a>WangXingHao</h3><h3 id="Dyson-Wang"><a href="#Dyson-Wang" class="headerlink" title="Dyson Wang"></a>Dyson Wang</h3><h3 id="樱川琴子aka-SakuraGw-Kotoko"><a href="#樱川琴子aka-SakuraGw-Kotoko" class="headerlink" title="樱川琴子aka.SakuraGw_Kotoko"></a>樱川琴子aka.SakuraGw_Kotoko</h3>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;About-me&quot;&gt;&lt;a href=&quot;#About-me&quot; class=&quot;headerlink&quot; title=&quot;About me.&quot;&gt;&lt;/a&gt;About me.&lt;/h1&gt;&lt;h3 id=&quot;WangXingHao&quot;&gt;&lt;a href=&quot;#WangXingHao&quot; cla</summary>
+    <summary type="html">&lt;h1 id=&quot;About&quot;&gt;&lt;a href=&quot;#About&quot; class=&quot;headerlink&quot; title=&quot;About&quot;&gt;&lt;/a&gt;About&lt;/h1&gt;&lt;h3 id=&quot;WangXingHao&quot;&gt;&lt;a href=&quot;#WangXingHao&quot; class=&quot;headerlink</summary>
       
     
     
@@ -161,14 +365,14 @@
     <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/02/GitLab/"/>
     <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2024/01/02/GitLab/</id>
     <published>2024-01-02T07:06:51.000Z</published>
-    <updated>2024-01-02T11:24:42.000Z</updated>
+    <updated>2024-03-22T02:24:30.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="GitLab"><a href="#GitLab" class="headerlink" title="GitLab"></a>GitLab</h1><h2 id="APT-安装"><a href="#APT-安装" class="headerlink" title="APT 安装"></a>APT 安装</h2><p>包管理器安装 GitLab Community Edition（CE）通常是一种简单且方便的方法，但具体步骤取决于你使用的操作系统。以下是针对一些常见的操作系统的包管理器安装步骤：</p><h3 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu:"></a>Ubuntu:</h3><ol><li><p>更新软件包列表：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure></li><li><p>安装必要的依赖：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install -y curl openssh-server ca-certificates</span><br></pre></td></tr></table></figure></li><li><p>添加 GitLab 的官方仓库：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash</span><br></pre></td></tr></table></figure></li><li><p>安装 GitLab CE：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install gitlab-ce</span><br></pre></td></tr></table></figure></li><li><p>配置和启动 GitLab：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gitlab-ctl reconfigure</span><br></pre></td></tr></table></figure></li></ol><h3 id="Debian"><a href="#Debian" class="headerlink" title="Debian:"></a>Debian:</h3><ol><li><p>更新软件包列表：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure></li><li><p>安装必要的依赖：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install -y curl openssh-server ca-certificates</span><br></pre></td></tr></table></figure></li><li><p>添加 GitLab 的官方仓库：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash</span><br></pre></td></tr></table></figure></li><li><p>安装 GitLab CE：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install gitlab-ce</span><br></pre></td></tr></table></figure></li><li><p>配置和启动 GitLab：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gitlab-ctl reconfigure</span><br></pre></td></tr></table></figure></li></ol><h3 id="CentOS"><a href="#CentOS" class="headerlink" title="CentOS:"></a>CentOS:</h3><ol><li><p>安装必要的依赖：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y curl policycoreutils-python openssh-server</span><br></pre></td></tr></table></figure></li><li><p>添加 GitLab 的官方仓库：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash</span><br></pre></td></tr></table></figure></li><li><p>安装 GitLab CE：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y gitlab-ce</span><br></pre></td></tr></table></figure></li><li><p>配置和启动 GitLab：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gitlab-ctl reconfigure</span><br></pre></td></tr></table></figure></li></ol><p>这些步骤可能会有所变化，具体取决于操作系统的版本和配置。请务必查阅 GitLab 官方文档以获取最新和详细的安装指南。</p><h2 id="Omnibus-安装"><a href="#Omnibus-安装" class="headerlink" title="Omnibus 安装"></a>Omnibus 安装</h2><p>在部署 GitLab Community Edition (CE) 之前，请确保你的服务器满足 GitLab 的<a href="https://docs.gitlab.com/ee/install/requirements.html">系统要求</a>。</p><p>以下是 GitLab CE 的基本部署步骤。这里提供的步骤是使用 Omnibus 安装方式，这是 GitLab 官方推荐的安装方式。</p><h3 id="步骤-1-安装和配置依赖项"><a href="#步骤-1-安装和配置依赖项" class="headerlink" title="步骤 1: 安装和配置依赖项"></a>步骤 1: 安装和配置依赖项</h3><ol><li><p>更新系统软件包：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br></pre></td></tr></table></figure></li><li><p>安装必要的依赖项：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install -y curl openssh-server ca-certificates postfix</span><br></pre></td></tr></table></figure><p> 在安装 postfix 时，选择 “Internet Site” 并按照提示设置系统邮件配置。</p></li></ol><h3 id="步骤-2-添加-GitLab-仓库"><a href="#步骤-2-添加-GitLab-仓库" class="headerlink" title="步骤 2: 添加 GitLab 仓库"></a>步骤 2: 添加 GitLab 仓库</h3><ol><li><p>添加 GitLab 的 GPG 密钥：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl https://packages.gitlab.com/gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/gitlab-archive-keyring.gpg</span><br></pre></td></tr></table></figure></li><li><p>添加 GitLab 仓库：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;deb [signed-by=/usr/share/keyrings/gitlab-archive-keyring.gpg] https://packages.gitlab.com/gitlab/gitlab-ce/ubuntu/ <span class="subst">$(lsb_release -cs)</span> main&quot;</span> | sudo <span class="built_in">tee</span> /etc/apt/sources.list.d/gitlab-ce.list</span><br></pre></td></tr></table></figure></li></ol><h3 id="步骤-3-安装-GitLab-CE"><a href="#步骤-3-安装-GitLab-CE" class="headerlink" title="步骤 3: 安装 GitLab CE"></a>步骤 3: 安装 GitLab CE</h3><ol><li><p>更新软件包索引：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure></li><li><p>安装 GitLab CE：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install gitlab-ce</span><br></pre></td></tr></table></figure></li></ol><h3 id="步骤-4-配置和启动-GitLab"><a href="#步骤-4-配置和启动-GitLab" class="headerlink" title="步骤 4: 配置和启动 GitLab"></a>步骤 4: 配置和启动 GitLab</h3><ol><li><p>打开配置文件：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/gitlab/gitlab.rb</span><br></pre></td></tr></table></figure><p> 根据需要修改配置。特别是，请确保 <code>external_url</code> 的值是你 GitLab 访问的 URL。</p></li><li><p>重新配置并重启 GitLab：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gitlab-ctl reconfigure</span><br></pre></td></tr></table></figure></li><li><p>启动 GitLab：</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gitlab-ctl start</span><br></pre></td></tr></table></figure><p> 你也可以使用 <code>sudo gitlab-ctl restart</code> 重启服务。</p></li></ol><h3 id="步骤-5-访问-GitLab"><a href="#步骤-5-访问-GitLab" class="headerlink" title="步骤 5: 访问 GitLab"></a>步骤 5: 访问 GitLab</h3><p>在浏览器中访问你设置的 <code>external_url</code> 地址，你将会看到 GitLab 的登录页面。首次登录时，使用默认的管理员用户名 <code>root</code> 和密码 <code>5iveL!fe</code> 登录。</p><p>请注意，首次登录后，建议修改管理员密码以增加安全性。</p><p>这是一个简单的部署步骤，确保根据实际需求进行配置。有关更详细的配置和设置，请查阅<a href="https://docs.gitlab.com/ee/install/">官方文档</a>。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="GitLab"><a href="#GitLab" class="headerlink" title="GitLab"></a>GitLab</h1><h2 id="yum安装"><a href="#yum安装" class="headerlink" title="yum安装"></a>yum安装</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">sudo firewall-cmd --permanent --add-service=http</span><br><span class="line">sudo firewall-cmd --permanent --add-service=https</span><br><span class="line">sudo systemctl reload firewalld</span><br><span class="line"></span><br><span class="line">sudo yum install postfix</span><br><span class="line">sudo systemctl enable postfix</span><br><span class="line">sudo systemctl start postfix</span><br><span class="line"></span><br><span class="line">curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash</span><br><span class="line">yum install gitlab-ce</span><br><span class="line"></span><br><span class="line">#/etc/gitlab/gitlab.rb</span><br><span class="line">#external_url &quot;http://10.0.0.1&quot;</span><br><span class="line"></span><br><span class="line">gitlab-ctl reconfigure</span><br><span class="line"></span><br><span class="line">systemctl enable gitlab-runsvdir.service</span><br></pre></td></tr></table></figure><h2 id="config"><a href="#config" class="headerlink" title="config"></a>config</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ssl]# vim /etc/gitlab/gitlab.rb</span><br><span class="line"> </span><br><span class="line">external_url &#x27;https://gitlab.example.com&#x27;      ###改为https开头</span><br><span class="line"> </span><br><span class="line">nginx[&#x27;enable&#x27;] = true</span><br><span class="line">nginx[&#x27;client_max_body_size&#x27;] = &#x27;2048m&#x27;</span><br><span class="line">nginx[&#x27;redirect_http_to_https&#x27;] = true           #取消#号 更改注释并为true</span><br><span class="line">nginx[&#x27;ssl_certificate&#x27;] = &quot;/etc/gitlab/ssl/gitlab.example.com.crt&quot;     #更改路径</span><br><span class="line">nginx[&#x27;ssl_certificate_key&#x27;] = &quot;/etc/gitlab/ssl/gitlab.example.com.key&quot;     #更改路径</span><br><span class="line"> ###注意如果使用docker，这里的路径，需要是docker内证书的路径</span><br><span class="line">[root@localhost ssl]# mkdir /etc/gitlab/ssl</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;GitLab&quot;&gt;&lt;a href=&quot;#GitLab&quot; class=&quot;headerlink&quot; title=&quot;GitLab&quot;&gt;&lt;/a&gt;GitLab&lt;/h1&gt;&lt;h2 id=&quot;APT-安装&quot;&gt;&lt;a href=&quot;#APT-安装&quot; class=&quot;headerlink&quot; titl</summary>
+    <summary type="html">&lt;h1 id=&quot;GitLab&quot;&gt;&lt;a href=&quot;#GitLab&quot; class=&quot;headerlink&quot; title=&quot;GitLab&quot;&gt;&lt;/a&gt;GitLab&lt;/h1&gt;&lt;h2 id=&quot;yum安装&quot;&gt;&lt;a href=&quot;#yum安装&quot; class=&quot;headerlink&quot; title=</summary>
       
     
     
@@ -249,227 +453,20 @@
     <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/09/20/Https%20Notes/"/>
     <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2023/09/20/Https%20Notes/</id>
     <published>2023-09-20T06:39:33.000Z</published>
-    <updated>2024-01-08T02:17:16.000Z</updated>
+    <updated>2024-03-22T03:13:54.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Https-Notes"><a href="#Https-Notes" class="headerlink" title="Https Notes"></a>Https Notes</h1><h2 id="虚构一个CA机构"><a href="#虚构一个CA机构" class="headerlink" title="虚构一个CA机构"></a>虚构一个CA机构</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 生成CA认证机构的证书密钥key</span><br><span class="line"># 需要设置密码，输入两次</span><br><span class="line">openssl genrsa -des3 -out ca.key 2048</span><br><span class="line"></span><br><span class="line"># 去除密钥里的密码(可选)</span><br><span class="line"># 这里需要再输入一次原来设的密码</span><br><span class="line">openssl rsa -in ca.key -out ca.key</span><br><span class="line"></span><br><span class="line"># 用私钥ca.key生成CA认证机构的证书ca.crt</span><br><span class="line"># 其实就是相当于用私钥生成公钥，再把公钥包装成证书</span><br><span class="line">openssl req -new -x509 -key ca.key -out ca.crt -days 3650</span><br><span class="line"># 这个证书ca.crt有的又称为&quot;根证书&quot;,因为可以用来认证其他证书</span><br></pre></td></tr></table></figure><h2 id="生成网站的证书"><a href="#生成网站的证书" class="headerlink" title="生成网站的证书"></a>生成网站的证书</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 生成自己网站的密钥server.key</span><br><span class="line">openssl genrsa -des3 -out server.key 2048</span><br><span class="line"></span><br><span class="line"># 生成自己网站证书的请求文件</span><br><span class="line"># 如果找外面的CA机构认证，也是发个请求文件给他们</span><br><span class="line"># 这个私钥就包含在请求文件中了，认证机构要用它来生成网站的公钥，然后包装成一个证书</span><br><span class="line">openssl req -new -key server.key -out server.csr</span><br><span class="line"></span><br><span class="line"># 使用虚拟的CA认证机构的证书ca.crt，来对自己网站的证书请求文件server.csr进行处理，生成签名后的证书server.crt</span><br><span class="line"># 注意设置序列号和有效期（一般都设1年）</span><br><span class="line">openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -set_serial 01 -out server.crt -days 365</span><br><span class="line"></span><br><span class="line">// set_serial指定生成的自签名根证书的序列号，默认情况下生成的自签名根证书序列号是0；该选项也只有在生成自签名根证书的时候有效。</span><br></pre></td></tr></table></figure><h2 id="配置nginx"><a href="#配置nginx" class="headerlink" title="配置nginx"></a>配置nginx</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">把server.crt 和server.key 文件放在nginx/conf文件夹下。(和nginx.conf文件同一文件夹)</span><br><span class="line"> </span><br><span class="line">ssl_certificate server.crt;</span><br><span class="line">ssl_certificate_key server.key;</span><br><span class="line"></span><br><span class="line">/443 搜索 注释</span><br></pre></td></tr></table></figure><h2 id="windows-hosts配置"><a href="#windows-hosts配置" class="headerlink" title="windows hosts配置"></a>windows hosts配置</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Windows\System32\drivers\etc\hosts</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Https-Notes&quot;&gt;&lt;a href=&quot;#Https-Notes&quot; class=&quot;headerlink&quot; title=&quot;Https Notes&quot;&gt;&lt;/a&gt;Https Notes&lt;/h1&gt;&lt;h2 id=&quot;虚构一个CA机构&quot;&gt;&lt;a href=&quot;#虚构一个CA机构&quot;</summary>
-      
-    
-    
-    
-    
-    <category term="博客" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux</title>
-    <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/09/10/linux/"/>
-    <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2023/09/10/linux/</id>
-    <published>2023-09-10T08:13:34.000Z</published>
-    <updated>2024-01-26T11:57:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><h2 id="web"><a href="#web" class="headerlink" title="web"></a>web</h2><ul><li>git</li><li>nodejs</li><li>docker</li><li>kubernetes</li><li>ngnix</li><li>mariadb</li><li>gitlab</li><li>github</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="Https-Notes"><a href="#Https-Notes" class="headerlink" title="Https Notes"></a>Https Notes</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">openssl genrsa -des3 -out ca.pass.key 2048</span><br><span class="line">openssl rsa -in ca.pass.key -out ca.key</span><br><span class="line">openssl req -new -x509 -key ca.key -out ca.crt -days 365</span><br><span class="line">openssl genrsa -des3 -out server.key 2048</span><br><span class="line">openssl req -new -key server.key -out server.csr</span><br><span class="line">openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -set_serial 01 -out server.crt -days 365</span><br></pre></td></tr></table></figure><h2 id="虚构一个CA机构-RSA"><a href="#虚构一个CA机构-RSA" class="headerlink" title="虚构一个CA机构 RSA"></a>虚构一个CA机构 RSA</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># 生成CA认证机构的证书密钥key</span><br><span class="line"></span><br><span class="line"># -genra    生成RSA私钥</span><br><span class="line"># -des3 des3算法</span><br><span class="line"># -out server.key 生成的私钥文件名</span><br><span class="line"># -2048 私钥长度</span><br><span class="line"></span><br><span class="line">openssl genrsa -des3 -out ca.pass.key 2048</span><br><span class="line"></span><br><span class="line"># 去除密钥里的密码(可选)</span><br><span class="line"># 这里需要再输入一次原来设的密码</span><br><span class="line"></span><br><span class="line">openssl rsa -in ca.pass.key -out ca.key</span><br><span class="line"></span><br><span class="line"># 用私钥ca.key生成CA认证机构的证书ca.crt</span><br><span class="line"># 其实就是相当于用私钥生成公钥，再把公钥包装成证书</span><br><span class="line"></span><br><span class="line"># -req 生成证书签名请求</span><br><span class="line"># -new 新生成</span><br><span class="line"># -key 私钥文件</span><br><span class="line"># -out 生成的CSR文件</span><br><span class="line">openssl req -new -x509 -key ca.key -out ca.crt -days 365</span><br><span class="line"># 这个证书ca.crt有的又称为&quot;根证书&quot;,因为可以用来认证其他证书</span><br></pre></td></tr></table></figure><h2 id="生成网站的证书"><a href="#生成网站的证书" class="headerlink" title="生成网站的证书"></a>生成网站的证书</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># 生成自己网站的密钥server.key</span><br><span class="line">openssl genrsa -des3 -out server.key 2048</span><br><span class="line"></span><br><span class="line"># 生成自己网站证书的请求文件</span><br><span class="line"># 如果找外面的CA机构认证，也是发个请求文件给他们</span><br><span class="line"># 这个私钥就包含在请求文件中了，认证机构要用它来生成网站的公钥，然后包装成一个证书</span><br><span class="line"></span><br><span class="line">openssl req -new -key server.key -out server.csr </span><br><span class="line">-subj=C = CN, ST = beijing, L = beijing, O = xiao.work, OU = xiao, CN = gitlab.xiao.work, emailAddress = wangxinghao2001@163.com</span><br><span class="line"></span><br><span class="line"># 使用虚拟的CA认证机构的证书ca.crt，来对自己网站的证书请求文件server.csr进行处理，生成签名后的证书server.crt</span><br><span class="line"># 注意设置序列号和有效期（一般都设1年）</span><br><span class="line"></span><br><span class="line">openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -set_serial 01 -out server.crt -days 365</span><br><span class="line"></span><br><span class="line"># set_serial指定生成的自签名根证书的序列号，默认情况下生成的自签名根证书序列号是0；该选项也只有在生成自签名根证书的时候有效。</span><br></pre></td></tr></table></figure><h2 id="配置nginx"><a href="#配置nginx" class="headerlink" title="配置nginx"></a>配置nginx</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">把server.crt 和server.key 文件放在nginx/conf文件夹下。(和nginx.conf文件同一文件夹)</span><br><span class="line"> </span><br><span class="line">ssl_certificate server.crt;</span><br><span class="line">ssl_certificate_key server.key;</span><br><span class="line"></span><br><span class="line">/443 搜索 注释</span><br></pre></td></tr></table></figure><h2 id="windows-hosts配置"><a href="#windows-hosts配置" class="headerlink" title="windows hosts配置"></a>windows hosts配置</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Windows\System32\drivers\etc\hosts</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;linux&quot;&gt;&lt;a href=&quot;#linux&quot; class=&quot;headerlink&quot; title=&quot;linux&quot;&gt;&lt;/a&gt;linux&lt;/h1&gt;&lt;h2 id=&quot;web&quot;&gt;&lt;a href=&quot;#web&quot; class=&quot;headerlink&quot; title=&quot;web&quot;&gt;&lt;/</summary>
-      
-    
-    
-    
-    
-    <category term="文档" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E6%96%87%E6%A1%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>rocky logs</title>
-    <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/06/24/rocky%20logs/"/>
-    <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2023/06/24/rocky%20logs/</id>
-    <published>2023-06-24T01:06:05.000Z</published>
-    <updated>2024-01-26T11:57:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="rocky-logs"><a href="#rocky-logs" class="headerlink" title="rocky logs"></a>rocky logs</h1><h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><ul><li><p>切换yum源nju mirror</p></li><li><p>安装net-tools</p></li><li><p>git 2.39.1</p></li><li><p>tar 1.34</p></li><li><p>手动全局安装nodejs</p></li><li><p>配置npm mirror</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm get registry</span><br><span class="line">npm config set registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn config get registry</span><br><span class="line">yarn config set registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure></li><li><p>yum-utils</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y yum-utils</span><br><span class="line"></span><br><span class="line">sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure></li><li><p>docker</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y</span><br><span class="line"></span><br><span class="line">systemctl start docker</span><br><span class="line"></span><br><span class="line">systemctl enable docker</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// /etc/docker/daemon.json</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    &quot;registry-mirrors&quot;: [</span><br><span class="line">        &quot;https://24fgpaf5.mirror.aliyuncs.com&quot;,</span><br><span class="line">        &quot;https://83f60d800b31479a97ed45ce119dab75.mirror.swr.myhuaweicloud.com&quot;,</span><br><span class="line">        &quot;https://hub-mirror.c.163.com&quot;,</span><br><span class="line">        &quot;https://docker.mirrors.ustc.edu.cn&quot;,</span><br><span class="line">        &quot;https://mirror.baidubce.com&quot;,</span><br><span class="line">        &quot;https://reg-mirror.qiniu.com&quot;,</span><br><span class="line">        &quot;https://mirror.ccs.tencentyun.com&quot;,</span><br><span class="line">        &quot;https://registry.docker-cn.com&quot;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl restart docker</span><br><span class="line">docker info</span><br></pre></td></tr></table></figure></li></ul><h1 id="softwares"><a href="#softwares" class="headerlink" title="softwares"></a>softwares</h1><h2 id="gitlab"><a href="#gitlab" class="headerlink" title="gitlab"></a>gitlab</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">docker pull gitlab/gitlab-ce</span><br><span class="line">docker images</span><br><span class="line"></span><br><span class="line">docker run --detach \</span><br><span class="line">  --publish 16443:443 --publish 16680:80 --publish 16622:22 \</span><br><span class="line">  --name gitlab \</span><br><span class="line">  --restart always \</span><br><span class="line">  --volume $GITLAB_HOME/config:/etc/gitlab:Z \</span><br><span class="line">  --volume $GITLAB_HOME/logs:/var/log/gitlab:Z \</span><br><span class="line">  --volume $GITLAB_HOME/data:/var/opt/gitlab:Z \</span><br><span class="line">  gitlab/gitlab-ce</span><br><span class="line"></span><br><span class="line">docker run </span><br><span class="line">  -d</span><br><span class="line">  -p 443:443 -p 9000:80 -p 22:22 //外：内</span><br><span class="line">  --name gitlab</span><br><span class="line">  --restart always</span><br><span class="line">  -v $HOME/docker/gitlab/config:/etc/gitlab</span><br><span class="line">  -v $HOME/docker/gitlab/logs:/var/log/gitlab</span><br><span class="line">  -v $HOME/docker/gitlab/data:/var/opt/gitlab</span><br><span class="line">  gitlab/gitlab-ce</span><br><span class="line"></span><br><span class="line"># -d：后台运行</span><br><span class="line"># -p：将容器内部端口向外映射</span><br><span class="line"># --name：命名容器名称</span><br><span class="line"># -v：将容器内数据文件夹或者日志、配置等文件夹挂载到宿主机指定目录</span><br><span class="line"></span><br><span class="line"># 443:443：将http：443映射到外部端口443</span><br><span class="line"># 9000:80：将web：80映射到外部端口9000</span><br><span class="line"># 22:22：将ssh：22映射到外部端口22</span><br><span class="line"></span><br><span class="line">port 8888 root 15630148029</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="nginx-usr-local-nginx"><a href="#nginx-usr-local-nginx" class="headerlink" title="nginx &#x2F;usr&#x2F;local&#x2F;nginx"></a>nginx &#x2F;usr&#x2F;local&#x2F;nginx</h2>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;rocky-logs&quot;&gt;&lt;a href=&quot;#rocky-logs&quot; class=&quot;headerlink&quot; title=&quot;rocky logs&quot;&gt;&lt;/a&gt;rocky logs&lt;/h1&gt;&lt;h2 id=&quot;安装环境&quot;&gt;&lt;a href=&quot;#安装环境&quot; class=&quot;head</summary>
-      
-    
-    
-    
-    
-    <category term="文档" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E6%96%87%E6%A1%A3/"/>
-    
-    <category term="博客" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>docker in rocky</title>
-    <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/05/09/docker%20in%20rocky/"/>
-    <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2023/05/09/docker%20in%20rocky/</id>
-    <published>2023-05-09T11:19:11.000Z</published>
-    <updated>2024-01-08T02:17:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="docker-in-rocky"><a href="#docker-in-rocky" class="headerlink" title="docker in rocky"></a>docker in rocky</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y yum-utils</span><br><span class="line">sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line"></span><br><span class="line">yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line">yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// daemon.json</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    &quot;registry-mirrors&quot;: [</span><br><span class="line">        &quot;https://24fgpaf5.mirror.aliyuncs.com&quot;,</span><br><span class="line">        &quot;https://83f60d800b31479a97ed45ce119dab75.mirror.swr.myhuaweicloud.com&quot;,</span><br><span class="line">        &quot;https://hub-mirror.c.163.com&quot;,</span><br><span class="line">        &quot;https://docker.mirrors.ustc.edu.cn&quot;,</span><br><span class="line">        &quot;https://mirror.baidubce.com&quot;,</span><br><span class="line">        &quot;https://reg-mirror.qiniu.com&quot;,</span><br><span class="line">        &quot;https://mirror.ccs.tencentyun.com&quot;,</span><br><span class="line">        &quot;https://registry.docker-cn.com&quot;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl restart docker</span><br><span class="line">docker info</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo dnf check-update</span><br><span class="line">sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line">sudo dnf install docker-ce docker-ce-cli containerd.io -y</span><br><span class="line">sudo systemctl start docker</span><br><span class="line">sudo systemctl status docker</span><br><span class="line">sudo systemctl enable docker</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker pull mysql:latest</span><br><span class="line">docker images</span><br><span class="line">docker ps -a</span><br><span class="line"></span><br><span class="line">docker run -itd --name mysql-test -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 mysql</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>-i 以交互模式运行容器，通常与 -t 同时使用<br>-t 为容器重新分配一个伪输入终端，通常与 -i 同时使用<br>-d 后台运行容器，并返回容器ID<br>–name&#x3D;”nginx-lb”: 为容器指定一个名称<br>-e username&#x3D;”ritchie”: 设置环境变量<br>-p: 指定端口映射，格式为：主机(宿主)端口:容器端口</p><h2 id="drone"><a href="#drone" class="headerlink" title="drone"></a>drone</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">docker run</span><br><span class="line">  --volume=/srv/drone:/data</span><br><span class="line">  --env=DRONE_GITLAB_SERVER=HTTP://192.168.1.104:8888</span><br><span class="line">  --env=DRONE_GITLAB_CLIENT_ID=b19a3167484bf0d283e16a57b4f4e31e63617b48ebf4fc1714a2078eecaef00c</span><br><span class="line">  --env=DRONE_GITLAB_CLIENT_SECRET=56bba1c6fa31998b6e0923c54300f60ba513b9ffcdc41696c258975ff1537f54</span><br><span class="line">  --env=DRONE_RPC_SECRET=323c3689a93a2853c38b28e78736a482</span><br><span class="line">  --env=DRONE_SERVER_HOST=192.168.1.104</span><br><span class="line">  --env=DRONE_SERVER_PROTO=http</span><br><span class="line">  --publish=32222:80</span><br><span class="line">  --publish=32221:443</span><br><span class="line">  --restart=always</span><br><span class="line">  --detach=true</span><br><span class="line">  --name=drone</span><br><span class="line">  drone/drone:latest</span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">version: &#x27;3.9&#x27;</span><br><span class="line"># 创建自定义网络</span><br><span class="line">networks:</span><br><span class="line">  drone:</span><br><span class="line">    name: drone</span><br><span class="line">    driver: bridge</span><br><span class="line">services:</span><br><span class="line">  # 数据库服务</span><br><span class="line">  db:</span><br><span class="line">    image: postgres:latest</span><br><span class="line">    container_name: drone_db</span><br><span class="line">    restart: always</span><br><span class="line">    networks:</span><br><span class="line">      - drone # 加入到drone网络</span><br><span class="line">    ports:</span><br><span class="line">      - &#x27;32000:5432&#x27;</span><br><span class="line">    environment:</span><br><span class="line">      - POSTGRES_USER=drone # PGSQL默认用户</span><br><span class="line">      - POSTGRES_PASSWORD=drone # PGSQL默认密码</span><br><span class="line">      - POSTGRES_DB=drone # PGSQL默认数据库</span><br><span class="line">    volumes:</span><br><span class="line">      - /srv/drone/db:/var/lib/postgresql/data</span><br><span class="line">  # Drone Server 服务</span><br><span class="line">  server:</span><br><span class="line">    image: drone/drone:latest # 目前drone最新版本为 2.8.0</span><br><span class="line">    container_name: drone_server</span><br><span class="line">    restart: always</span><br><span class="line">    networks:</span><br><span class="line">      - drone # 加入到drone网络</span><br><span class="line">    ports:</span><br><span class="line">      - &#x27;32222:80&#x27;</span><br><span class="line">    environment:</span><br><span class="line">      - DRONE_SERVER_PROTO=http # 访问协议，创建webHooks和重定向</span><br><span class="line">      - DRONE_SERVER_HOST=192.168.1.104:32222 # 主机名称，创建webHooks和重定向</span><br><span class="line">      - DRONE_RPC_SECRET=323c3689a93a2853c38b28e78736a482 # 与 drone runner 通讯的密钥</span><br><span class="line">      - DRONE_USER_CREATE=username:root,admin:true # 管理员账户</span><br><span class="line">      - DRONE_DATABASE_DRIVER=postgres # 数据库类型</span><br><span class="line">      - DRONE_DATABASE_DATASOURCE=postgres://drone:drone@db/drone?sslmode=disable # 数据库连接</span><br><span class="line">      - DRONE_GIT_ALWAYS_AUTH=true # 使用 oauth 身份验证信息拉取代码</span><br><span class="line">      - DRONE_GITLAB_SERVER=HTTP://192.168.1.104:8888</span><br><span class="line">      - DRONE_GITLAB_CLIENT_ID=b19a3167484bf0d283e16a57b4f4e31e63617b48ebf4fc1714a2078eecaef00c</span><br><span class="line">      - DRONE_GITLAB_CLIENT_SECRET=56bba1c6fa31998b6e0923c54300f60ba513b9ffcdc41696c258975ff1537f54</span><br><span class="line">    volumes:</span><br><span class="line">      - /srv/drone/server:/data</span><br><span class="line">      - /var/run/docker.sock:/var/run/docker.sock</span><br><span class="line">    depends_on:</span><br><span class="line">      - db</span><br><span class="line">  # Drone Docker Runner</span><br><span class="line">  runner:</span><br><span class="line">    image: drone/drone-runner-docker:latest # 目前drone-runner-docker最新版本为 1.8.0</span><br><span class="line">    container_name: drone_runner</span><br><span class="line">    restart: always</span><br><span class="line">    networks:</span><br><span class="line">      - drone # 加入到drone网络</span><br><span class="line">    ports:</span><br><span class="line">      - &#x27;32220:3000&#x27;</span><br><span class="line">    environment:</span><br><span class="line">      - DRONE_RUNNER_NAME=docker-runner</span><br><span class="line">      - DRONE_RUNNER_CAPACITY=10 # 限制runner可执行的并发管道数量</span><br><span class="line">      - DRONE_RPC_PROTO=http # 访问drone server 协议</span><br><span class="line">      - DRONE_RPC_HOST=192.168.1.104:32222 # 访问drone server 服务器地址</span><br><span class="line">      - DRONE_RPC_SECRET=e1ad8a7f3dbc68ca9c21bcc949335009 # 与 drone server 通讯的密钥</span><br><span class="line">      - DRONE_UI_USERNAME=root # Drone Runner 的 UI 用户账号</span><br><span class="line">      - DRONE_UI_PASSWORD=8888 # Drone Runner 的 UI 用户密码</span><br><span class="line">    volumes:</span><br><span class="line">      - &#x27;/var/run/docker.sock:/var/run/docker.sock&#x27;</span><br><span class="line">    depends_on:</span><br><span class="line">      - server</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;docker-in-rocky&quot;&gt;&lt;a href=&quot;#docker-in-rocky&quot; class=&quot;headerlink&quot; title=&quot;docker in rocky&quot;&gt;&lt;/a&gt;docker in rocky&lt;/h1&gt;&lt;figure class=&quot;highli</summary>
+    <summary type="html">&lt;h1 id=&quot;Https-Notes&quot;&gt;&lt;a href=&quot;#Https-Notes&quot; class=&quot;headerlink&quot; title=&quot;Https Notes&quot;&gt;&lt;/a&gt;Https Notes&lt;/h1&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;</summary>
       
     
     
     
     
     <category term="博客" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mac</title>
-    <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/04/25/mac/"/>
-    <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2023/04/25/mac/</id>
-    <published>2023-04-25T09:10:20.000Z</published>
-    <updated>2024-01-26T11:57:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="mac"><a href="#mac" class="headerlink" title="mac"></a>mac</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python macrecovery.py -b Mac-4B682C642B45593E -m 00000000000000000 download</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c:\&quot;Program Files&quot;\qemu\qemu-img convert -O vmdk -o compat6 BaseSystem.dmg recovery.vmdk</span><br></pre></td></tr></table></figure><p>.vmx </p><p>ethenet0 &#x3D; “vmxnet3”</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;mac&quot;&gt;&lt;a href=&quot;#mac&quot; class=&quot;headerlink&quot; title=&quot;mac&quot;&gt;&lt;/a&gt;mac&lt;/h1&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pr</summary>
-      
-    
-    
-    
-    
-    <category term="文档" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E6%96%87%E6%A1%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Logs</title>
-    <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/04/19/Logs/"/>
-    <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2023/04/19/Logs/</id>
-    <published>2023-04-19T03:23:25.000Z</published>
-    <updated>2024-01-26T11:57:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Logs"><a href="#Logs" class="headerlink" title="Logs"></a>Logs</h1><ul><li>安装 net-tools</li><li>安装 git</li><li>安装 nodejs</li><li>安装 mariadb-server</li><li>mysql_secure_installation 00125</li><li></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Logs&quot;&gt;&lt;a href=&quot;#Logs&quot; class=&quot;headerlink&quot; title=&quot;Logs&quot;&gt;&lt;/a&gt;Logs&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;安装 net-tools&lt;/li&gt;
-&lt;li&gt;安装 git&lt;/li&gt;
-&lt;li&gt;安装 nodejs&lt;/li&gt;
-&lt;li</summary>
-      
-    
-    
-    
-    
-    <category term="文档" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E6%96%87%E6%A1%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>BND</title>
-    <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/04/17/BND/"/>
-    <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2023/04/17/BND/</id>
-    <published>2023-04-17T12:18:09.000Z</published>
-    <updated>2024-01-26T11:57:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="BND"><a href="#BND" class="headerlink" title="BND"></a>BND</h1><p>设每个用户下每个命名空间，可以单独配置一个数据库用于所建云函数的链接。</p><h3 id="新建函数"><a href="#新建函数" class="headerlink" title="新建函数"></a>新建函数</h3><p>API种类<br>1、数据库交互<br>2、静态资源上传与请求<br>3、函数内运算响应</p><p>沙箱逃逸</p><p>vm</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const vm = require(&#x27;vm&#x27;);</span><br><span class="line">vm.runInNewContext(&#x27;this.constructor.constructor(&quot;return process&quot;)().exit()&#x27;);</span><br><span class="line">console.log(&#x27;Never gets executed.&#x27;);</span><br></pre></td></tr></table></figure><p>vm2</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const &#123;VM&#125; = require(&#x27;vm2&#x27;);</span><br><span class="line">new VM().run(&#x27;this.constructor.constructor(&quot;return process&quot;)().exit()&#x27;);</span><br><span class="line">// Throws ReferenceError: process is not defined</span><br></pre></td></tr></table></figure><h1 id="API"><a href="#API" class="headerlink" title="API"></a>API</h1><h2 id="func部分"><a href="#func部分" class="headerlink" title="func部分"></a>func部分</h2><h3 id="调用函数-GET方法"><a href="#调用函数-GET方法" class="headerlink" title="调用函数(GET方法)"></a>调用函数(GET方法)</h3><p><strong>GET</strong> <em>&#x2F;faas&#x2F;:id</em></p><p><strong>return</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  //标准返回对象</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="调用函数-POST方法"><a href="#调用函数-POST方法" class="headerlink" title="调用函数(POST方法)"></a>调用函数(POST方法)</h3><p><strong>POST</strong> <em>&#x2F;faas&#x2F;:id</em></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  //示例对象</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>return</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  //标准返回对象</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="backend部分"><a href="#backend部分" class="headerlink" title="backend部分"></a>backend部分</h2><h3 id="添加函数"><a href="#添加函数" class="headerlink" title="添加函数"></a>添加函数</h3><p><strong>POST</strong> <em>&#x2F;addfunc</em></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  user-token,</span><br><span class="line">  codeStr:String, //代码字符串</span><br><span class="line">  method:String, //函数方法</span><br><span class="line">  objScan:Object, //输入实例对象</span><br><span class="line">  comment:String, //函数功能备注</span><br><span class="line">  maxruntime</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>return</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  status,</span><br><span class="line">  message,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="请求函数列表"><a href="#请求函数列表" class="headerlink" title="请求函数列表"></a>请求函数列表</h3><h4 id="用户下全部函数"><a href="#用户下全部函数" class="headerlink" title="用户下全部函数"></a>用户下全部函数</h4><p><strong>GET</strong> <em>&#x2F;funclist</em></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">user-token</span><br></pre></td></tr></table></figure><p><strong>return</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  funcarray:Array[&#123;</span><br><span class="line">      functionid,</span><br><span class="line">      createTime,</span><br><span class="line">      invokeTimes,</span><br><span class="line">      namespaceid,</span><br><span class="line">      master,</span><br><span class="line">      ...</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="命名空间下全部函数"><a href="#命名空间下全部函数" class="headerlink" title="命名空间下全部函数"></a>命名空间下全部函数</h4><p><strong>GET</strong> <em>&#x2F;funclist&#x2F;:namespaceid</em></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">user-token</span><br></pre></td></tr></table></figure><p><strong>return</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  funcarray:Array[&#123;</span><br><span class="line">      functionid,</span><br><span class="line">      createTime,</span><br><span class="line">      invokeTimes,</span><br><span class="line">      namespaceid,</span><br><span class="line">      master,</span><br><span class="line">      ...</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;BND&quot;&gt;&lt;a href=&quot;#BND&quot; class=&quot;headerlink&quot; title=&quot;BND&quot;&gt;&lt;/a&gt;BND&lt;/h1&gt;&lt;p&gt;设每个用户下每个命名空间，可以单独配置一个数据库用于所建云函数的链接。&lt;/p&gt;
-&lt;h3 id=&quot;新建函数&quot;&gt;&lt;a href=&quot;#新建</summary>
-      
-    
-    
-    
-    
-    <category term="文档" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E6%96%87%E6%A1%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Serverless in linux</title>
-    <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/04/09/Serverless%20in%20linux/"/>
-    <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2023/04/09/Serverless%20in%20linux/</id>
-    <published>2023-04-09T07:13:31.000Z</published>
-    <updated>2024-01-26T11:57:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Serverless-in-linux"><a href="#Serverless-in-linux" class="headerlink" title="Serverless in linux"></a>Serverless in linux</h1><h2 id="rocky-linux-安装-git、nodejs"><a href="#rocky-linux-安装-git、nodejs" class="headerlink" title="rocky linux 安装 git、nodejs"></a>rocky linux 安装 git、nodejs</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install git nodejs</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Serverless-in-linux&quot;&gt;&lt;a href=&quot;#Serverless-in-linux&quot; class=&quot;headerlink&quot; title=&quot;Serverless in linux&quot;&gt;&lt;/a&gt;Serverless in linux&lt;/h1&gt;&lt;h2 i</summary>
-      
-    
-    
-    
-    
-    <category term="文档" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E6%96%87%E6%A1%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>三月学习大纲</title>
-    <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2023/02/24/%E4%B8%89%E6%9C%88%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/"/>
-    <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2023/02/24/%E4%B8%89%E6%9C%88%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/</id>
-    <published>2023-02-24T11:01:12.000Z</published>
-    <updated>2024-01-26T11:57:27.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="三月学习大纲"><a href="#三月学习大纲" class="headerlink" title="三月学习大纲"></a>三月学习大纲</h1><p>8：00 - 12：00 离散数学</p><p>14：00 - 18：00 英语听说、数据库</p><p>19：00 - 23：00 LeetCode Dev-C++ 专业课复习</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;三月学习大纲&quot;&gt;&lt;a href=&quot;#三月学习大纲&quot; class=&quot;headerlink&quot; title=&quot;三月学习大纲&quot;&gt;&lt;/a&gt;三月学习大纲&lt;/h1&gt;&lt;p&gt;8：00 - 12：00 离散数学&lt;/p&gt;
-&lt;p&gt;14：00 - 18：00 英语听说、数据库&lt;/p&gt;
-&lt;p</summary>
-      
-    
-    
-    
-    
-    <category term="文档" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E6%96%87%E6%A1%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>graduate exam</title>
-    <link href="https://dyson-wang.github.io/SakuraGw_Kotoko/2022/10/08/graduate%20exam/"/>
-    <id>https://dyson-wang.github.io/SakuraGw_Kotoko/2022/10/08/graduate%20exam/</id>
-    <published>2022-10-08T00:53:25.000Z</published>
-    <updated>2024-01-26T11:57:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="graduate-exam"><a href="#graduate-exam" class="headerlink" title="graduate exam"></a>graduate exam</h1><h2 id="十月底强化结束"><a href="#十月底强化结束" class="headerlink" title="十月底强化结束"></a>十月底强化结束</h2><p>英语长难句梳理，单词！！！（五星紧急）3h</p><p>可以开始做真题了，数二 刷！！！</p><p>政治看课，做每章课后题 3h</p><p>李永乐强化视频跟完，108、330、其他题 4h</p><p>17堂课梳理知识点</p><p>408大题+教材 4h</p><h2 id="11-12月卷子真题-政治"><a href="#11-12月卷子真题-政治" class="headerlink" title="11 12月卷子真题+政治"></a>11 12月卷子真题+政治</h2><p>英语直接英一英二80-22真题</p><p>政治肖四肖八+94-22真题</p><p>数学87-22真题+挑几套模拟做做</p><p>408 王道天勤8套模拟，09-22真题</p><p>模拟卷+真题卷</p><h2 id="平板资料"><a href="#平板资料" class="headerlink" title="平板资料"></a>平板资料</h2><p>徐涛课后习题，看答案，看解析视频</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;graduate-exam&quot;&gt;&lt;a href=&quot;#graduate-exam&quot; class=&quot;headerlink&quot; title=&quot;graduate exam&quot;&gt;&lt;/a&gt;graduate exam&lt;/h1&gt;&lt;h2 id=&quot;十月底强化结束&quot;&gt;&lt;a href=&quot;#十月</summary>
-      
-    
-    
-    
-    
-    <category term="文档" scheme="https://dyson-wang.github.io/SakuraGw_Kotoko/tags/%E6%96%87%E6%A1%A3/"/>
     
   </entry>
   
